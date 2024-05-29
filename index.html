@@ -22,6 +22,25 @@
   <link id="color-scheme" rel="stylesheet" href="css/colors/main-darkgreen.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="../customizer/main.css">
+
+  <script>
+    function calculateAge(birthdate) {
+      const birthDate = new Date(birthdate);
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      return age;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const ageElement = document.getElementById("age");
+      const birthdate = "2001-01-01"; // Your birthdate here
+      ageElement.textContent = calculateAge(birthdate);
+    });
+  </script>
 </head>
 
 <body class="theme-dark">
@@ -58,8 +77,10 @@
         <div class="col-12 col-lg-8 home-content text-center">
           <h1 class="home-name">Mohsenul Kabir <span>Mithun</span></h1>
           <h4 class="cd-headline clip home-headline">Hola! I’m a <span class="cd-words-wrapper single-headline"><b
-                class="is-visible">Software Enginner</b><b>Django Developer</b><b>Data
-                Analytics</b><b>Programmer</b></span></h4>
+                class="is-visible">Software Enginner</b><b>Django Developer</b><b>Backend
+                Developer</b><b>Programmer</b><b>Tech Enthusiast</b><b> AI Enthusiast</b></span></h4>
+          <p class="mt-4">Welcome to my digital space where innovation meets technology. I specialize in crafting
+            seamless backend solutions and robust web applications. Let's build something amazing together!</p>
         </div>
       </div>
     </div>
@@ -67,7 +88,7 @@
       <!-- Languages list-->
       <div class="fixed-block block-left">
         <ul class="list-unstyled languages-list">
-          <li><a href="https://dev.to/"><span class="single-language">DEV</span></a>
+          <li><a href="https://dev.to/mohsenul_kabirmithun_63d"><span class="single-language">DEV</span></a>
           </li>
           <li><a href="https://www.quora.com/profile/"><span class="single-language">Quora</span></a>
           </li>
@@ -116,29 +137,43 @@
                   <div class="content-block">
                     <h2 class="content-subtitle">Who am i?</h2>
                     <h6 class="content-title">I'm Mohsenul Kabir Mithun, a Software Enginner</h6>
-                    <div class="content-description">
-                      <p>I am a Full Stack Web Developer based in Dhaka, Bangladesh, specializing in backend development
-                        with Django, Docker, PostgreSQL, Nginx. I have a strong foundation in computer science with a
-                        B.Sc. from East West University, achieving a CGPA of 3.76, and I am currently pursuing an M.Sc.
-                        at Brac University. My professional experience includes roles at Software Global Consultancy and
-                        as a Teaching Assistant at East West University, contributing to various projects and enhancing
-                        my skills in database management, RESTful API development, and collaborative problem-solving.
+                    <div class="content-description" style="text-align: justify;">
+                      <p>
+                        I am a passionate and dedicated Software Engineer based in Dhaka, Bangladesh. Specializing in
+                        backend development, I excel in using technologies such as Django, Docker, PostgreSQL, and
+                        Nginx. I hold a B.Sc. in Computer Science and Engineering from East West University and am
+                        currently pursuing an M.Sc. at BRAC University.
+                      </p>
+                      <p>
+                        My professional journey includes working as an Associate Software Engineer at Software
+                        Global Consultancy (SGC), where I develop scalable web applications, integrate RESTful APIs, and
+                        optimize database performance. I also served as an Undergraduate Teaching Assistant at East West
+                        University, assisting in lectures and lab sessions, and providing one-on-one support to
+                        students.
+                      </p>
+                      <p>
+                        I have contributed to high-impact projects, including developing banking modules for Dhaka Bank,
+                        a Learning Management System for PMCBD, a Content Management System for Border Guard Bangladesh,
+                        and a Transport Management Application for Namirah Apparels. My skills span multiple programming
+                        languages and frameworks, making me a versatile and innovative problem solver in the tech
+                        industry.
                       </p>
                     </div>
+
                     <address class="content-info">
                       <div class="row">
-                        <div class="col-12 col-md-6 single-info"><span>Name:</span>
+                        <div class="col-12 col-md-5 single-info"><span>Name:</span>
                           <p>Mohsenul Kabir Mithun</p>
                         </div>
-                        <div class="col-12 col-md-6 single-info"><span>Email:</span>
+                        <div class="col-12 col-md-7 single-info"><span>Email:</span>
                           <p><a href="mailto:cs19rajeev@gmail.com">mohsenulkabirmi8486@gmail.com</a></p>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-12 col-md-6 single-info"><span>Age:</span>
-                          <p>23</p>
+                        <div class="col-12 col-md-5 single-info"><span>Age:</span>
+                          <p id="age"></p>
                         </div>
-                        <div class="col-12 col-md-6 single-info"><span>From:</span>
+                        <div class="col-12 col-md-7 single-info"><span>From:</span>
                           <p>Dhaka, Bangladesh</p>
                         </div>
                       </div>
@@ -178,34 +213,48 @@
                 <!-- Single service-->
                 <div class="col-12 col-md-6 col-lg-4">
                   <div class="single-service"><i class="icon service-icon ion-logo-css3"></i>
-                    <h6 class="service-title">Full Stack Web Developer</h6>
-                    <p class="service-description"> A frontend dev has to know
-                      and be fluent in HTML,CSS and JavaScript,there is no doubt about it. Front end development
-                      manages everything that users visually see first in their browser or application. You manage what
-                      people first see in their browser. As a front end developer are responsible for the look,feel
-                      and ultimately design of the site.</p>
-                  </div>
-                </div>
-                <!-- Single service-->
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="single-service"><i class="icon service-icon ion-md-images"></i>
-                    <h6 class="service-title">Data Analytics</h6>
-                    <p class="service-description">Passionate DS and ML problem solver. Check out my GitHub for projects
-                      that showcase my expertise in this exciting field. Let's collaborate!</p>
-                  </div>
-                </div>
-                <!-- Single service-->
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div class="single-service"><i class="icon service-icon ion-logo-ionic"></i>
-                    <h6 class="service-title">Customer Support</h6>
-                    <p class="service-description">Customer support is a range of customer services to assist customers
-                      in making cost effective and correct use of a product. It includes assistance in planning,
-                      installation, training, troubleshooting, maintenance, upgrading, and disposal of a
-                      product.Regarding technology products such as mobile phones, televisions, computers, software
-                      products.
+                    <h6 class="service-title">Django Backend Developer</h6>
+                    <p class="service-description">
+                      Specializing in backend development, I excel in using technologies such as Django, Docker,
+                      PostgreSQL, and Nginx. My role involves developing scalable web applications, integrating
+                      RESTful
+                      APIs, and optimizing database performance to deliver efficient and robust solutions.
                     </p>
                   </div>
                 </div>
+                <!-- Single service-->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="single-service"><i class="icon service-icon ion-md-stats"></i>
+                    <h6 class="service-title">Data Analytics</h6>
+                    <p class="service-description">
+                      Passionate about data science and machine learning, I solve complex problems using tools like
+                      NumPy, Pandas, Matplotlib, and Scikit-learn. Check out my GitHub for projects that showcase my
+                      expertise in this exciting field. Let's collaborate!
+                    </p>
+                  </div>
+                </div>
+                <!-- Single service-->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="single-service"><i class="icon service-icon ion-md-code-working"></i>
+                    <h6 class="service-title">Web Scraping</h6>
+                    <p class="service-description">
+                      Experienced in web scraping using BeautifulSoup and Scrapy. I have developed various projects,
+                      including a DataCamp web scraping project, to extract and process data efficiently. Let's harness
+                      the power of web scraping for your data needs!
+                    </p>
+                  </div>
+                </div>
+                <!-- Single service-->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                  <div class="single-service"><i class="icon service-icon ion-md-school"></i>
+                    <h6 class="service-title">Teaching and Mentorship</h6>
+                    <p class="service-description">
+                      With experience as an Undergraduate Teaching Assistant, I assist in lectures, conduct lab
+                      sessions, and provide one-on-one support to students, helping them grasp complex technical
+                      concepts and improve their coding skills.
+                    </p>
+                  </div>
+                </div> -->
               </div>
             </div>
             <!-- Testimonials section-->
@@ -233,7 +282,8 @@
                         </div>
                       </div><i class="icon ion-md-quote review-icon"></i>
                     </div>
-                    <p class="review-content">Mithun did an excellent creative job, addressing our request quickly, and
+                    <p class="review-content">Mithun did an excellent creative job, addressing our request quickly,
+                      and
                       also providing his own web Development, being open to feedback and changes or edits when they
                       arose. He worked with us the entire way. Highly recommended.</p>
                   </div>
@@ -252,8 +302,10 @@
                         </div>
                       </div><i class="icon ion-md-quote review-icon"></i>
                     </div>
-                    <p class="review-content">Mithun did an excellent creative job, addressing our request quickly, and
-                      also providing his own Software Development, being open to feedback and changes or edits when they
+                    <p class="review-content">Mithun did an excellent creative job, addressing our request quickly,
+                      and
+                      also providing his own Software Development, being open to feedback and changes or edits when
+                      they
                       arose. He worked with us the entire way. Highly recommended.</p>
                   </div>
                 </div>
@@ -271,7 +323,8 @@
                         </div>
                       </div><i class="icon ion-md-quote review-icon"></i>
                     </div>
-                    <p class="review-content">Mithun did an excellent creative job, addressing our request quickly, and
+                    <p class="review-content">Mithun did an excellent creative job, addressing our request quickly,
+                      and
                       also providing his own web Development, being open to feedback and changes or edits when they
                       arose. He worked with us the entire way. Highly recommended.</p>
                   </div>
@@ -291,44 +344,50 @@
               <div class="row align-items-center">
                 <!-- Single plan -->
                 <div class="col-lg-4">
-                  <div class="single-plan mb-4 mb-sm-5"><i class="plan-icon icon ion-md-egg"></i>
+                  <div class="single-plan mb-4 mb-sm-5">
+                    <i class="plan-icon icon ion-md-egg"></i>
                     <h3 class="plan-type">Standard</h3>
-                    <h2 class="plan-price">$50/month</h2>
+                    <h2 class="plan-price">$200/month</h2>
                     <ul class="list-unstyled plan-list">
-                      <li>Mobile App Design</li>
-                      <li>Responsive Design</li>
-                      <li>Database Development</li>
-                      <li>Web Design</li>
+                      <li>Django Backend Development</li>
+                      <li>Basic RESTful API Integration</li>
+                      <li>Basic Database Management</li>
                       <li>24/7 Support</li>
-                    </ul><a class="btn button-main button-scheme plan-btn" href="#0" role="button">Get Standard</a>
+                      <li>...</li>
+                    </ul>
+                    <a class="btn button-main button-scheme plan-btn" href="#0" role="button">Get Standard</a>
                   </div>
                 </div>
                 <!-- Single plan -->
                 <div class="col-lg-4">
-                  <div class="single-plan mb-4 mb-sm-5"><i class="plan-icon icon ion-ios-rocket"></i>
+                  <div class="single-plan mb-4 mb-sm-5">
+                    <i class="plan-icon icon ion-ios-rocket"></i>
                     <h3 class="plan-type">Professional</h3>
-                    <h2 class="plan-price">$100/month</h2>
+                    <h2 class="plan-price">$600/month</h2>
                     <ul class="list-unstyled plan-list">
-                      <li>Mobile App Design</li>
-                      <li>Responsive Design</li>
-                      <li>Database Development</li>
-                      <li>Web Design</li>
+                      <li>Advanced Django Development</li>
+                      <li>Advanced RESTful API Integration</li>
+                      <li>Data Analytics with Python</li>
+                      <li>Database Optimization</li>
                       <li>24/7 Support</li>
-                    </ul><a class="btn button-main button-scheme plan-btn" href="#0" role="button">Get Pro</a>
+                    </ul>
+                    <a class="btn button-main button-scheme plan-btn" href="#0" role="button">Get Pro</a>
                   </div>
                 </div>
                 <!-- Single plan -->
                 <div class="col-lg-4">
-                  <div class="single-plan mb-4 mb-sm-5"><i class="plan-icon icon ion-logo-ionic"></i>
+                  <div class="single-plan mb-4 mb-sm-5">
+                    <i class="plan-icon icon ion-logo-ionic"></i>
                     <h3 class="plan-type">Business</h3>
-                    <h2 class="plan-price">$150/month</h2>
+                    <h2 class="plan-price">$1000/month</h2>
                     <ul class="list-unstyled plan-list">
-                      <li>Mobile App Design</li>
-                      <li>Responsive Design</li>
-                      <li>Database Development</li>
-                      <li>Web Design</li>
+                      <li>Full Stack Development</li>
+                      <li>Data Analytics and Machine Learning</li>
+                      <li>Web Scraping Projects</li>
+                      <li>Customized Solutions</li>
                       <li>24/7 Support</li>
-                    </ul><a class="btn button-main button-scheme plan-btn" href="#0" role="button">Get Business</a>
+                    </ul>
+                    <a class="btn button-main button-scheme plan-btn" href="#0" role="button">Get Business</a>
                   </div>
                 </div>
               </div>
@@ -337,7 +396,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
   <!-- Resume lightbox-->
   <div class="lightbox-wrapper" id="resume" data-simplebar>
@@ -365,17 +423,17 @@
                   <div class="col-block education">
                     <h3 class="col-title">Education</h3>
                     <div class="resume-item"><span class="item-arrow"></span>
-                      <h5 class="item-title">Brac University, Dhaka</h5><span class="item-details">January 2024 -
+                      <h5 class="item-title">BRAC University, Dhaka</h5><span class="item-details">January 2024 -
                         Present</span>
                       <p class="item-description">MSC in Computer Science and Engineering</p>
-                      <p class="item-description">CGPA: 0.00</p>
-                      <p class="item-description">Credits Earned: 0 / 36</p>
+                      <p class="item-description">CGPA: 4.00</p>
+                      <p class="item-description">Credits Earned: 06 / 36</p>
                     </div>
                     <div class="resume-item"><span class="item-arrow"></span>
                       <h5 class="item-title">East West University, Dhaka</h5><span class="item-details">September 2019 -
                         September 2023</span>
                       <p class="item-description">BSC in Computer Science and Engineering</p>
-                      <p class="item-description">CGPA: 3.72</p>
+                      <p class="item-description">CGPA: 3.76</p>
                       <p class="item-description">Credits Earned: 140 / 140</p>
                     </div>
                   </div>
@@ -402,6 +460,7 @@
               </div>
             </div>
             <!-- Skills section-->
+            <!-- Skills section-->
             <div class="skills-section single-section">
               <div class="row">
                 <div class="col-12">
@@ -413,23 +472,39 @@
               </div>
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <div class="single-skill" data-percentage="95">
-                    <div class="skill-info"><span class="skill-name">HTML/CSS</span><span
-                        class="skill-percentage"></span></div>
-                    <div class="progress skill-progress">
-                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                      </div>
+                  <div class="single-skill" data-percentage="90">
+                    <div class="skill-info"><span class="skill-name">Python</span><span class="skill-percentage"></span>
                     </div>
-                  </div>
-                  <div class="single-skill" data-percentage="80">
-                    <div class="skill-info"><span class="skill-name">bootstrap</span><span
-                        class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                       </div>
                     </div>
                   </div>
                   <div class="single-skill" data-percentage="85">
+                    <div class="skill-info"><span class="skill-name">Django/Flask</span><span
+                        class="skill-percentage"></span></div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-skill" data-percentage="75">
+                    <div class="skill-info"><span class="skill-name">Java</span><span class="skill-percentage"></span>
+                    </div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-skill" data-percentage="80">
+                    <div class="skill-info"><span class="skill-name">C/C++</span><span class="skill-percentage"></span>
+                    </div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-skill" data-percentage="70">
                     <div class="skill-info"><span class="skill-name">JavaScript</span><span
                         class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
@@ -439,7 +514,15 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <div class="single-skill" data-percentage="70">
+                  <div class="single-skill" data-percentage="85">
+                    <div class="skill-info"><span class="skill-name">HTML/CSS</span><span
+                        class="skill-percentage"></span></div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-skill" data-percentage="80">
                     <div class="skill-info"><span class="skill-name">React JS</span><span
                         class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
@@ -447,16 +530,24 @@
                       </div>
                     </div>
                   </div>
-                  <div class="single-skill" data-percentage="92">
-                    <div class="skill-info"><span class="skill-name">Algorithms/Data Stuctures</span><span
+                  <div class="single-skill" data-percentage="90">
+                    <div class="skill-info"><span class="skill-name">SQL/PostgreSQL</span><span
                         class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                       </div>
                     </div>
                   </div>
-                  <div class="single-skill" data-percentage="90">
-                    <div class="skill-info"><span class="skill-name">C++/Java</span><span
+                  <div class="single-skill" data-percentage="85">
+                    <div class="skill-info"><span class="skill-name">Data Science & ML</span><span
+                        class="skill-percentage"></span></div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="single-skill" data-percentage="75">
+                    <div class="skill-info"><span class="skill-name">Web Scraping</span><span
                         class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
@@ -536,92 +627,105 @@
                 <div class="col-12">
                   <ul class="list-inline filter-control" role="group" aria-label="Filter Control">
                     <li class="list-inline-item tab-active" data-filter="*">All</li>
-                    <li class="list-inline-item" data-filter=".brand">Web Development</li>
-                    <li class="list-inline-item" data-filter=".design">Software Development</li>
-                    <li class="list-inline-item" data-filter=".photos">Data Science</li>
+                    <li class="list-inline-item" data-filter=".web-dev">Web Development</li>
+                    <li class="list-inline-item" data-filter=".software-dev">Software Development</li>
+                    <li class="list-inline-item" data-filter=".data-science">Data Science</li>
                   </ul>
                 </div>
               </div>
               <!-- Thumbnail list-->
               <div class="portfolio-grid row">
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 design"><a class="portfolio-item"
-                    href="https:/https://mi-thun.github.io/project1/">
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-1.jpg">
+                <!-- Single item: Web Development -->
+                <div class="single-item col-6 col-lg-4 web-dev">
+                  <a class="portfolio-item" href="https://mi-thun.github.io/project1/">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Item" src="img/item-1.jpg">
                       <div class="item-content">
-                        <h6 class="content-title">portfolio</h6><span class="content-more">Click For More
-                          Info</span>
+                        <h6 class="content-title">Online Café Shop Management System</h6>
+                        <span class="content-more">Click For More Info</span>
                       </div>
                     </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 photos"><a class="portfolio-item"
-                    href="https://mi-thun.github.io/project2/">
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-2.jpg">
+                  </a>
+                </div>
+                <!-- Single item: Web Development -->
+                <div class="single-item col-6 col-lg-4 web-dev">
+                  <a class="portfolio-item" href="https://mi-thun.github.io/project2/">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Item" src="img/item-2.jpg">
                       <div class="item-content">
-                        <h6 class="content-title">Dhaka Bank Project</h6><span class="content-more">Click For More
-                          Info</span>
+                        <h6 class="content-title">Lok Lagbe Management System</h6>
+                        <span class="content-more">Click For More Info</span>
                       </div>
                     </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 photos"><a class="portfolio-item"
-                    href="https://mi-thun.github.io/project2/">
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-2.jpg">
+                  </a>
+                </div>
+                <!-- Single item: Software Development -->
+                <div class="single-item col-6 col-lg-4 software-dev">
+                  <a class="portfolio-item" href="https://mi-thun.github.io/project3/">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Item" src="img/item-3.jpg">
                       <div class="item-content">
-                        <h6 class="content-title">Cafe Shop Management</h6><span class="content-more">Click For More
-                          Info</span>
+                        <h6 class="content-title">Crazy8 - Reward Earning App</h6>
+                        <span class="content-more">Click For More Info</span>
                       </div>
                     </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 design"><a class="portfolio-item"
-                    href="https://mi-thun.github.io/project3/">
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-3.jpg">
+                  </a>
+                </div>
+                <!-- Single item: Software Development -->
+                <div class="single-item col-6 col-lg-4 software-dev">
+                  <a class="portfolio-item" href="https://mi-thun.github.io/project4/">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Item" src="img/item-4.jpg">
                       <div class="item-content">
-                        <h6 class="content-title">Lok Lagbe</h6><span class="content-more">Click For More
-                          Info</span>
+                        <h6 class="content-title">Event Management App</h6>
+                        <span class="content-more">Click For More Info</span>
                       </div>
                     </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 brand"><a class="portfolio-item"
-                    href="https://mi-thun.github.io/project3/">
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-4.jpg">
+                  </a>
+                </div>
+                <!-- Single item: Data Science -->
+                <div class="single-item col-6 col-lg-4 data-science">
+                  <a class="portfolio-item" href="https://mi-thun.github.io/project5/">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Item" src="img/item-5.jpg">
                       <div class="item-content">
-                        <h6 class="content-title">Crazy8- Earn & Learn app</h6><span class="content-more">Click For More
-                          Info</span>
+                        <h6 class="content-title">Covid Prediction Using Regression Algorithms</h6>
+                        <span class="content-more">Click For More Info</span>
                       </div>
                     </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 brand"><a class="portfolio-item" href="img/item-5.jpg"
-                    data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-5.jpg">
+                  </a>
+                </div>
+                <!-- Single item: Data Science -->
+                <div class="single-item col-6 col-lg-4 data-science">
+                  <a class="portfolio-item" href="https://mi-thun.github.io/project6/">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Item" src="img/item-6.jpg">
                       <div class="item-content">
-                        <h6 class="content-title">Covid Prediction Using Regression Algorithms</h6><span
-                          class="content-more">Click For More
-                          Info</span>
+                        <h6 class="content-title">Web Scraping DataCamp Website</h6>
+                        <span class="content-more">Click For More Info</span>
                       </div>
                     </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 photos"><a class="portfolio-item" href="img/item-6.jpg"
-                    data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-6.jpg">
+                  </a>
+                </div>
+                <!-- Single item: Software Development -->
+                <div class="single-item col-6 col-lg-4 software-dev">
+                  <a class="portfolio-item" href="https://mi-thun.github.io/project7/">
+                    <div class="portfolio-wrapper">
+                      <img class="img-fluid" alt="Item" src="img/item-6.jpg">
                       <div class="item-content">
-                        <h6 class="content-title">Grocesary Shop Management</h6><span class="content-more">Click For
-                          More
-                          Info</span>
+                        <h6 class="content-title">Lung Cancer Diagnose App</h6>
+                        <span class="content-more">Click For More Info</span>
                       </div>
                     </div>
-                  </a></div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!-- Blog lightbox-->
   <div class="lightbox-wrapper" id="blog" data-simplebar>
@@ -795,7 +899,7 @@
                         <div class="media align-items-center"><span class="info-icon"><i
                               class="icon ion-logo-ionic"></i></span>
                           <div class="media-body info-details">
-                            <h6 class="info-type">Name</h6><span class="info-value">mohsenul Kabir Mithun</span>
+                            <h6 class="info-type">Name</h6><span class="info-value">Mohsenul Kabir Mithun</span>
                           </div>
                         </div>
                       </li>
