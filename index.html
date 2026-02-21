@@ -4,697 +4,753 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mohsenul Kabir Mithun</title>
-  <meta content="Mohsenul Kabir Mithun" name="description">
-  <meta content="Mohsenul Kabir Mithun" name="keywords">
+  <title>Mohsenul Kabir Mithun — Software Engineer</title>
+  <meta name="description"
+    content="Portfolio of Mohsenul Kabir Mithun — Software Engineer specializing in backend development, Python, Django, and scalable systems.">
+  <meta name="keywords"
+    content="Mohsenul Kabir Mithun, Software Engineer, Backend Developer, Python, Django, React, Portfolio">
+  <meta name="author" content="Mohsenul Kabir Mithun">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mohsenul Kabir Mithun — Software Engineer">
+  <meta property="og:description"
+    content="Backend developer building reliable and scalable solutions with Python, Django, React & more.">
+  <meta property="og:type" content="website">
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <!-- Fonts -->
+
+  <!-- Fonts — Modern Inter + Space Grotesk -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
-  <header id="header" class="header d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+  <!-- ===== TOP HORIZONTAL NAVIGATION ===== -->
+  <header id="header" class="header">
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="#hero" class="active"><span>Home</span></a></li>
+        <li><a href="#about"><span>About</span></a></li>
+        <li><a href="#skills"><span>Skills</span></a></li>
+        <li><a href="#resume"><span>Resume</span></a></li>
+        <li><a href="#services"><span>Services</span></a></li>
+        <li><a href="#contact"><span>Contact</span></a></li>
       </ul>
     </nav>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
   </header>
+
   <main class="main">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-      <img src="assets/img/hero.png" alt="">
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Mohsenul Kabir Mithun</h2>
-            <p>I'm <span class="typed"
-                data-typed-items="Software Engineer, Web Developer, Freelancer, Researcher">Developer</span><span
-                class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <a href="https://github.com/mi-thun"><i class="bi bi-github"></i></a>
-              <a href="https://www.facebook.com/mohsenulkabir.mithun.9"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun"><i class="bi bi-linkedin"></i></a>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero" class="hero section dark-background">
+      <div class="hero-gradient-bg"></div>
+      <div class="hero-wall-texture"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-10">
+
+
+            <!-- <div class="aot-wings-hero" data-aos="fade-down" data-aos-delay="50">
+              <svg viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" aria-label="Wings of Freedom">
+                <path d="M145 52 C122 36 92 22 48 15 C68 27 84 39 96 54 Z" fill="currentColor" opacity="0.95" />
+                <path d="M145 57 C116 47 82 36 32 36 C56 43 80 51 96 58 Z" fill="currentColor" opacity="0.9" />
+                <path d="M145 62 C114 60 79 58 28 60 C54 62 80 63 96 63 Z" fill="currentColor" opacity="0.85" />
+                <path d="M145 67 C114 70 79 70 28 75 C54 70 80 67 96 67 Z" fill="currentColor" opacity="0.9" />
+                <path d="M145 72 C118 79 88 83 50 90 C70 82 90 75 96 70 Z" fill="currentColor" opacity="0.95" />
+
+                <path d="M138 52 C120 42 100 33 75 28 C90 35 105 43 114 53 Z" fill="currentColor" opacity="0.4" />
+
+                <rect x="133" y="40" width="34" height="32" rx="6" fill="currentColor" opacity="0.9" />
+                <rect x="139" y="35" width="22" height="42" rx="4" fill="currentColor" opacity="0.6" />
+
+                <path d="M155 52 C178 36 208 22 252 15 C232 27 216 39 204 54 Z" fill="currentColor" opacity="0.95" />
+                <path d="M155 57 C184 47 218 36 268 36 C244 43 220 51 204 58 Z" fill="currentColor" opacity="0.9" />
+                <path d="M155 62 C186 60 221 58 272 60 C246 62 220 63 204 63 Z" fill="currentColor" opacity="0.85" />
+                <path d="M155 67 C186 70 221 70 272 75 C246 70 220 67 204 67 Z" fill="currentColor" opacity="0.9" />
+                <path d="M155 72 C182 79 212 83 250 90 C230 82 210 75 204 70 Z" fill="currentColor" opacity="0.95" />
+          
+                <path d="M162 52 C180 42 200 33 225 28 C210 35 195 43 186 53 Z" fill="currentColor" opacity="0.4" />
+              </svg>
+            </div>
+            <div data-aos="fade-down" data-aos-delay="80">
+              <span class="aot-quote"><span class="aot-jp">戦え</span>&nbsp;·&nbsp;Survey Corps · Beyond the Walls</span>
+            </div> -->
+
+            <div class="code-snippet" data-aos="fade-down" data-aos-delay="80">
+              <code>$ <span class="code-command">npm run build</span> <span class="code-comment">// Crafting digital solutions</span></code>
+            </div>
+
+            <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
+              <span class="badge-dot"></span> Available for opportunities
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+              Hi, I'm <span class="gradient-text">Mohsenul Kabir M.</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+              I'm a <span class="typed"
+                data-typed-items="Software Engineer, Backend Developer, Full Stack Developer, Researcher">Software
+                Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+            </p>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+              Building reliable, scalable systems with Python, Django & modern web technologies
+            </p>
+            <blockquote class="hero-aot-quote" data-aos="fade-up" data-aos-delay="450">
+              <p>"Code is poetry written for computers, but read by humans."</p>
+              <cite>— Software Engineering Philosophy</cite>
+            </blockquote>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+              <a href="#portfolio" class="btn-cta-primary">View My Work <i class="bi bi-arrow-right"></i></a>
+              <a href="#contact" class="btn-cta-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
+              <a href="https://github.com/mi-thun" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" aria-label="LinkedIn"><i
+                  class="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/mohsenulkabir.mithun.9" target="_blank" aria-label="Facebook"><i
+                  class="bi bi-facebook"></i></a>
             </div>
           </div>
         </div>
       </div>
+      <div class="hero-scroll-indicator">
+        <a href="#about"><i class="bi bi-chevron-down"></i></a>
+      </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== ABOUT SECTION ===== -->
     <section id="about" class="about section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Software Engineer with a passion for building reliable and scalable solutions.</p>
-      </div>
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">About Me</span>
+          <h2>Get to know me</h2>
+        </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/IMG_9896.JPG" class="img-fluid" alt="mithun" style="border-radius: 5%">
-          </div>
-          <div class="col-lg-8 content">
-            <h2>Software Engineer</h2>
-            <p class="fst-italic py-3">
-              Greetings, I’m Mithun, a backend developer with a passion for building reliable and scalable solutions.
-              Proficient Software Engineer with 2 years of experience leading development teams through all phases of
-              the
-              software development life cycle. I specialize in creating, testing, and maintaining systems that enhance
-              functionality and performance for client applications using technologies like Python, Django, JavaScript,
-              React, PostgreSQL, MongoDB, and Docker.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+8801639769081</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>Mirpur, Dhaka,
-                      Bangladesh</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>M.Sc. in Computer Science and
-                      Engineering</span></li>
-                </ul>
+        <div class="row gy-5 align-items-center">
+          <!-- <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200"> -->
+          <div class="col-12 col-xl-10 mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-content">
+              <!-- <div class="about-role-badge"><span class="dot"></span>Open to Opportunities</div> -->
+              <h3>Sr. Software Engineer</h3>
+              <p class="about-lead">
+                I'm Mohsenul Kabir Mithun — a backend developer with a passion for building reliable and scalable
+                solutions.
+                With 2.5+ years of experience leading development teams through all phases of the SDLC, I specialize
+                in creating, testing, and maintaining systems that enhance functionality and performance.
+              </p>
+              <!-- <div class="about-stats">
+                <div class="about-stat">
+                  <span class="stat-number">2+</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="about-stat">
+                  <span class="stat-number">15+</span>
+                  <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="about-stat">
+                  <span class="stat-number">3.95</span>
+                  <span class="stat-label">MSc CGPA</span>
+                </div>
+                <div class="about-stat">
+                  <span class="stat-number">1</span>
+                  <span class="stat-label">Publication</span>
+                </div>
+              </div> -->
+              <div class="about-details">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="detail-item">
+                      <i class="bi bi-geo-alt"></i>
+                      <div>
+                        <span class="detail-label">Location</span>
+                        <span class="detail-value">Mirpur, Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-item">
+                      <i class="bi bi-mortarboard"></i>
+                      <div>
+                        <span class="detail-label">Degree</span>
+                        <span class="detail-value">M.Sc. in CSE</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-item">
+                      <i class="bi bi-envelope"></i>
+                      <div>
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value">mohsenulkabirmi8486@gmail.com</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-item">
+                      <i class="bi bi-phone"></i>
+                      <div>
+                        <span class="detail-label">Phone</span>
+                        <span class="detail-value">+8801639769081</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-item">
+                      <i class="bi bi-person"></i>
+                      <div>
+                        <span class="detail-label">Age</span>
+                        <span class="detail-value" id="age"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="detail-item">
+                      <i class="bi bi-check-circle"></i>
+                      <div>
+                        <span class="detail-label">Freelance</span>
+                        <span class="detail-value status-available">Available</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age"></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                    <span>mohsenulkabirmi8486@gmail.com</span>
-                  </li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-              <p class="py-3">
-                I am dedicated to delivering high-quality solutions and thrive in collaborative environments. My
-                expertise
-                lies in solving complex problems and implementing efficient systems. I am committed to continuous
-                learning
-                and staying updated with the latest technologies to provide innovative solutions for my clients.
+              <p class="about-closing">
+                I'm dedicated to delivering high-quality solutions and thrive in collaborative environments. My
+                expertise lies in solving complex problems and implementing efficient systems.
               </p>
             </div>
           </div>
+          <!-- </div> -->
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ===== SKILLS SECTION ===== -->
     <section id="skills" class="skills section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Software Development Life Cycle ∙ Database Design</p>
-        <p>Design Patterns ∙ Data Structures ∙ Algorithm ∙ Python Programming ∙ Backend Development</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-translate"></i> Languages</h4>
-              <p>Bangla, English</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-code-slash"></i> Programming Languages</h4>
-              <p>Python, Java, C++</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-server"></i> Backend</h4>
-              <p>Python, Django, Flask, Scrapy</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-window"></i> Frontend</h4>
-              <p>HTML, CSS, JavaScript, React</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-database"></i> Database</h4>
-              <p>PostgreSQL, MongoDB, ORM, Oracle</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-bug"></i> Software Testing</h4>
-              <p>Selenium, JMeter, Postman</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-phone"></i> Mobile</h4>
-              <p>Java, Flutter</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-bar-chart"></i> Data Science</h4>
-              <p>NumPy, Pandas, Plotly, Matplotlib, Scikit-learn, Keras, TensorFlow</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-cloud-arrow-up"></i> Big Data</h4>
-              <p>Hadoop, PySpark</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-item">
-              <h4><i class="bi bi-tools"></i> Miscellaneous</h4>
-              <p>Git, Docker, Celery, Redis, Elasticsearch, LDAP, MATLAB, Oracle SQL Developer, Jira, PuTTY</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>A detailed overview of my educational background and professional experience.</p>
-      </div>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Mohsenul Kabir Mithun</h4>
-              <p><em>Dedicated and results-driven Software Engineer with a passion for building scalable and efficient
-                  solutions. Proficient in backend development, system design, and delivering high-quality software
-                  solutions.</em></p>
-              <ul class="custom-bullets">
-                <li><i class="bi bi-geo-alt"></i> Mirpur, Dhaka, Bangladesh</li>
-                <li><i class="bi bi-telephone"></i> 01639769081</li>
-                <li><i class="bi bi-envelope"></i> mohsenulkabirmi8486@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>M.Sc. in Computer Science and Engineering</h4>
-              <h5>January 2024 – Present</h5>
-              <p><em>BRAC University</em></p>
-              <p>CGPA: 3.95/4.00 (Thesis pending)</p>
-              <h5>Achievements/Scholarship</h5>
-              <ul class="custom-bullets">
-                <li><i class="bi bi-award"></i> 75% Merit Scholarship - Awarded for obtaining CGPA of 3.95/+.</li>
-                <li><i class="bi bi-award"></i> 50% Merit Scholarship - Awarded for obtaining CGPA of 3.90/+.</li>
-                <li><i class="bi bi-award"></i> 40% Tuition Fee Waiver - Awarded for outstanding undergraduate
-                  performance.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>B.Sc. in Computer Science and Engineering</h4>
-              <h5>September 2019 – September 2023</h5>
-              <p><em>East West University</em></p>
-              <p>CGPA: 3.76/4.00</p>
-              <h5>Achievements/Scholarship</h5>
-              <ul class="custom-bullets">
-                <li><i class="bi bi-award"></i> 'Cum Laude' Academic Achievement - Awarded for obtaining CGPA of 3.75/+
-                  in 12 consecutive semesters (Four academic calendars).</li>
-                <li><i class="bi bi-award"></i> Dean's List Scholarship - Awarded for obtaining an average GPA of 3.75/+
-                  in 3 consecutive semesters (One academic calendar).</li>
-                <li><i class="bi bi-award"></i> Medha Lalon Scholarship - Awarded for obtaining an average GPA of 3.50/+
-                  in 3 consecutive semesters (One academic calendar).</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Publication</h3>
-            <div class="resume-item pb-0">
-              <ul class="custom-bullets">
-                <li>
-                  <i class="bi bi-journal-text"></i>
-                  <p> <strong>Computer Aided Strategy to Diagnose Lung Cancer from
-                      CT-Scan Images using Inception Architecture</strong>, 2nd International Conference on Big Data,
-                    IoT
-                    and Machine Learning (BIM), pp. XXX–XXX, to be published in Taylor and Francis Book, 2023. DOI:
-                    XXXXXXXXXXXXXXXX [Book Chapter] (Accepted) <a href="link" target="_blank">(link)</a></p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Software Engineer</h4>
-              <h5>June 2025 – Present</h5>
-              <p><em>Software Global Consultancy (SGC)</em></p>
-              <ul class="custom-bullets">
-                <li><i class="bi bi-check-circle"></i> Designed, developed, and maintained robust backend services with
-                  a focus on scalability and performance.</li>
-                <li><i class="bi bi-check-circle"></i> Implemented new features, addressed technical requirements,
-                  resolved bugs, and ensured platform security and stability.</li>
-                <li><i class="bi bi-check-circle"></i> Managed production deployments, performed root cause analysis of
-                  outages, and ensured uptime.</li>
-                <li><i class="bi bi-check-circle"></i> Created scalable and reusable backend architecture following best
-                  practices.</li>
-                <li><i class="bi bi-check-circle"></i> Maintained high performance and responsiveness of APIs and
-                  services.</li>
-                <li><i class="bi bi-check-circle"></i> Collaborated closely with front-end teams and product managers to
-                  align on requirements.</li>
-                <li><i class="bi bi-check-circle"></i> Led the design, development, and maintenance of multiple
-                  enterprise-grade applications across banking, logistics, military, education, and data analytics
-                  domains.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Associate Software Engineer</h4>
-              <h5>June 2023 – June 2025</h5>
-              <p><em>Software Global Consultancy (SGC)</em></p>
-              <ul class="custom-bullets">
-                <li><i class="bi bi-check-circle"></i> Assisted in designing and developing backend services with a
-                  focus on scalability and performance.</li>
-                <li><i class="bi bi-check-circle"></i> Implemented new features and resolved bugs to ensure platform
-                  stability and security.</li>
-                <li><i class="bi bi-check-circle"></i> Supported production deployments and performed root cause
-                  analysis of outages.</li>
-                <li><i class="bi bi-check-circle"></i> Collaborated with senior engineers to create reusable backend
-                  architecture following best practices.</li>
-                <li><i class="bi bi-check-circle"></i> Maintained high performance and responsiveness of APIs and
-                  services.</li>
-                <li><i class="bi bi-check-circle"></i> Worked closely with front-end teams and product managers to meet
-                  project requirements.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Teaching Assistant</h4>
-              <h5>June 2023 – September 2023</h5>
-              <p><em>East West University</em></p>
-              <ul class="custom-bullets">
-                <li><i class="bi bi-check-circle"></i> Assisted in conducting lectures and laboratory sessions.</li>
-                <li><i class="bi bi-check-circle"></i> Provided one-on-one assistance to students, helping them grasp
-                  complex technical concepts and improve their coding skills.</li>
-              </ul>
-            </div>
-          </div>
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Expertise</span>
+          <h2>Skills & Technologies</h2>
+          <p class="section-subtitle">Software Development Life Cycle &bull; Database Design &bull; Design Patterns
+            &bull; Data Structures &bull; Algorithms</p>
         </div>
-      </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
-      </div>
-      <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul>
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Learning Management System (LMS) - 3PCLTD</h4>
-                <p>Contributed to the design and development of a robust LMS, enhancing online learning experiences</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="Quizller App"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Abu Kalam Shamsuddin Portfolio</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card Service Workflow - Dhaka Bank</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Small and Medium Enterprises Workflow - Dhaka Bank</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Quizller App</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Securing a Networked System with Public Key Infrastructure </h4>
-                <p>Implementation of Transport Layer
-                  Security (TLS) on HTTP for https:// connection</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Log Lagbe</h4>
-                <p>Online worker hire system</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Cafe Shop Management System</h4>
-                <p>User site</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Cafe Shop Management System</h4>
-                <p>Admin And Employee dashboard</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Offering a range of professional services to meet your development and automation needs.</p>
-      </div>
-      <div class="container">
-        <div class="row gy-4">
-
+        <div class="row g-4">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762">
-                  </path>
-                </svg>
-                <i class="bi bi-code-slash"></i>
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-code-slash"></i></div>
+              <h4>Programming Languages</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">JavaScript</span>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-                <h3>Full Stack Web Development</h3>
-              </a>
-              <p>Develop websites as a full-stack web developer using Python, Django, and React.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-server"></i></div>
+              <h4>Backend</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Scrapy</span>
+                <span class="skill-tag">REST APIs</span>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-orange position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762">
-                  </path>
-                </svg>
-                <i class="bi bi-terminal"></i>
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-window"></i></div>
+              <h4>Frontend</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Python Projects & Automation</h3>
-              </a>
-              <p>Build, debug, and automate Python projects, scripts, and custom programs.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-database"></i></div>
+              <h4>Database</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">ORM</span>
+                <span class="skill-tag">Oracle</span>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-pink position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762">
-                  </path>
-                </svg>
-                <i class="bi bi-box"></i>
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-bar-chart"></i></div>
+              <h4>Data Science</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">NumPy</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Keras</span>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Docker & SSL Support</h3>
-              </a>
-              <p>Assist with Docker, Dockerfile, Docker Compose, and resolving SSL certificate issues.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-gear-fill"></i></div>
+              <h4>DevOps</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Linux</span>
+              </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item item-indigo position-relative">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762">
-                  </path>
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-bug"></i></div>
+              <h4>Testing & QA</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Selenium</span>
+                <span class="skill-tag">JMeter</span>
+                <span class="skill-tag">Postman</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="450">
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-phone"></i></div>
+              <h4>Mobile</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Flutter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill-card">
+              <div class="skill-card-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+              <h4>Big Data</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Hadoop</span>
+                <span class="skill-tag">PySpark</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AoT CHARACTER SECTION ===== -->
+    <section class="aot-characters section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Survey Corps Squad</span>
+          <h2>Titan Slayers — Developer Roles</h2>
+          <p class="section-subtitle">Like the Scout Regiment, every developer has a critical role in defeating the
+            titans of technology.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Eren Character Card - Full Stack Developer -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="character-card eren-card">
+              <div class="character-silhouette">
+                <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" class="character-svg">
+                  <!-- Eren silhouette -->
+                  <ellipse cx="60" cy="35" rx="18" ry="22" fill="currentColor" />
+                  <rect x="38" y="55" width="44" height="60" rx="8" fill="currentColor" />
+                  <rect x="30" y="70" width="15" height="50" fill="currentColor" />
+                  <rect x="75" y="70" width="15" height="50" fill="currentColor" />
+                  <rect x="35" y="120" width="12" height="40" fill="currentColor" />
+                  <rect x="73" y="120" width="12" height="40" fill="currentColor" />
+                  <circle cx="50" cy="30" r="4" fill="#5dbb6c" />
+                  <circle cx="70" cy="30" r="4" fill="#5dbb6c" />
                 </svg>
-                <i class="bi bi-browser-chrome"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Figma to Responsive Code</h3>
-              </a>
-              <p>Convert your Figma designs into responsive HTML, CSS, or React projects.</p>
+              <div class="character-content">
+                <h3>Eren</h3>
+                <p class="character-role">Attack Specialist</p>
+                <p class="character-desc">All-around developer. Aggressive approach to problem-solving with
+                  determination.</p>
+                <div class="character-skills">
+                  <span class="skill-badge">Backend</span>
+                  <span class="skill-badge">Frontend</span>
+                  <span class="skill-badge">DevOps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mikasa Character Card - Frontend Developer -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="character-card mikasa-card">
+              <div class="character-silhouette">
+                <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" class="character-svg">
+                  <!-- Mikasa silhouette - more feminine -->
+                  <ellipse cx="60" cy="33" rx="16" ry="20" fill="currentColor" />
+                  <polygon points="60,20 70,55 50,55" fill="currentColor" />
+                  <rect x="40" y="55" width="40" height="50" rx="6" fill="currentColor" />
+                  <rect x="32" y="72" width="13" height="48" fill="currentColor" />
+                  <rect x="75" y="72" width="13" height="48" fill="currentColor" />
+                  <rect x="37" y="125" width="10" height="40" fill="currentColor" />
+                  <rect x="73" y="125" width="10" height="40" fill="currentColor" />
+                  <circle cx="50" cy="28" r="3" fill="#d4892a" />
+                  <circle cx="70" cy="28" r="3" fill="#d4892a" />
+                </svg>
+              </div>
+              <div class="character-content">
+                <h3>Mikasa</h3>
+                <p class="character-role">Defense Specialist</p>
+                <p class="character-desc">UI/UX focused developer. Protects user experience with precision and care.</p>
+                <div class="character-skills">
+                  <span class="skill-badge">React</span>
+                  <span class="skill-badge">UI/UX</span>
+                  <span class="skill-badge">Mobile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Armin Character Card - Backend Developer -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="character-card armin-card">
+              <div class="character-silhouette">
+                <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" class="character-svg">
+                  <!-- Armin silhouette - strategic thinker -->
+                  <ellipse cx="60" cy="32" rx="15" ry="19" fill="currentColor" />
+                  <path d="M45 50 Q45 65 55 72 L65 72 Q75 65 75 50 Z" fill="currentColor" />
+                  <rect x="42" y="75" width="12" height="48" fill="currentColor" />
+                  <rect x="66" y="75" width="12" height="48" fill="currentColor" />
+                  <rect x="45" y="128" width="10" height="38" fill="currentColor" />
+                  <rect x="65" y="128" width="10" height="38" fill="currentColor" />
+                  <!-- Brain indicator -->
+                  <circle cx="60" cy="32" r="3" fill="#c04020" opacity="0.7" />
+                </svg>
+              </div>
+              <div class="character-content">
+                <h3>Armin</h3>
+                <p class="character-role">Strategic Coordinator</p>
+                <p class="character-desc">Architecture and database specialist. Strategizes scalable solutions.</p>
+                <div class="character-skills">
+                  <span class="skill-badge">Python</span>
+                  <span class="skill-badge">Databases</span>
+                  <span class="skill-badge">APIs</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                          Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at
-                          semper.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Kazi Sifat Al Maksud</h3>
-                      <h4>Executive at Suvastu</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
+    <!-- ===== RESUME SECTION ===== -->
+    <section id="resume" class="resume section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Career</span>
+          <h2>Resume & Experience</h2>
+          <p class="section-subtitle">Education, professional experience, and research achievements</p>
+        </div>
+
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <!-- <div class="resume-category">
+              <h3 class="resume-title"><i class="bi bi-person-badge"></i> Summary</h3>
+              <div class="resume-item">
+                <h4>Mohsenul Kabir Mithun</h4>
+                <p><em>Dedicated and results-driven Software Engineer with a passion for building scalable and efficient
+                    solutions. Proficient in backend development, system design, and delivering high-quality software
+                    solutions.</em></p>
+                <ul class="resume-list">
+                  <li><i class="bi bi-geo-alt"></i> Mirpur, Dhaka, Bangladesh</li>
+                  <li><i class="bi bi-telephone"></i> 01639769081</li>
+                  <li><i class="bi bi-envelope"></i> mohsenulkabirmi8486@gmail.com</li>
+                </ul>
+              </div>
+            </div> -->
+
+            <div class="resume-category">
+              <h3 class="resume-title"><i class="bi bi-mortarboard"></i> Education</h3>
+              <div class="resume-item">
+                <h4>M.Sc. in Computer Science and Engineering</h4>
+                <div class="resume-date"><i class="bi bi-calendar3"></i> January 2024 – Present</div>
+                <p class="resume-org">BRAC University</p>
+                <p class="resume-gpa">CGPA: 3.95/4.00 (Thesis pending)</p>
+                <div class="achievements">
+                  <h5><i class="bi bi-trophy"></i> Achievements</h5>
+                  <ul class="resume-list">
+                    <li><i class="bi bi-award"></i> 75% Merit Scholarship — CGPA 3.95+</li>
+                    <li><i class="bi bi-award"></i> 50% Merit Scholarship — CGPA 3.90+</li>
+                    <li><i class="bi bi-award"></i> 40% Tuition Fee Waiver — Outstanding undergrad performance</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <h4>B.Sc. in Computer Science and Engineering</h4>
+                <div class="resume-date"><i class="bi bi-calendar3"></i> September 2019 – September 2023</div>
+                <p class="resume-org">East West University</p>
+                <p class="resume-gpa">CGPA: 3.76/4.00</p>
+                <div class="achievements">
+                  <h5><i class="bi bi-trophy"></i> Achievements</h5>
+                  <ul class="resume-list">
+                    <li><i class="bi bi-award"></i> 'Cum Laude' — CGPA 3.75+ across 12 consecutive semesters</li>
+                    <li><i class="bi bi-award"></i> Dean's List Scholarship — GPA 3.75+ for 3 consecutive semesters</li>
+                    <li><i class="bi bi-award"></i> Medha Lalon Scholarship — GPA 3.50+ for 3 consecutive semesters</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum
-                          eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim
-                          culpa.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Iqbal Ahmed</h3>
-                      <h4>Business Analytics at SGC</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="row gy-4 justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="testimonial-content">
-                      <p>
-                        <i class="bi bi-quote quote-icon-left"></i>
-                        <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                          duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                        <i class="bi bi-quote quote-icon-right"></i>
-                      </p>
-                      <h3>Alex Diaz</h3>
-                      <h4>Fiverr Market Place Buyer</h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                          class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 text-center">
-                    <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="">
-                  </div>
-                </div>
+            <div class="resume-category">
+              <h3 class="resume-title"><i class="bi bi-journal-text"></i> Publication</h3>
+              <div class="resume-item">
+                <p><strong>Computer Aided Strategy to Diagnose Lung Cancer from CT-Scan Images using Inception
+                    Architecture</strong>, 2nd International Conference on Big Data, IoT and Machine Learning (BIM), pp.
+                  XXX–XXX, Taylor and Francis Book, 2023. [Book Chapter] (Accepted)</p>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+
+          <!-- Right Column -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="resume-category">
+              <h3 class="resume-title"><i class="bi bi-briefcase"></i> Professional Experience</h3>
+
+              <div class="resume-item">
+                <h4>Sr. Software Engineer</h4>
+                <div class="resume-date"><i class="bi bi-calendar3"></i> June 2025 – Present</div>
+                <p class="resume-org">Software Global Consultancy (SGC)</p>
+                <ul class="resume-list">
+                  <li><i class="bi bi-check2-circle"></i> Designed, developed, and maintained robust backend services
+                    with a focus on scalability and performance</li>
+                  <li><i class="bi bi-check2-circle"></i> Implemented features, resolved bugs, and ensured platform
+                    security and stability</li>
+                  <li><i class="bi bi-check2-circle"></i> Managed production deployments and performed root cause
+                    analysis of outages</li>
+                  <li><i class="bi bi-check2-circle"></i> Created scalable and reusable backend architecture following
+                    best practices</li>
+                  <li><i class="bi bi-check2-circle"></i> Led development of enterprise applications across banking,
+                    logistics, military, education, and analytics domains</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Associate Software Engineer</h4>
+                <div class="resume-date"><i class="bi bi-calendar3"></i> June 2023 – June 2025</div>
+                <p class="resume-org">Software Global Consultancy (SGC)</p>
+                <ul class="resume-list">
+                  <li><i class="bi bi-check2-circle"></i> Assisted in designing and developing backend services for
+                    scalability and performance</li>
+                  <li><i class="bi bi-check2-circle"></i> Implemented features and resolved bugs to ensure platform
+                    stability</li>
+                  <li><i class="bi bi-check2-circle"></i> Supported production deployments and root cause analysis</li>
+                  <li><i class="bi bi-check2-circle"></i> Maintained high performance and responsiveness of APIs and
+                    services</li>
+                  <li><i class="bi bi-check2-circle"></i> Worked closely with front-end teams and product managers</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Teaching Assistant</h4>
+                <div class="resume-date"><i class="bi bi-calendar3"></i> June 2023 – September 2023</div>
+                <p class="resume-org">East West University</p>
+                <ul class="resume-list">
+                  <li><i class="bi bi-check2-circle"></i> Assisted in conducting lectures and laboratory sessions</li>
+                  <li><i class="bi bi-check2-circle"></i> Provided one-on-one assistance to students on complex
+                    technical concepts and coding skills</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section id="services" class="services section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Offerings</span>
+          <h2>Services I Provide</h2>
+          <p class="section-subtitle">Professional services to meet your development and automation needs</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="service-icon">
+                <div class="service-icon-inner"><i class="bi bi-code-slash"></i></div>
+              </div>
+              <div class="service-content">
+                <h3>Backend Web Development</h3>
+                <p>RESTful API development, database design, server architecture, and backend optimization using Python,
+                  Django, and modern frameworks.</p>
+                <a href="pages/service-details.html?service=backend" class="service-link">Learn More <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon">
+                <div class="service-icon-inner"><i class="bi bi-terminal"></i></div>
+              </div>
+              <div class="service-content">
+                <h3>Python Projects & Automation</h3>
+                <p>Build, debug, and automate Python projects, scripts, and custom programs for your business needs.</p>
+                <a href="pages/service-details.html?service=python" class="service-link">Learn More <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon">
+                <div class="service-icon-inner"><i class="bi bi-gear-fill"></i></div>
+              </div>
+              <div class="service-content">
+                <h3>DevOps Service</h3>
+                <p>CI/CD pipeline setup, containerization, cloud deployment, infrastructure automation, and monitoring
+                  solutions.</p>
+                <a href="pages/service-details.html?service=devops" class="service-link">Learn More <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-icon">
+                <div class="service-icon-inner"><i class="bi bi-window-dock"></i></div>
+              </div>
+              <div class="service-content">
+                <h3>Frontend Service using React</h3>
+                <p>Modern, interactive React applications with state management, component architecture, responsive
+                  design, and performance optimization.</p>
+                <a href="pages/service-details.html?service=frontend" class="service-link">Learn More <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="contact section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div>
-      <div class="container" data-aos="fade" data-aos-delay="100">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Reach Out</span>
+          <h2>Let's Work Together</h2>
+          <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+        </div>
+
         <div class="row gy-4">
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-info-cards">
+              <div class="contact-info-card">
+                <div class="contact-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <h4>Location</h4>
                 <p>Mirpur, Dhaka, Bangladesh</p>
               </div>
-            </div>
 
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Us</h3>
-                <p>01639769081</p>
+              <div class="contact-info-card">
+                <div class="contact-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <h4>Phone</h4>
+                <p>+8801639769081</p>
               </div>
-            </div>
 
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
+              <div class="contact-info-card">
+                <div class="contact-icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <h4>Email</h4>
                 <p>mohsenulkabirmi8486@gmail.com</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
-              <div class="row gy-4">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/contact.php" method="post" class="contact-form php-email-form">
+              <div class="row g-3">
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <div class="form-floating">
+                    <input type="text" name="name" class="form-control" id="contactName" placeholder="Your Name"
+                      required>
+                    <label for="contactName">Your Name</label>
+                  </div>
                 </div>
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" name="email" id="contactEmail" placeholder="Your Email"
+                      required>
+                    <label for="contactEmail">Your Email</label>
+                  </div>
                 </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" name="subject" id="contactSubject" placeholder="Subject"
+                      required>
+                    <label for="contactSubject">Subject</label>
+                  </div>
                 </div>
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" name="message" id="contactMessage" placeholder="Message"
+                      style="height: 180px" required></textarea>
+                    <label for="contactMessage">Your Message</label>
+                  </div>
                 </div>
-                <div class="col-md-12 text-center">
+                <div class="col-12">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <button type="submit">Send Message</button>
+                  <button type="submit" class="btn-submit">
+                    <span>Send Message</span>
+                    <i class="bi bi-send"></i>
+                  </button>
                 </div>
               </div>
             </form>
@@ -704,33 +760,54 @@
     </section>
 
   </main>
-  <footer id="footer" class="footer position-relative light-background">
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" class="footer">
     <div class="container">
-      <h3 class="sitename">Mohsenul Kabir Mithun</h3>
-      <p>Passionate Software Engineer dedicated to building scalable and efficient solutions. Let's create something
-        amazing together!</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/mi-thun"><i class="bi bi-github"></i></a>
-        <a href="https://www.facebook.com/mohsenulkabir.mithun.9"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun"><i class="bi bi-linkedin"></i></a>
+      <div class="footer-wings">
+        <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" class="footer-wings-svg" aria-hidden="true">
+          <path d="M78 30 C65 20 50 13 28 9 C40 16 50 24 56 31 Z" fill="currentColor" opacity="0.8" />
+          <path d="M78 33 C62 27 44 21 18 21 C34 26 52 30 57 34 Z" fill="currentColor" opacity="0.75" />
+          <path d="M78 37 C61 36 44 35 16 37 C33 37 53 38 57 38 Z" fill="currentColor" opacity="0.7" />
+          <path d="M78 41 C61 43 44 43 16 46 C33 43 53 41 57 41 Z" fill="currentColor" opacity="0.75" />
+          <path d="M78 45 C63 49 48 52 29 57 C43 51 56 47 57 44 Z" fill="currentColor" opacity="0.8" />
+          <rect x="71" y="22" width="18" height="18" rx="3" fill="currentColor" opacity="0.85" />
+          <rect x="74" y="19" width="12" height="24" rx="2" fill="currentColor" opacity="0.5" />
+          <path d="M82 30 C95 20 110 13 132 9 C120 16 110 24 104 31 Z" fill="currentColor" opacity="0.8" />
+          <path d="M82 33 C98 27 116 21 142 21 C126 26 108 30 103 34 Z" fill="currentColor" opacity="0.75" />
+          <path d="M82 37 C99 36 116 35 144 37 C127 37 107 38 103 38 Z" fill="currentColor" opacity="0.7" />
+          <path d="M82 41 C99 43 116 43 144 46 C127 43 107 41 103 41 Z" fill="currentColor" opacity="0.75" />
+          <path d="M82 45 C97 49 112 52 131 57 C117 51 104 47 103 44 Z" fill="currentColor" opacity="0.8" />
+        </svg>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Mohsenul Kabir Mithun</strong> <span>All Rights
-            Reserved</span>
+      <div class="footer-content">
+        <h3 class="footer-name">Mohsenul Kabir Mithun</h3>
+        <p class="footer-tagline">Building scalable solutions, one commit at a time.</p>
+        <!-- <p class="footer-aot-tagline">「戦え」 — Tatakae</p> -->
+        <div class="footer-social">
+          <a href="https://github.com/mi-thun" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" aria-label="LinkedIn"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="https://www.facebook.com/mohsenulkabir.mithun.9" target="_blank" aria-label="Facebook"><i
+              class="bi bi-facebook"></i></a>
         </div>
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Mohsenul Kabir Mithun. All Rights Reserved.</p>
+        <!-- <p class="footer-aot-credit">Inspired by &nbsp;<span>進撃の巨人</span>&nbsp; Attack on Titan · Survey Corps Division -->
+        </p>
       </div>
     </div>
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
   <!-- Preloader -->
   <div id="preloader"></div>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -746,19 +823,19 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Function to calculate age -->
+  <!-- Inline utilities -->
   <script>
+    // Calculate age
     function calculateAge(birthday) {
       const today = new Date();
       const birthDate = new Date(birthday);
       let age = today.getFullYear() - birthDate.getFullYear();
       const monthDiff = today.getMonth() - birthDate.getMonth();
-      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-      }
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) age--;
       return age;
     }
     document.getElementById('age').textContent = calculateAge('2001-01-01');
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 
 </body>

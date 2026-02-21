@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Service Details â€” Mohsenul Kabir Mithun</title>
+    <meta name="description" content="Service details â€” Mohsenul Kabir Mithun portfolio">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <style>
+        /* Service nav buttons */
+        .services-nav .service-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 13px 16px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            text-align: left;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .services-nav .service-btn:hover {
+            background: var(--accent-muted);
+            border-color: var(--border-accent);
+            color: var(--accent);
+        }
+
+        .services-nav .service-btn.active {
+            background: var(--gradient-primary);
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+        }
+
+        .services-nav .service-btn i {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* Content panels */
+        .service-content-panel {
+            display: none;
+        }
+
+        .service-content-panel.active {
+            display: block;
+            animation: fadeInUp 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Highlights grid */
+        .service-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin: 28px 0;
+        }
+
+        .highlight-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 24px 16px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+        }
+
+        .highlight-card:hover::after {
+            opacity: 1;
+        }
+
+        .highlight-card i {
+            font-size: 30px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .highlight-card h5 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 6px;
+        }
+
+        .highlight-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body class="service-details-page">
+
+    <!-- ===== TOP HORIZONTAL NAVIGATION ===== -->
+    <header id="header" class="header">
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="../index.html#hero"><span>Home</span></a></li>
+                <li><a href="../index.html#about"><span>About</span></a></li>
+                <li><a href="../index.html#skills"><span>Skills</span></a></li>
+                <li><a href="../index.html#resume"><span>Resume</span></a></li>
+                <li><a href="../index.html#services" class="active"><span>Services</span></a></li>
+                <li><a href="../index.html#contact"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <!-- <div class="page-title" data-aos="fade">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="current">Services</li>
+                    </ol>
+                </nav>
+                <h1>My Services</h1>
+            </div>
+        </div> -->
+
+        <!-- Service Details Section -->
+        <section id="service-details" class="service-details section">
+            <div class="container">
+                <div class="row gy-5">
+
+                    <!-- Services Navigation Sidebar -->
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-box">
+                            <h4 style="margin-bottom: 20px;">Services</h4>
+                            <div class="services-nav">
+                                <button class="service-btn active" onclick="showService('backend')">
+                                    <i class="bi bi-code-slash"></i>
+                                    <span>Backend Development</span>
+                                </button>
+                                <button class="service-btn" onclick="showService('frontend')">
+                                    <i class="bi bi-window-dock"></i>
+                                    <span>Frontend (React)</span>
+                                </button>
+                                <button class="service-btn" onclick="showService('python')">
+                                    <i class="bi bi-terminal"></i>
+                                    <span>Python & Automation</span>
+                                </button>
+                                <button class="service-btn" onclick="showService('devops')">
+                                    <i class="bi bi-gear-fill"></i>
+                                    <span>DevOps Service</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="help-box d-flex flex-column justify-content-center align-items-center">
+                            <i class="bi bi-headset help-icon"></i>
+                            <h4>Let's Work Together</h4>
+                            <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i>
+                                <span>+8801639769081</span>
+                            </p>
+                            <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a
+                                    href="mailto:mohsenulkabirmi8486@gmail.com">mohsenulkabirmi8486@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Service Content -->
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+                        <!-- Backend Development Service -->
+                        <div id="backend" class="service-content-panel active">
+                            <h2>Backend Web Development</h2>
+                            <p>I build robust, scalable backend systems that power modern applications. Specializing in
+                                REST API design, database architecture, and server-side optimization with Python and
+                                Django.</p>
+
+                            <div class="service-highlights">
+                                <div class="highlight-card">
+                                    <i class="bi bi-database"></i>
+                                    <h5>Database Design</h5>
+                                    <p>PostgreSQL, MySQL, optimization</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-diagram-3"></i>
+                                    <h5>API Architecture</h5>
+                                    <p>RESTful, GraphQL, OAuth2</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-lightning-fill"></i>
+                                    <h5>Performance</h5>
+                                    <p>Caching, indexing, monitoring</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-shield-check"></i>
+                                    <h5>Security</h5>
+                                    <p>Authentication, authorization, encryption</p>
+                                </div>
+                            </div>
+
+                            <h4>Key Deliverables</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span>Scalable REST APIs with Django & DRF</span>
+                                </li>
+                                <li><i class="bi bi-check-circle"></i> <span>Database schema design &
+                                        optimization</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Authentication & authorization
+                                        systems</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Caching strategies & performance
+                                        tuning</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Unit & integration testing</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>API documentation & deployment</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Frontend React Service -->
+                        <div id="frontend" class="service-content-panel">
+                            <h2>Frontend Service using React</h2>
+                            <p>Create modern, interactive user interfaces with React. I build scalable component
+                                architectures, manage complex state, and ensure responsive design across all devices.
+                            </p>
+
+                            <div class="service-highlights">
+                                <div class="highlight-card">
+                                    <i class="bi bi-palette"></i>
+                                    <h5>UI/UX Design</h5>
+                                    <p>Modern interfaces, accessibility</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-puzzle"></i>
+                                    <h5>Components</h5>
+                                    <p>Reusable, modular architecture</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-phone"></i>
+                                    <h5>Responsive</h5>
+                                    <p>Mobile-first design, all screens</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-speedometer"></i>
+                                    <h5>Performance</h5>
+                                    <p>Optimization, lazy loading, bundles</p>
+                                </div>
+                            </div>
+
+                            <h4>Key Deliverables</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span>Reusable React component system</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>State management (Redux, Context
+                                        API)</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Responsive & mobile-friendly design</span>
+                                </li>
+                                <li><i class="bi bi-check-circle"></i> <span>API integration & data fetching</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Performance optimization & bundling</span>
+                                </li>
+                                <li><i class="bi bi-check-circle"></i> <span>Testing & code documentation</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Python & Automation Service -->
+                        <div id="python" class="service-content-panel">
+                            <h2>Python Projects & Automation</h2>
+                            <p>Leverage Python's versatility for custom projects, data processing, automation
+                                workflows, and scripting. From web scraping to batch processing and system automation.
+                            </p>
+
+                            <div class="service-highlights">
+                                <div class="highlight-card">
+                                    <i class="bi bi-gear"></i>
+                                    <h5>Automation</h5>
+                                    <p>Workflow, task scheduling, scripts</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-graph-up"></i>
+                                    <h5>Data Processing</h5>
+                                    <p>ETL, analysis, visualization</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-box-seam"></i>
+                                    <h5>Web Scraping</h5>
+                                    <p>BeautifulSoup, Selenium, Scrapy</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-tools"></i>
+                                    <h5>Custom Tools</h5>
+                                    <p>Utilities, libraries, integrations</p>
+                                </div>
+                            </div>
+
+                            <h4>Key Deliverables</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span>Automation scripts for complex
+                                        workflows</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Data extraction & processing
+                                        pipelines</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Web scraping & parsing solutions</span>
+                                </li>
+                                <li><i class="bi bi-check-circle"></i> <span>Batch processing & scheduled jobs</span>
+                                </li>
+                                <li><i class="bi bi-check-circle"></i> <span>Python libraries & reusable modules</span>
+                                </li>
+                                <li><i class="bi bi-check-circle"></i> <span>System integration & deployment</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- DevOps Service -->
+                        <div id="devops" class="service-content-panel">
+                            <h2>DevOps Service</h2>
+                            <p>Build reliable, scalable infrastructure with modern DevOps practices. CI/CD pipelines,
+                                containerization, cloud deployment, and infrastructure automation for seamless delivery.
+                            </p>
+
+                            <div class="service-highlights">
+                                <div class="highlight-card">
+                                    <i class="bi bi-git"></i>
+                                    <h5>CI/CD Pipelines</h5>
+                                    <p>GitHub Actions, GitLab, automation</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-box-seam"></i>
+                                    <h5>Containerization</h5>
+                                    <p>Docker, Docker Compose, images</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-cloud"></i>
+                                    <h5>Cloud Deployment</h5>
+                                    <p>AWS, Google Cloud, DigitalOcean</p>
+                                </div>
+                                <div class="highlight-card">
+                                    <i class="bi bi-eye"></i>
+                                    <h5>Monitoring</h5>
+                                    <p>Logging, analytics, alerting</p>
+                                </div>
+                            </div>
+
+                            <h4>Key Deliverables</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle"></i> <span>Complete CI/CD pipeline setup &
+                                        configuration</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Docker containerization &
+                                        optimization</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Infrastructure as Code (IaC)</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Cloud deployment & scaling
+                                        strategies</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Monitoring, logging, & alerting
+                                        setup</span></li>
+                                <li><i class="bi bi-check-circle"></i> <span>Security hardening & best practices</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-wings">
+                <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" class="footer-wings-svg"
+                    aria-hidden="true">
+                    <path d="M78 30 C65 20 50 13 28 9 C40 16 50 24 56 31 Z" fill="currentColor" opacity="0.8" />
+                    <path d="M78 33 C62 27 44 21 18 21 C34 26 52 30 57 34 Z" fill="currentColor" opacity="0.75" />
+                    <path d="M78 37 C61 36 44 35 16 37 C33 37 53 38 57 38 Z" fill="currentColor" opacity="0.7" />
+                    <path d="M78 41 C61 43 44 43 16 46 C33 43 53 41 57 41 Z" fill="currentColor" opacity="0.75" />
+                    <path d="M78 45 C63 49 48 52 29 57 C43 51 56 47 57 44 Z" fill="currentColor" opacity="0.8" />
+                    <rect x="71" y="22" width="18" height="18" rx="3" fill="currentColor" opacity="0.85" />
+                    <rect x="74" y="19" width="12" height="24" rx="2" fill="currentColor" opacity="0.5" />
+                    <path d="M82 30 C95 20 110 13 132 9 C120 16 110 24 104 31 Z" fill="currentColor" opacity="0.8" />
+                    <path d="M82 33 C98 27 116 21 142 21 C126 26 108 30 103 34 Z" fill="currentColor" opacity="0.75" />
+                    <path d="M82 37 C99 36 116 35 144 37 C127 37 107 38 103 38 Z" fill="currentColor" opacity="0.7" />
+                    <path d="M82 41 C99 43 116 43 144 46 C127 43 107 41 103 41 Z" fill="currentColor" opacity="0.75" />
+                    <path d="M82 45 C97 49 112 52 131 57 C117 51 104 47 103 44 Z" fill="currentColor" opacity="0.8" />
+                </svg>
+            </div>
+            <div class="footer-content">
+                <h3 class="footer-name">Mohsenul Kabir Mithun</h3>
+                <p class="footer-tagline">Building scalable solutions, one commit at a time.</p>
+                <!-- <p class="footer-aot-tagline">ã€Œæˆ¦ãˆã€ â€” Tatakae</p> -->
+                <div class="footer-social">
+                    <a href="https://github.com/mi-thun" target="_blank" aria-label="GitHub"><i
+                            class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" aria-label="LinkedIn"><i
+                            class="bi bi-linkedin"></i></a>
+                    <a href="https://www.facebook.com/mohsenulkabir.mithun.9" target="_blank" aria-label="Facebook"><i
+                            class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mohsenul Kabir Mithun. All Rights Reserved.</p>
+                <!-- <p class="footer-aot-credit">Inspired by &nbsp;<span>é€²æ’ƒã®å·¨äºº</span>&nbsp; Attack on Titan Â· -->
+                <!-- Survey Corps -->
+                <!-- Division</p> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Get URL parameter to show correct service
+        function getServiceFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('service') || 'backend';
+        }
+
+        // Initialize with correct service from URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const serviceId = getServiceFromURL();
+            showService(serviceId);
+        });
+
+        function showService(serviceId) {
+            // Hide all panels
+            document.querySelectorAll('.service-content-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+
+            // Deactivate all buttons
+            document.querySelectorAll('.service-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected panel
+            const panel = document.getElementById(serviceId);
+            if (panel) {
+                panel.classList.add('active');
+            }
+
+            // Activate corresponding button
+            const button = document.querySelector(`.service-btn[onclick="showService('${serviceId}')"]`);
+            if (button) {
+                button.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
