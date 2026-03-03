@@ -101,19 +101,21 @@
 
   /* ===== AOS Init ===== */
   function aosInit() {
-    AOS.init({
-      duration: 700,
-      easing: "ease-out-cubic",
-      once: true,
-      mirror: false,
-      offset: 50,
-    });
+    if (typeof AOS !== "undefined") {
+      AOS.init({
+        duration: 700,
+        easing: "ease-out-cubic",
+        once: true,
+        mirror: false,
+        offset: 50,
+      });
+    }
   }
   window.addEventListener("load", aosInit);
 
   /* ===== Typed.js Init ===== */
   const selectTyped = document.querySelector(".typed");
-  if (selectTyped) {
+  if (selectTyped && typeof Typed !== "undefined") {
     let typed_strings = selectTyped.getAttribute("data-typed-items");
     typed_strings = typed_strings.split(",");
     new Typed(".typed", {
@@ -133,6 +135,7 @@
 
   /* ===== Skills Animation ===== */
   document.querySelectorAll(".skills-animation").forEach((item) => {
+    if (typeof Waypoint === "undefined") return;
     new Waypoint({
       element: item,
       offset: "80%",
@@ -145,15 +148,19 @@
   });
 
   /* ===== GLightbox Init ===== */
-  const glightbox = GLightbox({
-    selector: ".glightbox",
-    touchNavigation: true,
-    loop: true,
-    zoomable: true,
-  });
+  if (typeof GLightbox !== "undefined") {
+    GLightbox({
+      selector: ".glightbox",
+      touchNavigation: true,
+      loop: true,
+      zoomable: true,
+    });
+  }
 
   /* ===== Isotope Layout & Filters ===== */
   document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
+    if (typeof Isotope === "undefined" || typeof imagesLoaded === "undefined")
+      return;
     let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
     let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
     let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
@@ -191,6 +198,7 @@
 
   /* ===== Swiper Init ===== */
   function initSwiper() {
+    if (typeof Swiper === "undefined") return;
     document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim(),
@@ -319,6 +327,104 @@
     sections.forEach((section) => observer.observe(section));
   }
   window.addEventListener("load", revealOnScroll);
+
+  const EMAILJS_SERVICE_ID = "service_3s1jq75";
+  const EMAILJS_TEMPLATE_ID = "template_su5arxp";
+  const EMAILJS_PUBLIC_KEY = "ZYrpQKaq0-e-S20f-";
+
+  if (typeof emailjs !== "undefined") {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    const submitBtn = contactForm.querySelector(".btn-submit");
+
+    const fieldRules = [
+      {
+        field: contactForm.querySelector("[name='name']"),
+        error: document.getElementById("err-name"),
+        validate: (v) => v.trim() !== "",
+      },
+      {
+        field: contactForm.querySelector("[name='email']"),
+        error: document.getElementById("err-email"),
+        validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+      },
+      {
+        field: contactForm.querySelector("[name='subject']"),
+        error: document.getElementById("err-subject"),
+        validate: (v) => v.trim() !== "",
+      },
+      {
+        field: contactForm.querySelector("[name='message']"),
+        error: document.getElementById("err-message"),
+        validate: (v) => v.trim() !== "",
+      },
+    ];
+
+    function validateField(rule) {
+      const valid = rule.validate(rule.field.value);
+      rule.field.classList.toggle("is-invalid", !valid);
+      if (rule.error) rule.error.classList.toggle("visible", !valid);
+      return valid;
+    }
+
+    // Show error when user leaves a field
+    fieldRules.forEach((rule) => {
+      rule.field.addEventListener("blur", () => validateField(rule));
+      // Clear error as soon as user starts typing again
+      rule.field.addEventListener("input", () => {
+        if (rule.field.classList.contains("is-invalid")) validateField(rule);
+      });
+    });
+
+    contactForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      // Validate all fields before sending; highlight any empty/invalid ones
+      const allValid = fieldRules.map((r) => validateField(r)).every(Boolean);
+      if (!allValid) return;
+
+      const loading = contactForm.querySelector(".loading");
+      const errorBox = contactForm.querySelector(".error-message");
+      const successBox = contactForm.querySelector(".sent-message");
+
+      errorBox.style.display = "none";
+      successBox.style.display = "none";
+      loading.style.display = "block";
+      submitBtn.disabled = true;
+
+      const templateParams = {
+        name: contactForm.querySelector("[name='name']").value.trim(),
+        email: contactForm.querySelector("[name='email']").value.trim(),
+        subject: contactForm.querySelector("[name='subject']").value.trim(),
+        message: contactForm.querySelector("[name='message']").value.trim(),
+      };
+
+      try {
+        const response = await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          templateParams,
+        );
+        console.log("EmailJS response:", response.status, response.text);
+        if (response.status === 200) {
+          successBox.style.display = "block";
+          contactForm.reset();
+        } else {
+          throw new Error(`Unexpected status: ${response.status}`);
+        }
+      } catch (err) {
+        console.error("EmailJS error:", err);
+        errorBox.textContent = `Send failed (${err?.text || err?.message || err}). Please email directly: mohsenulkabirmi8486@gmail.com`;
+        errorBox.style.display = "block";
+      } finally {
+        loading.style.display = "none";
+        submitBtn.disabled = false;
+      }
+    });
+  }
 
   /* ===== Skill Card Tilt Effect ===== */
   document.querySelectorAll(".skill-card").forEach((card) => {
