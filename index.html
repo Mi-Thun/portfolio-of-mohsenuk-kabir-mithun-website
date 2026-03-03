@@ -31,9 +31,6 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -48,6 +45,7 @@
         <li><a href="#hero" class="active"><span>Home</span></a></li>
         <li><a href="#about"><span>About</span></a></li>
         <li><a href="#skills"><span>Skills</span></a></li>
+        <li><a href="#developer-roles"><span>My Roles</span></a></li>
         <li><a href="#resume"><span>Resume</span></a></li>
         <li><a href="#services"><span>Services</span></a></li>
         <li><a href="#contact"><span>Contact</span></a></li>
@@ -59,42 +57,16 @@
   <main class="main">
 
     <!-- ===== HERO SECTION ===== -->
-    <section id="hero" class="hero section dark-background">
-      <div class="hero-gradient-bg"></div>
+    <section class="hero"">
+      <div class=" hero-gradient-bg">
+      </div>
       <div class="hero-wall-texture"></div>
       <div class="hero-particles" id="heroParticles"></div>
       <div class="container" data-aos="fade-up" data-aos-duration="1000">
         <div class="row justify-content-center text-center">
           <div class="col-lg-10">
 
-
-            <!-- <div class="aot-wings-hero" data-aos="fade-down" data-aos-delay="50">
-              <svg viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" aria-label="Wings of Freedom">
-                <path d="M145 52 C122 36 92 22 48 15 C68 27 84 39 96 54 Z" fill="currentColor" opacity="0.95" />
-                <path d="M145 57 C116 47 82 36 32 36 C56 43 80 51 96 58 Z" fill="currentColor" opacity="0.9" />
-                <path d="M145 62 C114 60 79 58 28 60 C54 62 80 63 96 63 Z" fill="currentColor" opacity="0.85" />
-                <path d="M145 67 C114 70 79 70 28 75 C54 70 80 67 96 67 Z" fill="currentColor" opacity="0.9" />
-                <path d="M145 72 C118 79 88 83 50 90 C70 82 90 75 96 70 Z" fill="currentColor" opacity="0.95" />
-
-                <path d="M138 52 C120 42 100 33 75 28 C90 35 105 43 114 53 Z" fill="currentColor" opacity="0.4" />
-
-                <rect x="133" y="40" width="34" height="32" rx="6" fill="currentColor" opacity="0.9" />
-                <rect x="139" y="35" width="22" height="42" rx="4" fill="currentColor" opacity="0.6" />
-
-                <path d="M155 52 C178 36 208 22 252 15 C232 27 216 39 204 54 Z" fill="currentColor" opacity="0.95" />
-                <path d="M155 57 C184 47 218 36 268 36 C244 43 220 51 204 58 Z" fill="currentColor" opacity="0.9" />
-                <path d="M155 62 C186 60 221 58 272 60 C246 62 220 63 204 63 Z" fill="currentColor" opacity="0.85" />
-                <path d="M155 67 C186 70 221 70 272 75 C246 70 220 67 204 67 Z" fill="currentColor" opacity="0.9" />
-                <path d="M155 72 C182 79 212 83 250 90 C230 82 210 75 204 70 Z" fill="currentColor" opacity="0.95" />
-          
-                <path d="M162 52 C180 42 200 33 225 28 C210 35 195 43 186 53 Z" fill="currentColor" opacity="0.4" />
-              </svg>
-            </div>
-            <div data-aos="fade-down" data-aos-delay="80">
-              <span class="aot-quote"><span class="aot-jp">戦え</span>&nbsp;·&nbsp;Survey Corps · Beyond the Walls</span>
-            </div> -->
-
-            <div class="code-snippet" data-aos="fade-down" data-aos-delay="80">
+            <div class="code-snippet" style="margin-top: 50px;">
               <code>$ <span class="code-command">npm run build</span> <span class="code-comment">// Crafting digital solutions</span></code>
             </div>
 
@@ -105,9 +77,8 @@
               Hi, I'm <span class="gradient-text">Mohsenul Kabir M.</span>
             </h1>
             <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-              I'm a <span class="typed"
-                data-typed-items="Software Engineer, Backend Developer, Full Stack Developer, Researcher">Software
-                Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+              <span>Software
+                Engineer | Researcher | AI Enthusiast</span>
             </p>
             <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
               Building reliable, scalable systems with Python, Django & modern web technologies
@@ -116,10 +87,11 @@
               <p>"Code is poetry written for computers, but read by humans."</p>
               <cite>— Software Engineering Philosophy</cite>
             </blockquote>
-            <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
-              <a href="#portfolio" class="btn-cta-primary">View My Work <i class="bi bi-arrow-right"></i></a>
-              <a href="#contact" class="btn-cta-secondary">Get In Touch</a>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="550">
+              <!-- <a href="#resume" class="btn-cta-primary"><i class="bi bi-eye"></i> View My Work</a> -->
+              <a href="#contact" class="btn-cta-secondary"><i class="bi bi-envelope"></i> Get In Touch</a>
             </div>
+
             <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
               <a href="https://github.com/mi-thun" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
               <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" aria-label="LinkedIn"><i
@@ -139,15 +111,13 @@
     <section id="about" class="about section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">About Me</span>
+          <!-- <span class="section-tag">About Me</span> -->
           <h2>Get to know me</h2>
         </div>
 
         <div class="row gy-5 align-items-center">
-          <!-- <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200"> -->
           <div class="col-12 col-xl-10 mx-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="about-content">
-              <!-- <div class="about-role-badge"><span class="dot"></span>Open to Opportunities</div> -->
               <h3>Sr. Software Engineer</h3>
               <p class="about-lead">
                 I'm Mohsenul Kabir Mithun — a backend developer with a passion for building reliable and scalable
@@ -155,24 +125,6 @@
                 With 2.5+ years of experience leading development teams through all phases of the SDLC, I specialize
                 in creating, testing, and maintaining systems that enhance functionality and performance.
               </p>
-              <!-- <div class="about-stats">
-                <div class="about-stat">
-                  <span class="stat-number">2+</span>
-                  <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="about-stat">
-                  <span class="stat-number">15+</span>
-                  <span class="stat-label">Projects Delivered</span>
-                </div>
-                <div class="about-stat">
-                  <span class="stat-number">3.95</span>
-                  <span class="stat-label">MSc CGPA</span>
-                </div>
-                <div class="about-stat">
-                  <span class="stat-number">1</span>
-                  <span class="stat-label">Publication</span>
-                </div>
-              </div> -->
               <div class="about-details">
                 <div class="row g-3">
                   <div class="col-md-6">
@@ -189,7 +141,7 @@
                       <i class="bi bi-mortarboard"></i>
                       <div>
                         <span class="detail-label">Degree</span>
-                        <span class="detail-value">M.Sc. in CSE</span>
+                        <span class="detail-value">M.Sc. in Computer Science and Engineering</span>
                       </div>
                     </div>
                   </div>
@@ -204,28 +156,10 @@
                   </div>
                   <div class="col-md-6">
                     <div class="detail-item">
-                      <i class="bi bi-phone"></i>
-                      <div>
-                        <span class="detail-label">Phone</span>
-                        <span class="detail-value">+8801639769081</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="detail-item">
-                      <i class="bi bi-person"></i>
-                      <div>
-                        <span class="detail-label">Age</span>
-                        <span class="detail-value" id="age"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="detail-item">
                       <i class="bi bi-check-circle"></i>
                       <div>
                         <span class="detail-label">Freelance</span>
-                        <span class="detail-value status-available">Available</span>
+                        <span class="detail-value">Available</span>
                       </div>
                     </div>
                   </div>
@@ -237,7 +171,6 @@
               </p>
             </div>
           </div>
-          <!-- </div> -->
         </div>
       </div>
     </section>
@@ -246,7 +179,7 @@
     <section id="skills" class="skills section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Expertise</span>
+          <!-- <span class="section-tag">Expertise</span> -->
           <h2>Skills & Technologies</h2>
           <p class="section-subtitle">Software Development Life Cycle &bull; Database Design &bull; Design Patterns
             &bull; Data Structures &bull; Algorithms</p>
@@ -369,68 +302,69 @@
       </div>
     </section>
 
-    <!-- ===== AoT CHARACTER SECTION ===== -->
-    <section class="aot-characters section">
+    <!-- ===== DEVELOPER IDENTITY SECTION (AoT Theme) ===== -->
+    <section id="developer-roles" class="aot-characters section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Survey Corps Squad</span>
-          <h2>Titan Slayers — Developer Roles</h2>
-          <p class="section-subtitle">Like the Scout Regiment, every developer has a critical role in defeating the
-            titans of technology.</p>
+          <h2>How I See Myself as a Developer</h2>
+          <p class="section-subtitle">Three roles. One developer. I wear every hat it takes to ship great software.</p>
+          <div class="aot-lore-tag" data-aos="fade-up" data-aos-delay="80">
+            <span class="lore-icon">⚔</span>
+            <span>Survey Corps inspiration — for those who know, you know.</span>
+          </div>
         </div>
 
-        <div class="row g-4">
-          <!-- Eren Character Card - Full Stack Developer -->
+        <div class="row g-4 justify-content-center">
+
+          <!-- Eren Card — Full Stack Builder -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="character-card eren-card">
-              <div class="character-silhouette">
-                <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" class="character-svg">
-                  <!-- Eren silhouette -->
-                  <ellipse cx="60" cy="35" rx="18" ry="22" fill="currentColor" />
-                  <rect x="38" y="55" width="44" height="60" rx="8" fill="currentColor" />
-                  <rect x="30" y="70" width="15" height="50" fill="currentColor" />
-                  <rect x="75" y="70" width="15" height="50" fill="currentColor" />
-                  <rect x="35" y="120" width="12" height="40" fill="currentColor" />
-                  <rect x="73" y="120" width="12" height="40" fill="currentColor" />
-                  <circle cx="50" cy="30" r="4" fill="#5dbb6c" />
-                  <circle cx="70" cy="30" r="4" fill="#5dbb6c" />
-                </svg>
+              <div class="card-top-accent"></div>
+              <div class="character-icon-wrap eren-icon">
+                <span class="char-glyph">⚡</span>
+              </div>
+              <div class="character-meta">
+                <span class="character-lore-name">Eren</span>
+                <span class="character-lore-role">Attack Specialist</span>
+              </div>
+              <div class="character-divider">
+                <span class="divider-arrow">↓ in real life means</span>
               </div>
               <div class="character-content">
-                <h3>Eren</h3>
-                <p class="character-role">Attack Specialist</p>
-                <p class="character-desc">All-around developer. Aggressive approach to problem-solving with
-                  determination.</p>
+                <h3 class="developer-title">Full Stack Developer</h3>
+                <p class="character-desc">
+                  I attack every layer of the stack. Whether it's backend logic, frontend UI, or deployment pipelines —
+                  I charge in, solve the problem, and ship it.
+                </p>
                 <div class="character-skills">
-                  <span class="skill-badge">Backend</span>
-                  <span class="skill-badge">Frontend</span>
-                  <span class="skill-badge">DevOps</span>
+                  <span class="skill-badge backend-badge">Backend</span>
+                  <span class="skill-badge frontend-badge">Frontend</span>
+                  <span class="skill-badge devops-badge">DevOps</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Mikasa Character Card - Frontend Developer -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <!-- Mikasa Card — UX Guardian -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="180">
             <div class="character-card mikasa-card">
-              <div class="character-silhouette">
-                <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" class="character-svg">
-                  <!-- Mikasa silhouette - more feminine -->
-                  <ellipse cx="60" cy="33" rx="16" ry="20" fill="currentColor" />
-                  <polygon points="60,20 70,55 50,55" fill="currentColor" />
-                  <rect x="40" y="55" width="40" height="50" rx="6" fill="currentColor" />
-                  <rect x="32" y="72" width="13" height="48" fill="currentColor" />
-                  <rect x="75" y="72" width="13" height="48" fill="currentColor" />
-                  <rect x="37" y="125" width="10" height="40" fill="currentColor" />
-                  <rect x="73" y="125" width="10" height="40" fill="currentColor" />
-                  <circle cx="50" cy="28" r="3" fill="#d4892a" />
-                  <circle cx="70" cy="28" r="3" fill="#d4892a" />
-                </svg>
+              <div class="card-top-accent"></div>
+              <div class="character-icon-wrap mikasa-icon">
+                <span class="char-glyph">🛡</span>
+              </div>
+              <div class="character-meta">
+                <span class="character-lore-name">Mikasa</span>
+                <span class="character-lore-role">Defense Specialist</span>
+              </div>
+              <div class="character-divider">
+                <span class="divider-arrow">↓ in real life means</span>
               </div>
               <div class="character-content">
-                <h3>Mikasa</h3>
-                <p class="character-role">Defense Specialist</p>
-                <p class="character-desc">UI/UX focused developer. Protects user experience with precision and care.</p>
+                <h3 class="developer-title">UX & Interface Guardian</h3>
+                <p class="character-desc">
+                  I guard the user's experience with precision. Clean interfaces, smooth interactions, and mobile-first
+                  design — because the end user deserves protection from bad UX.
+                </p>
                 <div class="character-skills">
                   <span class="skill-badge">React</span>
                   <span class="skill-badge">UI/UX</span>
@@ -440,26 +374,26 @@
             </div>
           </div>
 
-          <!-- Armin Character Card - Backend Developer -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <!-- Armin Card — Systems Architect -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="260">
             <div class="character-card armin-card">
-              <div class="character-silhouette">
-                <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" class="character-svg">
-                  <!-- Armin silhouette - strategic thinker -->
-                  <ellipse cx="60" cy="32" rx="15" ry="19" fill="currentColor" />
-                  <path d="M45 50 Q45 65 55 72 L65 72 Q75 65 75 50 Z" fill="currentColor" />
-                  <rect x="42" y="75" width="12" height="48" fill="currentColor" />
-                  <rect x="66" y="75" width="12" height="48" fill="currentColor" />
-                  <rect x="45" y="128" width="10" height="38" fill="currentColor" />
-                  <rect x="65" y="128" width="10" height="38" fill="currentColor" />
-                  <!-- Brain indicator -->
-                  <circle cx="60" cy="32" r="3" fill="#c04020" opacity="0.7" />
-                </svg>
+              <div class="card-top-accent"></div>
+              <div class="character-icon-wrap armin-icon">
+                <span class="char-glyph">🧠</span>
+              </div>
+              <div class="character-meta">
+                <span class="character-lore-name">Armin</span>
+                <span class="character-lore-role">Strategic Coordinator</span>
+              </div>
+              <div class="character-divider">
+                <span class="divider-arrow">↓ in real life means</span>
               </div>
               <div class="character-content">
-                <h3>Armin</h3>
-                <p class="character-role">Strategic Coordinator</p>
-                <p class="character-desc">Architecture and database specialist. Strategizes scalable solutions.</p>
+                <h3 class="developer-title">Systems Architect</h3>
+                <p class="character-desc">
+                  I think before I build. Designing scalable systems, modeling databases, and planning APIs that don't
+                  fall apart under pressure — strategy over brute force.
+                </p>
                 <div class="character-skills">
                   <span class="skill-badge">Python</span>
                   <span class="skill-badge">Databases</span>
@@ -468,7 +402,15 @@
               </div>
             </div>
           </div>
+
         </div>
+
+        <!-- Bottom Note -->
+        <div class="aot-bottom-note" data-aos="fade-up" data-aos-delay="300">
+          <p>These aren't three different people — <strong>this is one developer</strong>, playing every role the
+            project demands.</p>
+        </div>
+
       </div>
     </section>
 
@@ -476,7 +418,7 @@
     <section id="resume" class="resume section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Career</span>
+          <!-- <span class="section-tag">Career</span> -->
           <h2>Resume & Experience</h2>
           <p class="section-subtitle">Education, professional experience, and research achievements</p>
         </div>
@@ -484,22 +426,6 @@
         <div class="row">
           <!-- Left Column -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <!-- <div class="resume-category">
-              <h3 class="resume-title"><i class="bi bi-person-badge"></i> Summary</h3>
-              <div class="resume-item">
-                <h4>Mohsenul Kabir Mithun</h4>
-                <p><em>Dedicated and results-driven Software Engineer with a passion for building scalable and efficient
-                    solutions. Proficient in backend development, system design, and delivering high-quality software
-                    solutions.</em></p>
-                <ul class="resume-list">
-                  <li><i class="bi bi-geo-alt"></i> Mirpur, Dhaka, Bangladesh</li>
-                  <li><i class="bi bi-telephone"></i> 01639769081</li>
-                  <li><i class="bi bi-envelope"></i> mohsenulkabirmi8486@gmail.com</li>
-                </ul>
-              </div>
-            </div> -->
-
             <div class="resume-category">
               <h3 class="resume-title"><i class="bi bi-mortarboard"></i> Education</h3>
               <div class="resume-item">
@@ -598,13 +524,11 @@
       </div>
     </section>
 
-
-
     <!-- ===== SERVICES SECTION ===== -->
     <section id="services" class="services section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Offerings</span>
+          <!-- <span class="section-tag">Offerings</span> -->
           <h2>Services I Provide</h2>
           <p class="section-subtitle">Professional services to meet your development and automation needs</p>
         </div>
@@ -619,7 +543,7 @@
                 <h3>Backend Web Development</h3>
                 <p>RESTful API development, database design, server architecture, and backend optimization using Python,
                   Django, and modern frameworks.</p>
-                <a href="pages/service-details.html?service=backend" class="service-link">Learn More <i
+                <a href="service-details.html?service=backend" class="service-link">Learn More <i
                     class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -633,7 +557,7 @@
               <div class="service-content">
                 <h3>Python Projects & Automation</h3>
                 <p>Build, debug, and automate Python projects, scripts, and custom programs for your business needs.</p>
-                <a href="pages/service-details.html?service=python" class="service-link">Learn More <i
+                <a href="service-details.html?service=python" class="service-link">Learn More <i
                     class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -648,7 +572,7 @@
                 <h3>DevOps Service</h3>
                 <p>CI/CD pipeline setup, containerization, cloud deployment, infrastructure automation, and monitoring
                   solutions.</p>
-                <a href="pages/service-details.html?service=devops" class="service-link">Learn More <i
+                <a href="service-details.html?service=devops" class="service-link">Learn More <i
                     class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -663,7 +587,7 @@
                 <h3>Frontend Service using React</h3>
                 <p>Modern, interactive React applications with state management, component architecture, responsive
                   design, and performance optimization.</p>
-                <a href="pages/service-details.html?service=frontend" class="service-link">Learn More <i
+                <a href="service-details.html?service=frontend" class="service-link">Learn More <i
                     class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -678,7 +602,7 @@
     <section id="contact" class="contact section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">Reach Out</span>
+          <!-- <span class="section-tag">Reach Out</span> -->
           <h2>Let's Work Together</h2>
           <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
         </div>
@@ -692,14 +616,6 @@
                 </div>
                 <h4>Location</h4>
                 <p>Mirpur, Dhaka, Bangladesh</p>
-              </div>
-
-              <div class="contact-info-card">
-                <div class="contact-icon">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <h4>Phone</h4>
-                <p>+8801639769081</p>
               </div>
 
               <div class="contact-info-card">
@@ -764,22 +680,6 @@
   <!-- ===== FOOTER ===== -->
   <footer id="footer" class="footer">
     <div class="container">
-      <div class="footer-wings">
-        <svg viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg" class="footer-wings-svg" aria-hidden="true">
-          <path d="M78 30 C65 20 50 13 28 9 C40 16 50 24 56 31 Z" fill="currentColor" opacity="0.8" />
-          <path d="M78 33 C62 27 44 21 18 21 C34 26 52 30 57 34 Z" fill="currentColor" opacity="0.75" />
-          <path d="M78 37 C61 36 44 35 16 37 C33 37 53 38 57 38 Z" fill="currentColor" opacity="0.7" />
-          <path d="M78 41 C61 43 44 43 16 46 C33 43 53 41 57 41 Z" fill="currentColor" opacity="0.75" />
-          <path d="M78 45 C63 49 48 52 29 57 C43 51 56 47 57 44 Z" fill="currentColor" opacity="0.8" />
-          <rect x="71" y="22" width="18" height="18" rx="3" fill="currentColor" opacity="0.85" />
-          <rect x="74" y="19" width="12" height="24" rx="2" fill="currentColor" opacity="0.5" />
-          <path d="M82 30 C95 20 110 13 132 9 C120 16 110 24 104 31 Z" fill="currentColor" opacity="0.8" />
-          <path d="M82 33 C98 27 116 21 142 21 C126 26 108 30 103 34 Z" fill="currentColor" opacity="0.75" />
-          <path d="M82 37 C99 36 116 35 144 37 C127 37 107 38 103 38 Z" fill="currentColor" opacity="0.7" />
-          <path d="M82 41 C99 43 116 43 144 46 C127 43 107 41 103 41 Z" fill="currentColor" opacity="0.75" />
-          <path d="M82 45 C97 49 112 52 131 57 C117 51 104 47 103 44 Z" fill="currentColor" opacity="0.8" />
-        </svg>
-      </div>
       <div class="footer-content">
         <h3 class="footer-name">Mohsenul Kabir Mithun</h3>
         <p class="footer-tagline">Building scalable solutions, one commit at a time.</p>
@@ -810,15 +710,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
