@@ -36,6 +36,9 @@
 
   <!-- ===== TOP HORIZONTAL NAVIGATION ===== -->
   <header id="header" class="header">
+    <div class="header-brand-wrapper">
+      <span class="header-brand">Mithun's Digital Space</span>
+    </div>
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><span>Home</span></a></li>
@@ -76,7 +79,7 @@
                 Engineer | Researcher | AI Enthusiast</span>
             </p>
             <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
-              Building reliable, scalable systems with Python, Django & modern web technologies
+              Building reliable, scalable systems with modern web technologies
             </p>
             <blockquote class="hero-aot-quote" data-aos="fade-up" data-aos-delay="450">
               <p>"Code is poetry written for computers, but read by humans."</p>
@@ -216,7 +219,6 @@
                   <div class="skill-tags">
                     <span class="skill-tag" style="--cat: #3b82f6;">Python</span>
                     <span class="skill-tag" style="--cat: #3b82f6;">Java</span>
-                    <span class="skill-tag" style="--cat: #3b82f6;">C</span>
                     <span class="skill-tag" style="--cat: #3b82f6;">JavaScript</span>
                   </div>
                 </div>
@@ -229,8 +231,6 @@
                   <div class="skill-tags">
                     <span class="skill-tag" style="--cat: #6366f1;">Django</span>
                     <span class="skill-tag" style="--cat: #6366f1;">Flask</span>
-                    <span class="skill-tag" style="--cat: #6366f1;">Scrapy</span>
-                    <span class="skill-tag" style="--cat: #6366f1;">REST APIs</span>
                   </div>
                 </div>
               </div>
@@ -243,8 +243,6 @@
                     <span class="skill-cat-name">Frontend</span>
                   </div>
                   <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #0ea5e9;">HTML</span>
-                    <span class="skill-tag" style="--cat: #0ea5e9;">CSS</span>
                     <span class="skill-tag" style="--cat: #0ea5e9;">JavaScript</span>
                     <span class="skill-tag" style="--cat: #0ea5e9;">React</span>
                   </div>
@@ -258,8 +256,8 @@
                   <div class="skill-tags">
                     <span class="skill-tag" style="--cat: #10b981;">PostgreSQL</span>
                     <span class="skill-tag" style="--cat: #10b981;">MongoDB</span>
+                    <span class="skill-tag" style="--cat: #10b981;">Supabase</span>
                     <span class="skill-tag" style="--cat: #10b981;">ORM</span>
-                    <span class="skill-tag" style="--cat: #10b981;">Oracle</span>
                   </div>
                 </div>
               </div>
@@ -284,6 +282,7 @@
                     <span class="skill-tag" style="--cat: #8b5cf6;">Scikit-learn</span>
                     <span class="skill-tag" style="--cat: #8b5cf6;">TensorFlow</span>
                     <span class="skill-tag" style="--cat: #8b5cf6;">Keras</span>
+                    <span class="skill-tag" style="--cat: #8b5cf6;">Matplotlib</span>
                   </div>
                 </div>
               </div>
@@ -298,6 +297,9 @@
                   <div class="skill-tags">
                     <span class="skill-tag" style="--cat: #7c3aed;">Hadoop</span>
                     <span class="skill-tag" style="--cat: #7c3aed;">PySpark</span>
+                    <span class="skill-tag" style="--cat: #6366f1;">Scrapy</span>
+                    <span class="skill-tag" style="--cat: #7c3aed;">Airflow</span>
+                    <span class="skill-tag" style="--cat: #7c3aed;">DBT</span>
                   </div>
                 </div>
               </div>
@@ -317,9 +319,8 @@
                     <span class="skill-cat-name">DevOps</span>
                   </div>
                   <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #f59e0b;">Docker</span>
-                    <span class="skill-tag" style="--cat: #f59e0b;">CI/CD</span>
                     <span class="skill-tag" style="--cat: #f59e0b;">AWS</span>
+                    <span class="skill-tag" style="--cat: #f59e0b;">Docker</span>
                     <span class="skill-tag" style="--cat: #f59e0b;">Linux</span>
                   </div>
                 </div>
@@ -364,7 +365,7 @@
           <p class="section-subtitle">Three roles. One developer. I wear every hat it takes to ship great software.</p>
           <div class="aot-lore-tag" data-aos="fade-up" data-aos-delay="80">
             <span class="lore-icon">⚔</span>
-            <span>Survey Corps inspiration — for those who know, you know.</span>
+            <span>Survey Corps inspiration — if you know, you know.</span>
           </div>
         </div>
 
@@ -461,7 +462,8 @@
 
         <!-- Bottom Note -->
         <div class="aot-bottom-note" data-aos="fade-up" data-aos-delay="300">
-          <p>These aren't three different people — <strong>this is one developer</strong>, playing every role the
+          <p>These aren't three different people — <strong>this is one developer <spam>me</spam></strong>, playing every
+            role the
             project demands.</p>
         </div>
 
@@ -581,68 +583,85 @@
     <!-- ===== SERVICES SECTION ===== -->
     <section id="services" class="services section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <!-- <span class="section-tag">Offerings</span> -->
-          <h2>Services I Provide</h2>
-          <p class="section-subtitle">Professional services to meet your development and automation needs</p>
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 style="font-weight: 800; font-family: 'Space Grotesk', sans-serif;">Services I Provide</h2>
+          <p class="section-subtitle" style="color: #64748b;">Professional services to meet your development and
+            automation needs</p>
         </div>
 
         <div class="row g-4">
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card">
-              <div class="service-icon">
-                <div class="service-icon-inner"><i class="bi bi-code-slash"></i></div>
+            <div class="service-card-modern">
+              <div class="modern-icon-wrapper icon-blue">
+                <i class="bi bi-server"></i>
               </div>
-              <div class="service-content">
-                <h3>Backend Web Development</h3>
-                <p>RESTful API development, database design, server architecture, and backend optimization using Python,
-                  Django, and modern frameworks.</p>
-                <a href="service-details.html?service=backend" class="service-link">Learn More <i
-                    class="bi bi-arrow-right"></i></a>
+              <h3>Backend Web Development</h3>
+              <p>RESTful API development, database design, server architecture, and backend optimization using Python,
+                Django, and modern frameworks to ensure scalable solutions.</p>
+              <div class="service-actions">
+                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
+                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
+                </a>
+                <a href="service-details.html?service=backend" class="btn-learn-modern">
+                  Learn More <i class="bi bi-arrow-right"></i>
+                </a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <div class="service-icon">
-                <div class="service-icon-inner"><i class="bi bi-terminal"></i></div>
+            <div class="service-card-modern">
+              <div class="modern-icon-wrapper icon-green">
+                <i class="bi bi-terminal-fill"></i>
               </div>
-              <div class="service-content">
-                <h3>Python Projects & Automation</h3>
-                <p>Build, debug, and automate Python projects, scripts, and custom programs for your business needs.</p>
-                <a href="service-details.html?service=python" class="service-link">Learn More <i
-                    class="bi bi-arrow-right"></i></a>
+              <h3>Python Projects & Automation</h3>
+              <p>Build, debug, and automate Python projects. From web scraping scripts to custom operational programs
+                tailored precisely for your business needs.</p>
+              <div class="service-actions">
+                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
+                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
+                </a>
+                <a href="service-details.html?service=python" class="btn-learn-modern">
+                  Learn More <i class="bi bi-arrow-right"></i>
+                </a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card">
-              <div class="service-icon">
-                <div class="service-icon-inner"><i class="bi bi-gear-fill"></i></div>
+            <div class="service-card-modern">
+              <div class="modern-icon-wrapper icon-orange">
+                <i class="bi bi-gear-fill"></i>
               </div>
-              <div class="service-content">
-                <h3>DevOps Service</h3>
-                <p>CI/CD pipeline setup, containerization, cloud deployment, infrastructure automation, and monitoring
-                  solutions.</p>
-                <a href="service-details.html?service=devops" class="service-link">Learn More <i
-                    class="bi bi-arrow-right"></i></a>
+              <h3>DevOps Service</h3>
+              <p>Robust CI/CD pipeline setup, containerization with Docker, cloud deployment strategies, infrastructure
+                automation, and real-time monitoring solutions.</p>
+              <div class="service-actions">
+                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
+                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
+                </a>
+                <a href="service-details.html?service=devops" class="btn-learn-modern">
+                  Learn More <i class="bi bi-arrow-right"></i>
+                </a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card">
-              <div class="service-icon">
-                <div class="service-icon-inner"><i class="bi bi-window-dock"></i></div>
+            <div class="service-card-modern">
+              <div class="modern-icon-wrapper icon-cyan">
+                <i class="bi bi-window-dock"></i>
               </div>
-              <div class="service-content">
-                <h3>Frontend Service using React</h3>
-                <p>Modern, interactive React applications with state management, component architecture, responsive
-                  design, and performance optimization.</p>
-                <a href="service-details.html?service=frontend" class="service-link">Learn More <i
-                    class="bi bi-arrow-right"></i></a>
+              <h3>Frontend Service using React</h3>
+              <p>Modern, interactive React applications featuring flawless state management, scalable component
+                architecture, and high-performance responsive design.</p>
+              <div class="service-actions">
+                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
+                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
+                </a>
+                <a href="service-details.html?service=frontend" class="btn-learn-modern">
+                  Learn More <i class="bi bi-arrow-right"></i>
+                </a>
               </div>
             </div>
           </div>
