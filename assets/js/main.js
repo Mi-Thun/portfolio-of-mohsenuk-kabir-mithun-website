@@ -1,28 +1,23 @@
 /**
- * Mohsenul Kabir Mithun — Modern Portfolio
- * Enhanced JavaScript with particles, smooth animations & modern interactions
+ * Mohsenul Kabir Mithun — Portfolio
  */
 
 (function () {
   "use strict";
 
-  /* ===== Mobile Navigation Toggle (mobile only ≤480px) ===== */
+  /* ── Mobile Navigation ────────────────────────────────────── */
   const hamburger = document.querySelector(".mobile-nav-toggle");
   const navmenu = document.querySelector("#navmenu");
 
   if (hamburger && navmenu) {
-    // Toggle menu on hamburger click
     hamburger.addEventListener("click", (e) => {
       e.stopPropagation();
       e.preventDefault();
       navmenu.classList.toggle("active");
       hamburger.innerHTML = navmenu.classList.contains("active") ? "✕" : "☰";
-      document.body.style.overflow = navmenu.classList.contains("active")
-        ? "hidden"
-        : "";
+      document.body.style.overflow = navmenu.classList.contains("active") ? "hidden" : "";
     });
 
-    // Close menu when clicking on a link
     navmenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navmenu.classList.remove("active");
@@ -31,10 +26,9 @@
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
       if (
-        window.innerWidth <= 480 &&
+        window.innerWidth <= 1024 &&
         navmenu.classList.contains("active") &&
         !navmenu.contains(e.target) &&
         !hamburger.contains(e.target)
@@ -45,9 +39,8 @@
       }
     });
 
-    // Reset menu state when resizing to tablet/desktop
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 480) {
+      if (window.innerWidth > 1024) {
         navmenu.classList.remove("active");
         hamburger.innerHTML = "☰";
         document.body.style.overflow = "";
@@ -55,24 +48,7 @@
     });
   }
 
-  /* ===== Scroll smooth behavior ===== */
-  document.querySelectorAll("#navmenu a").forEach((link) => {
-    link.addEventListener("click", () => {
-      // Smooth scroll is handled by CSS scroll-behavior
-    });
-  });
-
-  /* ===== Toggle mobile nav dropdowns ===== */
-  document.querySelectorAll(".navmenu .toggle-dropdown").forEach((item) => {
-    item.addEventListener("click", function (e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle("active");
-      this.parentNode.nextElementSibling.classList.toggle("dropdown-active");
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /* ===== Preloader ===== */
+  /* ── Preloader ────────────────────────────────────────────── */
   const preloader = document.querySelector("#preloader");
   if (preloader) {
     window.addEventListener("load", () => {
@@ -81,17 +57,16 @@
     });
   }
 
-  /* ===== Scroll Top Button ===== */
-  const scrollTop = document.querySelector(".scroll-top");
+  /* ── Scroll-to-top button ─────────────────────────────────── */
+  const scrollTopBtn = document.querySelector(".scroll-top");
+
   function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100
-        ? scrollTop.classList.add("active")
-        : scrollTop.classList.remove("active");
-    }
+    if (!scrollTopBtn) return;
+    scrollTopBtn.classList.toggle("active", window.scrollY > 120);
   }
-  if (scrollTop) {
-    scrollTop.addEventListener("click", (e) => {
+
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", (e) => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
@@ -99,238 +74,41 @@
   window.addEventListener("load", toggleScrollTop);
   document.addEventListener("scroll", toggleScrollTop);
 
-  /* ===== AOS Init ===== */
-  function aosInit() {
-    if (typeof AOS !== "undefined") {
-      AOS.init({
-        duration: 700,
-        easing: "ease-out-cubic",
-        once: true,
-        mirror: false,
-        offset: 50,
-      });
-    }
-  }
-  window.addEventListener("load", aosInit);
+  /* ── Navmenu scrollspy ────────────────────────────────────── */
+  const navLinks = document.querySelectorAll(".navmenu a");
 
-  /* ===== Typed.js Init ===== */
-  const selectTyped = document.querySelector(".typed");
-  if (selectTyped && typeof Typed !== "undefined") {
-    let typed_strings = selectTyped.getAttribute("data-typed-items");
-    typed_strings = typed_strings.split(",");
-    new Typed(".typed", {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40,
-      backDelay: 2000,
-      cursorChar: "|",
+  function navScrollspy() {
+    const scrollPos = window.scrollY + 120;
+    navLinks.forEach((link) => {
+      if (!link.hash) return;
+      const section = document.querySelector(link.hash);
+      if (!section) return;
+      const isActive =
+        scrollPos >= section.offsetTop &&
+        scrollPos <= section.offsetTop + section.offsetHeight;
+      link.classList.toggle("active", isActive);
     });
   }
 
-  /* ===== PureCounter Init ===== */
-  if (typeof PureCounter !== "undefined") {
-    new PureCounter();
-  }
+  window.addEventListener("load", navScrollspy);
+  document.addEventListener("scroll", navScrollspy);
 
-  /* ===== Skills Animation ===== */
-  document.querySelectorAll(".skills-animation").forEach((item) => {
-    if (typeof Waypoint === "undefined") return;
-    new Waypoint({
-      element: item,
-      offset: "80%",
-      handler: function () {
-        item.querySelectorAll(".progress .progress-bar").forEach((el) => {
-          el.style.width = el.getAttribute("aria-valuenow") + "%";
-        });
-      },
-    });
-  });
-
-  /* ===== GLightbox Init ===== */
-  if (typeof GLightbox !== "undefined") {
-    GLightbox({
-      selector: ".glightbox",
-      touchNavigation: true,
-      loop: true,
-      zoomable: true,
-    });
-  }
-
-  /* ===== Isotope Layout & Filters ===== */
-  document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
-    if (typeof Isotope === "undefined" || typeof imagesLoaded === "undefined")
-      return;
-    let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
-    let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
-    let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector(".isotope-container"), function () {
-      initIsotope = new Isotope(
-        isotopeItem.querySelector(".isotope-container"),
-        {
-          itemSelector: ".isotope-item",
-          layoutMode: layout,
-          filter: filter,
-          sortBy: sort,
-        },
-      );
-    });
-
-    isotopeItem
-      .querySelectorAll(".isotope-filters li")
-      .forEach(function (filterBtn) {
-        filterBtn.addEventListener(
-          "click",
-          function () {
-            isotopeItem
-              .querySelector(".isotope-filters .filter-active")
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            initIsotope.arrange({ filter: this.getAttribute("data-filter") });
-            if (typeof aosInit === "function") aosInit();
-          },
-          false,
-        );
-      });
-  });
-
-  /* ===== Swiper Init ===== */
-  function initSwiper() {
-    if (typeof Swiper === "undefined") return;
-    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim(),
-      );
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
-  }
-  window.addEventListener("load", initSwiper);
-
-  /* ===== Hash Link Scroll Fix ===== */
-  window.addEventListener("load", function () {
+  /* ── Hash scroll fix ──────────────────────────────────────── */
+  window.addEventListener("load", () => {
     if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
         setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: "smooth",
-          });
+          window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
         }, 100);
       }
     }
   });
 
-  /* ===== Navmenu Scrollspy ===== */
-  const navmenulinks = document.querySelectorAll(".navmenu a");
-  function navmenuScrollspy() {
-    navmenulinks.forEach((link) => {
-      if (!link.hash) return;
-      let section = document.querySelector(link.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (
-        position >= section.offsetTop &&
-        position <= section.offsetTop + section.offsetHeight
-      ) {
-        document
-          .querySelectorAll(".navmenu a.active")
-          .forEach((a) => a.classList.remove("active"));
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-  }
-  window.addEventListener("load", navmenuScrollspy);
-  document.addEventListener("scroll", navmenuScrollspy);
-
-  /* ===== Hero Floating Particles ===== */
-  function createParticles() {
-    const container = document.getElementById("heroParticles");
-    if (!container) return;
-
-    // Sky blue · cyan · light blue — Light theme palette
-    const skyBlueColors = [
-      [59, 130, 246], // Sky blue
-      [59, 130, 246], // sky blue (higher weight)
-      [14, 165, 233], // cyan
-      [6, 182, 212], // turquoise
-      [219, 234, 254], // light blue
-    ];
-    const particleCount = 35;
-    for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement("div");
-      particle.className = "hero-particle";
-
-      const size = Math.random() * 3.5 + 0.8;
-      const x = Math.random() * 100;
-      const y = Math.random() * 100;
-      const duration = Math.random() * 22 + 10;
-      const delay = Math.random() * 10;
-      const opacity = Math.random() * 0.28 + 0.08;
-      const [r, g, b] =
-        skyBlueColors[Math.floor(Math.random() * skyBlueColors.length)];
-
-      particle.style.cssText = `
-        position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        background: rgba(${r}, ${g}, ${b}, ${opacity});
-        border-radius: 50%;
-        left: ${x}%;
-        top: ${y}%;
-        animation: particleFloat ${duration}s ${delay}s ease-in-out infinite;
-        pointer-events: none;
-      `;
-      container.appendChild(particle);
-    }
-
-    // Add particle animation keyframes
-    if (!document.getElementById("particleStyles")) {
-      const style = document.createElement("style");
-      style.id = "particleStyles";
-      style.textContent = `
-        @keyframes particleFloat {
-          0%, 100% { transform: translate(0, 0) scale(1); opacity: var(--start-opacity, 0.2); }
-          25% { transform: translate(${Math.random() * 60 - 30}px, ${Math.random() * 60 - 30}px) scale(1.2); }
-          50% { transform: translate(${Math.random() * 80 - 40}px, ${Math.random() * 80 - 40}px) scale(0.8); opacity: 0.4; }
-          75% { transform: translate(${Math.random() * 60 - 30}px, ${Math.random() * 60 - 30}px) scale(1.1); }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }
-  window.addEventListener("load", createParticles);
-
-  /* ===== Smooth Section Reveal on Scroll ===== */
-  function revealOnScroll() {
-    const sections = document.querySelectorAll(".section");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("section-visible");
-          }
-        });
-      },
-      { threshold: 0.05 },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-  }
-  window.addEventListener("load", revealOnScroll);
-
-  const EMAILJS_SERVICE_ID = "service_3s1jq75";
+  /* ── EmailJS Contact Form ─────────────────────────────────── */
+  const EMAILJS_SERVICE_ID  = "service_3s1jq75";
   const EMAILJS_TEMPLATE_ID = "template_su5arxp";
-  const EMAILJS_PUBLIC_KEY = "ZYrpQKaq0-e-S20f-";
+  const EMAILJS_PUBLIC_KEY  = "ZYrpQKaq0-e-S20f-";
 
   if (typeof emailjs !== "undefined") {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
@@ -370,34 +148,31 @@
       return valid;
     }
 
-    // Show error when user leaves a field
     fieldRules.forEach((rule) => {
       rule.field.addEventListener("blur", () => validateField(rule));
-      // Clear error as soon as user starts typing again
       rule.field.addEventListener("input", () => {
         if (rule.field.classList.contains("is-invalid")) validateField(rule);
       });
     });
 
-    contactForm.addEventListener("submit", async function (e) {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      // Validate all fields before sending; highlight any empty/invalid ones
       const allValid = fieldRules.map((r) => validateField(r)).every(Boolean);
       if (!allValid) return;
 
-      const loading = contactForm.querySelector(".loading");
-      const errorBox = contactForm.querySelector(".error-message");
+      const loading    = contactForm.querySelector(".loading");
+      const errorBox   = contactForm.querySelector(".error-message");
       const successBox = contactForm.querySelector(".sent-message");
 
-      errorBox.style.display = "none";
+      errorBox.style.display   = "none";
       successBox.style.display = "none";
-      loading.style.display = "block";
+      loading.style.display    = "block";
       submitBtn.disabled = true;
 
       const templateParams = {
-        name: contactForm.querySelector("[name='name']").value.trim(),
-        email: contactForm.querySelector("[name='email']").value.trim(),
+        name:    contactForm.querySelector("[name='name']").value.trim(),
+        email:   contactForm.querySelector("[name='email']").value.trim(),
         subject: contactForm.querySelector("[name='subject']").value.trim(),
         message: contactForm.querySelector("[name='message']").value.trim(),
       };
@@ -406,18 +181,16 @@
         const response = await emailjs.send(
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
-          templateParams,
+          templateParams
         );
-        console.log("EmailJS response:", response.status, response.text);
         if (response.status === 200) {
           successBox.style.display = "block";
           contactForm.reset();
         } else {
-          throw new Error(`Unexpected status: ${response.status}`);
+          throw new Error(`Status: ${response.status}`);
         }
       } catch (err) {
-        console.error("EmailJS error:", err);
-        errorBox.textContent = `Send failed (${err?.text || err?.message || err}). Please email directly: mohsenulkabirmi8486@gmail.com`;
+        errorBox.textContent = `Send failed. Please email directly: mohsenulkabirmi8486@gmail.com`;
         errorBox.style.display = "block";
       } finally {
         loading.style.display = "none";
@@ -426,38 +199,124 @@
     });
   }
 
-  /* ===== Skill Card Tilt Effect ===== */
-  document.querySelectorAll(".skill-card").forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = (y - centerY) / 20;
-      const rotateY = (centerX - x) / 20;
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  /* ── Section fade-in on scroll ───────────────────────────── */
+  const sections = document.querySelectorAll(".section");
+  if (sections.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("section-visible");
+        });
+      },
+      { threshold: 0.04 }
+    );
+    sections.forEach((s) => observer.observe(s));
+  }
+
+  /* ── Service Detail Overlay ───────────────────────────────── */
+  const overlay     = document.getElementById("serviceOverlay");
+  const sdoClose    = document.getElementById("sdoClose");
+  const sdoTitle    = document.getElementById("sdoTitle");
+  const sdoContact  = document.getElementById("sdoContactLink");
+
+  const panelTitles = {
+    backend:  "Backend Development",
+    python:   "Python & Automation",
+    devops:   "DevOps",
+    frontend: "Frontend (React)",
+  };
+
+  function openServiceOverlay(serviceId) {
+    if (!overlay) return;
+
+    // Activate the correct panel
+    switchPanel(serviceId);
+
+    // Update breadcrumb title
+    if (sdoTitle) sdoTitle.textContent = panelTitles[serviceId] || serviceId;
+
+    // Open overlay
+    overlay.classList.add("open");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeServiceOverlay() {
+    if (!overlay) return;
+    overlay.classList.remove("open");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function switchPanel(serviceId) {
+    // Deactivate all nav buttons
+    overlay.querySelectorAll(".sdo-nav-btn").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.panel === serviceId);
     });
 
-    card.addEventListener("mouseleave", () => {
-      card.style.transform =
-        "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+    // Show the correct panel
+    overlay.querySelectorAll(".sdo-panel").forEach((panel) => {
+      panel.classList.toggle("active", panel.dataset.panel === serviceId);
+    });
+
+    // Update breadcrumb
+    if (sdoTitle) sdoTitle.textContent = panelTitles[serviceId] || serviceId;
+  }
+
+  // "Learn More" links on service cards
+  document.querySelectorAll(".open-service").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      openServiceOverlay(link.dataset.service);
     });
   });
 
-  /* ===== Magnetic Effect on CTA Buttons ===== */
-  document
-    .querySelectorAll(".btn-cta-primary, .btn-cta-secondary")
-    .forEach((btn) => {
-      btn.addEventListener("mousemove", (e) => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) translateY(-2px)`;
-      });
+  // Close button
+  if (sdoClose) {
+    sdoClose.addEventListener("click", closeServiceOverlay);
+  }
 
-      btn.addEventListener("mouseleave", () => {
-        btn.style.transform = "";
-      });
+  // Sidebar nav buttons inside overlay
+  if (overlay) {
+    overlay.querySelectorAll(".sdo-nav-btn").forEach((btn) => {
+      btn.addEventListener("click", () => switchPanel(btn.dataset.panel));
     });
+
+    // "or send a message" → close overlay and scroll to contact
+    if (sdoContact) {
+      sdoContact.addEventListener("click", (e) => {
+        e.preventDefault();
+        closeServiceOverlay();
+        setTimeout(() => {
+          const contact = document.getElementById("contact");
+          if (contact) contact.scrollIntoView({ behavior: "smooth" });
+        }, 350);
+      });
+    }
+  }
+
+  // Close overlay when any nav link (header) is clicked
+  document.querySelectorAll(".navmenu a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (overlay && overlay.classList.contains("open")) {
+        closeServiceOverlay();
+      }
+    });
+  });
+
+  // Close overlay when header logo or CTA is clicked
+  document.querySelector(".header-logo")?.addEventListener("click", () => {
+    if (overlay && overlay.classList.contains("open")) closeServiceOverlay();
+  });
+  document.querySelector(".header-cta")?.addEventListener("click", () => {
+    if (overlay && overlay.classList.contains("open")) closeServiceOverlay();
+  });
+
+  // Escape key closes overlay
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay && overlay.classList.contains("open")) {
+      closeServiceOverlay();
+    }
+  });
+
 })();

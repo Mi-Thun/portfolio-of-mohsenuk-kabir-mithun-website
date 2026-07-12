@@ -11,742 +11,545 @@
     content="Mohsenul Kabir Mithun, Software Engineer, Backend Developer, Python, Django, React, Portfolio">
   <meta name="author" content="Mohsenul Kabir Mithun">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Mohsenul Kabir Mithun — Software Engineer">
   <meta property="og:description"
     content="Backend developer building reliable and scalable solutions with Python, Django, React & more.">
   <meta property="og:type" content="website">
 
-  <!-- Fonts — Modern Inter + Space Grotesk -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
 
-  <!-- ===== TOP HORIZONTAL NAVIGATION ===== -->
+  <!-- ===== HEADER ===== -->
   <header id="header" class="header">
-    <div class="header-brand-wrapper">
-      <span class="header-brand">Mithun's Digital Space</span>
+    <div class="header-inner">
+      <a href="#hero" class="header-logo">MK<span>.</span></a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#developer-roles">Roles</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="header-cta">Let's Talk</a>
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
     </div>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><span>Home</span></a></li>
-        <li><a href="#about"><span>About</span></a></li>
-        <li><a href="#skills"><span>Skills</span></a></li>
-        <li><a href="#developer-roles"><span>Roles</span></a></li>
-        <li><a href="#resume"><span>Resume</span></a></li>
-        <li><a href="#services"><span>Services</span></a></li>
-        <li><a href="#contact"><span>Contact</span></a></li>
-      </ul>
-    </nav>
-    <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
   </header>
 
   <main class="main">
-    <!-- ===== HERO SECTION ===== -->
+
+    <!-- ===== HERO ===== -->
     <section id="hero" class="hero">
-      <div class=" hero-gradient-bg">
-      </div>
-      <div class="hero-wall-texture"></div>
-      <div class="hero-particles" id="heroParticles"></div>
-      <div class="container" data-aos="fade-up" data-aos-duration="1000">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-10">
+      <div class="container">
+        <div class="hero-inner">
 
-            <div class="code-snippet" style="margin-top: 0px;">
-              <code>$ <span class="code-command">npm run build</span> <span class="code-comment">// Crafting digital solutions</span></code>
-            </div>
+          <div class="hero-label">
+            <span class="hero-number">01 — intro</span>
+            <span class="hero-status">
+              <span class="status-dot"></span> Available for opportunities
+            </span>
+          </div>
 
-            <div class="hero-badge" data-aos="fade-down" data-aos-delay="100">
-              <span class="badge-dot"></span> Available for opportunities
-            </div>
-            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
-              Hi, I'm <span class="gradient-text">Mohsenul Kabir M.</span>
-            </h1>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-              <span>Software
-                Engineer | Researcher | AI Enthusiast</span>
-            </p>
-            <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
-              Building reliable, scalable systems with modern web technologies
-            </p>
-            <blockquote class="hero-aot-quote" data-aos="fade-up" data-aos-delay="450">
-              <p>"Code is poetry written for computers, but read by humans."</p>
-              <cite>— Software Engineering Philosophy</cite>
-            </blockquote>
-            <div class="hero-cta" data-aos="fade-up" data-aos-delay="550">
-              <!-- <a href="#resume" class="btn-cta-primary"><i class="bi bi-eye"></i> View My Work</a> -->
-              <a href="#contact" class="btn-cta-secondary"><i class="bi bi-envelope"></i> Get In Touch</a>
-            </div>
+          <h1 class="hero-title">
+            <span class="hero-title-line">Mohsenul</span>
+            <span class="hero-title-line">Kabir <em>Mithun.</em></span>
+          </h1>
 
-            <div class="hero-social" data-aos="fade-up" data-aos-delay="600">
-              <a href="https://github.com/mi-thun" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" aria-label="LinkedIn"><i
-                  class="bi bi-linkedin"></i></a>
-              <a href="https://www.facebook.com/mohsenulkabir.mithun.9" target="_blank" aria-label="Facebook"><i
-                  class="bi bi-facebook"></i></a>
+          <div class="hero-meta">
+            <p class="hero-role"><code>$ Sr. Software Engineer / Researcher / AI Enthusiast</code></p>
+            <p class="hero-desc">Backend systems that don't fall apart.<br>Code written for humans, not just machines.</p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Get In Touch</a>
+            <div class="hero-social">
+              <a href="https://github.com/mi-thun" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener">Fiverr</a>
             </div>
           </div>
+
         </div>
       </div>
-      <div class="hero-scroll-indicator">
-        <a href="#about"><i class="bi bi-chevron-down"></i></a>
+
+      <div class="hero-scroll">
+        <a href="#about">
+          <span>scroll</span>
+          <span class="scroll-line"></span>
+        </a>
       </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="about section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Get to know me</h2>
-          <div class="op-lore-tag" data-aos="fade-up" data-aos-delay="80">
-            <span class="lore-icon">☠</span>
-            <span>As Luffy never gives up on his quest to be King of the Pirates, I never stop striving to be a great
-              engineer—undaunted by challenges, driven by curiosity, and ready to chart my own course.</span>
-          </div>
+        <div class="section-eyebrow">
+          <span class="section-number">02</span>
+          <span class="section-label">About</span>
         </div>
 
-        <div class="row gy-5 align-items-center">
-
-          <!-- Left: Image -->
-          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
-            <div class="about-image-wrapper">
-              <div class="about-image-decoration"></div>
-              <img src="assets/image/Monkey_D.Luffy" alt="Mohsenul Kabir Mithun" class="img-fluid">
+        <div class="about-grid">
+          <!-- Image col -->
+          <div class="about-image-col">
+            <div class="about-img-wrapper">
+              <img src="assets/image/Monkey_D.Luffy" alt="Mohsenul Kabir Mithun">
+              <div class="about-img-tag">
+                <span>☠</span>
+                <span>Luffy energy. Engineer mindset.</span>
+              </div>
+            </div>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-num">2.5+</span>
+                <span class="stat-label">Years Exp.</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">3.95</span>
+                <span class="stat-label">M.Sc. CGPA</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">4+</span>
+                <span class="stat-label">Domains</span>
+              </div>
             </div>
           </div>
 
-          <!-- Right: Content -->
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
-            <div class="about-content">
-              <div class="about-role-badge">
-                Sr. Software Engineer
-              </div>
-              <h3>Mohsenul Kabir Mithun</h3>
-              <p class="about-lead">
-                I'm a backend developer with a passion for building reliable and scalable solutions.
-                With 2.5+ years of experience leading development teams through all phases of the SDLC, I specialize
-                in creating, testing, and maintaining systems that enhance functionality and performance.
-              </p>
+          <!-- Content col -->
+          <div class="about-content-col">
+            <div class="about-role-badge">Sr. Software Engineer</div>
+            <h2 class="about-name">Mohsenul Kabir Mithun</h2>
+            <p class="about-lead">
+              I build backend systems that are reliable, scalable, and boring in the best possible way — they just work.
+            </p>
+            <p class="about-body">
+              With 2.5+ years leading development teams through the full SDLC, I specialize in Python, Django,
+              and modern infrastructure. I've shipped enterprise software across banking, logistics, military, and
+              education domains. Currently pursuing M.Sc. in CSE at BRAC University with a 3.95 CGPA on scholarship.
+            </p>
 
-              <div class="about-details">
-                <div class="row g-3">
-                  <div class="col-sm-6">
-                    <div class="detail-item">
-                      <i class="bi bi-geo-alt"></i>
-                      <div>
-                        <span class="detail-label">Location</span>
-                        <span class="detail-value">Mirpur, Dhaka, Bangladesh</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="detail-item">
-                      <i class="bi bi-mortarboard"></i>
-                      <div>
-                        <span class="detail-label">Degree</span>
-                        <span class="detail-value">M.Sc. in Computer Science and Engineering</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="detail-item">
-                      <i class="bi bi-envelope"></i>
-                      <div>
-                        <span class="detail-label">Email</span>
-                        <span class="detail-value">mohsenulkabirmi8486@gmail.com</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="detail-item"
-                      style="text-decoration: none; cursor: pointer;">
-                      <i class="bi bi-check-circle"></i>
-                      <div>
-                        <span class="detail-label">Freelance</span>
-                        <span class="detail-value status-available">Available</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
+            <div class="about-details">
+              <div class="about-detail">
+                <i class="bi bi-geo-alt"></i>
+                <span>Mirpur, Dhaka, Bangladesh</span>
               </div>
-
-              <p class="about-closing">
-                I'm dedicated to delivering high-quality solutions and thrive in collaborative environments.
-                My expertise lies in solving complex problems and implementing efficient systems.
-              </p>
+              <div class="about-detail">
+                <i class="bi bi-mortarboard"></i>
+                <span>M.Sc. in Computer Science and Engineering</span>
+              </div>
+              <div class="about-detail">
+                <i class="bi bi-envelope"></i>
+                <span>mohsenulkabirmi8486@gmail.com</span>
+              </div>
+              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="about-detail about-detail-link">
+                <i class="bi bi-check-circle"></i>
+                <span>Freelance — <strong>Available on Fiverr</strong></span>
+              </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
+    <!-- ===== SKILLS ===== -->
     <section id="skills" class="skills section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <!-- <span class="section-tag">Expertise</span> -->
-          <h2>Skills & Technologies</h2>
-          <p class="section-subtitle">Software Development Life Cycle &bull; Database Design &bull; Design Patterns
-            &bull; Data Structures &bull; Algorithms</p>
+        <div class="section-eyebrow">
+          <span class="section-number">03</span>
+          <span class="section-label">Skills & Tech</span>
         </div>
+        <h2 class="section-title">What I Work With</h2>
+        <p class="section-sub">SDLC · Database Design · Design Patterns · Data Structures · Algorithms</p>
+      </div>
 
-        <div class="skills-container">
-
-          <!-- ── Group 1: Core Development ── -->
-          <div class="skill-group" data-aos="fade-up" data-aos-delay="80">
-            <div class="skill-group-label"><span>Core Development</span></div>
-
-            <div class="skill-group-split">
-              <!-- Left column -->
-              <div class="skill-col">
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="120">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #3b82f6;"><i class="bi bi-code-slash"></i></span>
-                    <span class="skill-cat-name">Programming Languages</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #3b82f6;">Python</span>
-                    <span class="skill-tag" style="--cat: #3b82f6;">Java</span>
-                    <span class="skill-tag" style="--cat: #3b82f6;">JavaScript</span>
-                  </div>
-                </div>
-
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="160">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #6366f1;"><i class="bi bi-server"></i></span>
-                    <span class="skill-cat-name">Backend</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #6366f1;">Django</span>
-                    <span class="skill-tag" style="--cat: #6366f1;">Flask</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right column -->
-              <div class="skill-col">
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="200">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #0ea5e9;"><i class="bi bi-window"></i></span>
-                    <span class="skill-cat-name">Frontend</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #0ea5e9;">JavaScript</span>
-                    <span class="skill-tag" style="--cat: #0ea5e9;">React</span>
-                  </div>
-                </div>
-
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="240">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #10b981;"><i class="bi bi-database"></i></span>
-                    <span class="skill-cat-name">Database</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #10b981;">PostgreSQL</span>
-                    <span class="skill-tag" style="--cat: #10b981;">MongoDB</span>
-                    <span class="skill-tag" style="--cat: #10b981;">Supabase</span>
-                    <span class="skill-tag" style="--cat: #10b981;">ORM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Marquee rows -->
+      <div class="skills-marquee-wrapper">
+        <div class="skills-marquee">
+          <div class="marquee-track">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Django</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Supabase</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Django</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">Linux</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Supabase</span>
           </div>
-
-          <!-- ── Group 2: Data & Intelligence ── -->
-          <div class="skill-group" data-aos="fade-up" data-aos-delay="260">
-            <div class="skill-group-label"><span>Data &amp; Intelligence</span></div>
-
-            <div class="skill-group-split">
-              <!-- Left column -->
-              <div class="skill-col">
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="300">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #8b5cf6;"><i class="bi bi-bar-chart-line"></i></span>
-                    <span class="skill-cat-name">Data Science</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #8b5cf6;">NumPy</span>
-                    <span class="skill-tag" style="--cat: #8b5cf6;">Pandas</span>
-                    <span class="skill-tag" style="--cat: #8b5cf6;">Scikit-learn</span>
-                    <span class="skill-tag" style="--cat: #8b5cf6;">TensorFlow</span>
-                    <span class="skill-tag" style="--cat: #8b5cf6;">Keras</span>
-                    <span class="skill-tag" style="--cat: #8b5cf6;">Matplotlib</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right column -->
-              <div class="skill-col">
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="340">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #7c3aed;"><i class="bi bi-cloud-arrow-up"></i></span>
-                    <span class="skill-cat-name">Big Data</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #7c3aed;">Hadoop</span>
-                    <span class="skill-tag" style="--cat: #7c3aed;">PySpark</span>
-                    <span class="skill-tag" style="--cat: #6366f1;">Scrapy</span>
-                    <span class="skill-tag" style="--cat: #7c3aed;">Airflow</span>
-                    <span class="skill-tag" style="--cat: #7c3aed;">DBT</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+        <div class="skills-marquee reverse">
+          <div class="marquee-track">
+            <span class="skill-pill accent">TensorFlow</span>
+            <span class="skill-pill accent">Pandas</span>
+            <span class="skill-pill accent">NumPy</span>
+            <span class="skill-pill accent">Scikit-learn</span>
+            <span class="skill-pill accent">Keras</span>
+            <span class="skill-pill accent">Hadoop</span>
+            <span class="skill-pill accent">PySpark</span>
+            <span class="skill-pill accent">Airflow</span>
+            <span class="skill-pill accent">DBT</span>
+            <span class="skill-pill accent">Scrapy</span>
+            <span class="skill-pill accent">Selenium</span>
+            <span class="skill-pill accent">Postman</span>
+            <span class="skill-pill accent">Flutter</span>
+            <!-- Duplicate -->
+            <span class="skill-pill accent">TensorFlow</span>
+            <span class="skill-pill accent">Pandas</span>
+            <span class="skill-pill accent">NumPy</span>
+            <span class="skill-pill accent">Scikit-learn</span>
+            <span class="skill-pill accent">Keras</span>
+            <span class="skill-pill accent">Hadoop</span>
+            <span class="skill-pill accent">PySpark</span>
+            <span class="skill-pill accent">Airflow</span>
+            <span class="skill-pill accent">DBT</span>
+            <span class="skill-pill accent">Scrapy</span>
+            <span class="skill-pill accent">Selenium</span>
+            <span class="skill-pill accent">Postman</span>
+            <span class="skill-pill accent">Flutter</span>
           </div>
-
-          <!-- ── Group 3: Infrastructure & Tooling ── -->
-          <div class="skill-group" data-aos="fade-up" data-aos-delay="360">
-            <div class="skill-group-label"><span>Infrastructure &amp; Tooling</span></div>
-
-            <div class="skill-group-split">
-              <!-- Left column -->
-              <div class="skill-col">
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="400">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #f59e0b;"><i class="bi bi-gear-fill"></i></span>
-                    <span class="skill-cat-name">DevOps</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #f59e0b;">AWS</span>
-                    <span class="skill-tag" style="--cat: #f59e0b;">Docker</span>
-                    <span class="skill-tag" style="--cat: #f59e0b;">Linux</span>
-                  </div>
-                </div>
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="480">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #14b8a6;"><i class="bi bi-phone-fill"></i></span>
-                    <span class="skill-cat-name">Mobile</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #14b8a6;">Java</span>
-                    <span class="skill-tag" style="--cat: #14b8a6;">Flutter</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right column -->
-              <div class="skill-col">
-                <div class="skill-row" data-aos="fade-up" data-aos-delay="440">
-                  <div class="skill-row-header">
-                    <span class="skill-cat-icon" style="--cat: #f43f5e;"><i class="bi bi-bug-fill"></i></span>
-                    <span class="skill-cat-name">Testing &amp; QA</span>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag" style="--cat: #f43f5e;">Selenium</span>
-                    <span class="skill-tag" style="--cat: #f43f5e;">JMeter</span>
-                    <span class="skill-tag" style="--cat: #f43f5e;">Postman</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- /.skill-group -->
-
         </div>
       </div>
-    </section>
 
-    <!-- ===== DEVELOPER IDENTITY SECTION (AoT Theme) ===== -->
-    <section id="developer-roles" class="aot-characters section">
+      <!-- Category grid -->
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>How I See Myself as a Developer</h2>
-          <p class="section-subtitle">Three roles. One developer. I wear every hat it takes to ship great software.</p>
-          <div class="aot-lore-tag" data-aos="fade-up" data-aos-delay="80">
-            <span class="lore-icon">⚔</span>
-            <span>Survey Corps inspiration — if you know, you know.</span>
+        <div class="skills-grid">
+          <div class="skill-cat">
+            <span class="skill-cat-num">01</span>
+            <h4>Core Development</h4>
+            <p>Python · Java · JavaScript · Django · Flask · React · PostgreSQL · MongoDB · ORM</p>
+          </div>
+          <div class="skill-cat">
+            <span class="skill-cat-num">02</span>
+            <h4>Data & Intelligence</h4>
+            <p>NumPy · Pandas · Scikit-learn · TensorFlow · Keras · Matplotlib · Hadoop · PySpark · Airflow · DBT</p>
+          </div>
+          <div class="skill-cat">
+            <span class="skill-cat-num">03</span>
+            <h4>Infrastructure</h4>
+            <p>AWS · Docker · Linux · CI/CD · Selenium · JMeter · Postman · Scrapy · Flutter · Supabase</p>
           </div>
         </div>
-
-        <div class="row g-4 justify-content-center">
-
-          <!-- Eren Card — Full Stack Builder -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="character-card eren-card">
-              <div class="card-top-accent"></div>
-              <div class="character-icon-wrap eren-icon">
-                <span class="char-glyph">⚡</span>
-              </div>
-              <div class="character-meta">
-                <span class="character-lore-name">Eren</span>
-                <span class="character-lore-role">Attack Specialist</span>
-              </div>
-              <div class="character-divider">
-                <span class="divider-arrow">↓ in real life means</span>
-              </div>
-              <div class="character-content">
-                <h3 class="developer-title">Full Stack Developer</h3>
-                <p class="character-desc">
-                  I attack every layer of the stack. Whether it's backend logic, frontend UI, or deployment pipelines —
-                  I charge in, solve the problem, and ship it.
-                </p>
-                <div class="character-skills">
-                  <span class="skill-badge backend-badge">Backend</span>
-                  <span class="skill-badge frontend-badge">Frontend</span>
-                  <span class="skill-badge devops-badge">DevOps</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mikasa Card — UX Guardian -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="180">
-            <div class="character-card mikasa-card">
-              <div class="card-top-accent"></div>
-              <div class="character-icon-wrap mikasa-icon">
-                <span class="char-glyph">🛡</span>
-              </div>
-              <div class="character-meta">
-                <span class="character-lore-name">Mikasa</span>
-                <span class="character-lore-role">Defense Specialist</span>
-              </div>
-              <div class="character-divider">
-                <span class="divider-arrow">↓ in real life means</span>
-              </div>
-              <div class="character-content">
-                <h3 class="developer-title">UX & Interface Guardian</h3>
-                <p class="character-desc">
-                  I guard the user's experience with precision. Clean interfaces, smooth interactions, and mobile-first
-                  design — because the end user deserves protection from bad UX.
-                </p>
-                <div class="character-skills">
-                  <span class="skill-badge">React</span>
-                  <span class="skill-badge">UI/UX</span>
-                  <span class="skill-badge">Mobile</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Armin Card — Systems Architect -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="260">
-            <div class="character-card armin-card">
-              <div class="card-top-accent"></div>
-              <div class="character-icon-wrap armin-icon">
-                <span class="char-glyph">🧠</span>
-              </div>
-              <div class="character-meta">
-                <span class="character-lore-name">Armin</span>
-                <span class="character-lore-role">Strategic Coordinator</span>
-              </div>
-              <div class="character-divider">
-                <span class="divider-arrow">↓ in real life means</span>
-              </div>
-              <div class="character-content">
-                <h3 class="developer-title">Systems Architect</h3>
-                <p class="character-desc">
-                  I think before I build. Designing scalable systems, modeling databases, and planning APIs that don't
-                  fall apart under pressure — strategy over brute force.
-                </p>
-                <div class="character-skills">
-                  <span class="skill-badge">Python</span>
-                  <span class="skill-badge">Databases</span>
-                  <span class="skill-badge">APIs</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Bottom Note -->
-        <div class="aot-bottom-note" data-aos="fade-up" data-aos-delay="300">
-          <p>These aren't three different people — <strong>this is one developer <spam>me</spam></strong>, playing every
-            role the
-            project demands.</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- ===== RESUME SECTION ===== -->
+    <!-- ===== DEVELOPER ROLES ===== -->
+    <section id="developer-roles" class="roles section">
+      <div class="container">
+        <div class="section-eyebrow">
+          <span class="section-number">04</span>
+          <span class="section-label">How I Work</span>
+        </div>
+
+        <div class="roles-header">
+          <h2 class="section-title">One Developer,<br><em>Three Modes.</em></h2>
+          <p class="roles-lore-note">
+            <span>⚔</span> Survey Corps inspiration — if you know, you know.
+          </p>
+        </div>
+
+        <div class="roles-grid">
+
+          <!-- Eren -->
+          <div class="role-card">
+            <div class="role-top">
+              <span class="role-num">01</span>
+              <span class="role-glyph">⚡</span>
+            </div>
+            <div class="role-lore">
+              <span class="role-char">Eren</span>
+              <span class="role-char-title">Attack Specialist</span>
+            </div>
+            <div class="role-divider">↓ in real life means</div>
+            <h3 class="role-title">Full Stack Developer</h3>
+            <p class="role-desc">I attack every layer of the stack. Backend logic, frontend UI, deployment pipelines — I charge in, solve the problem, and ship it.</p>
+            <div class="role-tags">
+              <span>Backend</span>
+              <span>Frontend</span>
+              <span>DevOps</span>
+            </div>
+          </div>
+
+          <!-- Mikasa -->
+          <div class="role-card">
+            <div class="role-top">
+              <span class="role-num">02</span>
+              <span class="role-glyph">🛡</span>
+            </div>
+            <div class="role-lore">
+              <span class="role-char">Mikasa</span>
+              <span class="role-char-title">Defense Specialist</span>
+            </div>
+            <div class="role-divider">↓ in real life means</div>
+            <h3 class="role-title">UX & Interface Guardian</h3>
+            <p class="role-desc">I guard the user's experience with precision. Clean interfaces, smooth interactions, mobile-first — users deserve protection from bad UX.</p>
+            <div class="role-tags">
+              <span>React</span>
+              <span>UI/UX</span>
+              <span>Mobile</span>
+            </div>
+          </div>
+
+          <!-- Armin -->
+          <div class="role-card">
+            <div class="role-top">
+              <span class="role-num">03</span>
+              <span class="role-glyph">🧠</span>
+            </div>
+            <div class="role-lore">
+              <span class="role-char">Armin</span>
+              <span class="role-char-title">Strategic Coordinator</span>
+            </div>
+            <div class="role-divider">↓ in real life means</div>
+            <h3 class="role-title">Systems Architect</h3>
+            <p class="role-desc">I think before I build. Scalable databases, clean APIs, systems designed not to fall apart under pressure — strategy over brute force.</p>
+            <div class="role-tags">
+              <span>Python</span>
+              <span>Databases</span>
+              <span>APIs</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="roles-note-bottom">
+          These aren't three different people — <strong>this is one developer, me</strong>, playing every role the project demands.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== RESUME ===== -->
     <section id="resume" class="resume section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <!-- <span class="section-tag">Career</span> -->
-          <h2>Resume & Experience</h2>
-          <p class="section-subtitle">Education, professional experience, and research achievements</p>
+        <div class="section-eyebrow">
+          <span class="section-number">05</span>
+          <span class="section-label">Resume</span>
         </div>
+        <h2 class="section-title">Experience & Education</h2>
 
-        <div class="row">
-          <!-- Left Column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="resume-category">
-              <h3 class="resume-title"><i class="bi bi-mortarboard"></i> Education</h3>
-              <div class="resume-item">
-                <h4>M.Sc. in Computer Science and Engineering</h4>
-                <div class="resume-date"><i class="bi bi-calendar3"></i> January 2024 – Present</div>
-                <p class="resume-org">BRAC University</p>
-                <p class="resume-gpa">CGPA: 3.95/4.00 (Thesis pending)</p>
-                <div class="achievements">
-                  <h5><i class="bi bi-trophy"></i> Achievements</h5>
-                  <ul class="resume-list">
-                    <li><i class="bi bi-award"></i> 75% Merit Scholarship — CGPA 3.95+</li>
-                    <li><i class="bi bi-award"></i> 50% Merit Scholarship — CGPA 3.90+</li>
-                    <li><i class="bi bi-award"></i> 40% Tuition Fee Waiver — Outstanding undergrad performance</li>
-                  </ul>
-                </div>
-              </div>
+        <div class="resume-grid">
 
-              <div class="resume-item">
-                <h4>B.Sc. in Computer Science and Engineering</h4>
-                <div class="resume-date"><i class="bi bi-calendar3"></i> September 2019 – September 2023</div>
-                <p class="resume-org">East West University</p>
-                <p class="resume-gpa">CGPA: 3.76/4.00</p>
-                <div class="achievements">
-                  <h5><i class="bi bi-trophy"></i> Achievements</h5>
-                  <ul class="resume-list">
-                    <li><i class="bi bi-award"></i> 'Cum Laude' — CGPA 3.75+ across 12 consecutive semesters</li>
-                    <li><i class="bi bi-award"></i> Dean's List Scholarship — GPA 3.75+ for 3 consecutive semesters</li>
-                    <li><i class="bi bi-award"></i> Medha Lalon Scholarship — GPA 3.50+ for 3 consecutive semesters</li>
-                  </ul>
-                </div>
-              </div>
+          <!-- Left: Education + Publication -->
+          <div class="resume-col">
+            <h3 class="resume-col-title"><i class="bi bi-mortarboard"></i> Education</h3>
+
+            <div class="resume-entry">
+              <div class="resume-entry-date">Jan 2024 — Present</div>
+              <h4>M.Sc. in Computer Science and Engineering</h4>
+              <p class="resume-entry-org">BRAC University</p>
+              <p class="resume-entry-grade">CGPA: 3.95 / 4.00</p>
+              <ul class="resume-achievements">
+                <li>75% Merit Scholarship — CGPA 3.95+</li>
+                <li>50% Merit Scholarship — CGPA 3.90+</li>
+                <li>40% Tuition Fee Waiver — Outstanding undergrad performance</li>
+              </ul>
             </div>
 
-            <div class="resume-category">
-              <h3 class="resume-title"><i class="bi bi-journal-text"></i> Publication</h3>
-              <div class="resume-item">
-                <p><strong>Computer Aided Strategy to Diagnose Lung Cancer from CT-Scan Images using Inception
-                    Architecture</strong>, 2nd International Conference on Big Data, IoT and Machine Learning (BIM), pp.
-                  XXX–XXX, Taylor and Francis Book, 2023. [Book Chapter] (Accepted)</p>
-              </div>
+            <div class="resume-entry">
+              <div class="resume-entry-date">Sep 2019 — Sep 2023</div>
+              <h4>B.Sc. in Computer Science and Engineering</h4>
+              <p class="resume-entry-org">East West University</p>
+              <p class="resume-entry-grade">CGPA: 3.76 / 4.00</p>
+              <ul class="resume-achievements">
+                <li>Cum Laude — 3.75+ GPA across 12 consecutive semesters</li>
+                <li>Dean's List Scholarship — GPA 3.75+ for 3 semesters</li>
+                <li>Medha Lalon Scholarship — GPA 3.50+ for 3 semesters</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-col-title mt-section"><i class="bi bi-journal-text"></i> Publication</h3>
+
+            <div class="resume-entry">
+              <p class="resume-pub">
+                <em>Computer Aided Strategy to Diagnose Lung Cancer from CT-Scan Images using Inception
+                  Architecture</em> — 2nd International Conference on Big Data, IoT and Machine Learning (BIM),
+                Taylor and Francis, 2023. [Book Chapter, Accepted]
+              </p>
             </div>
           </div>
 
-          <!-- Right Column -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="resume-category">
-              <h3 class="resume-title"><i class="bi bi-briefcase"></i> Professional Experience</h3>
+          <!-- Right: Experience -->
+          <div class="resume-col">
+            <h3 class="resume-col-title"><i class="bi bi-briefcase"></i> Professional Experience</h3>
 
-              <div class="resume-item">
-                <h4>Sr. Software Engineer</h4>
-                <div class="resume-date"><i class="bi bi-calendar3"></i> January 2026 – Present</div>
-                <p class="resume-org">Software Global Consultancy (SGC)</p>
-                <ul class="resume-list">
-                  <li><i class="bi bi-check2-circle"></i> Designed, developed, and maintained robust backend services
-                    with a focus on scalability and performance</li>
-                  <li><i class="bi bi-check2-circle"></i> Implemented features, resolved bugs, and ensured platform
-                    security and stability</li>
-                  <li><i class="bi bi-check2-circle"></i> Managed production deployments and performed root cause
-                    analysis of outages</li>
-                  <li><i class="bi bi-check2-circle"></i> Created scalable and reusable backend architecture following
-                    best practices</li>
-                  <li><i class="bi bi-check2-circle"></i> Led development of enterprise applications across banking,
-                    logistics, military, education, and analytics domains</li>
-                </ul>
-              </div>
+            <div class="resume-entry">
+              <div class="resume-entry-date">Jan 2026 — Present</div>
+              <h4>Sr. Software Engineer</h4>
+              <p class="resume-entry-org">Software Global Consultancy (SGC)</p>
+              <ul class="resume-list">
+                <li>Designed and maintained robust backend services focused on scalability and performance</li>
+                <li>Managed production deployments and performed root cause analysis of outages</li>
+                <li>Led enterprise applications across banking, logistics, military, and education domains</li>
+                <li>Built scalable, reusable backend architecture following best practices</li>
+              </ul>
+            </div>
 
-              <div class="resume-item">
-                <h4>Associate Software Engineer</h4>
-                <div class="resume-date"><i class="bi bi-calendar3"></i> June 2023 – December 2025</div>
-                <p class="resume-org">Software Global Consultancy (SGC)</p>
-                <ul class="resume-list">
-                  <li><i class="bi bi-check2-circle"></i> Assisted in designing and developing backend services for
-                    scalability and performance</li>
-                  <li><i class="bi bi-check2-circle"></i> Implemented features and resolved bugs to ensure platform
-                    stability</li>
-                  <li><i class="bi bi-check2-circle"></i> Supported production deployments and root cause analysis</li>
-                  <li><i class="bi bi-check2-circle"></i> Maintained high performance and responsiveness of APIs and
-                    services</li>
-                  <li><i class="bi bi-check2-circle"></i> Worked closely with front-end teams and product managers</li>
-                </ul>
-              </div>
+            <div class="resume-entry">
+              <div class="resume-entry-date">Jun 2023 — Dec 2025</div>
+              <h4>Associate Software Engineer</h4>
+              <p class="resume-entry-org">Software Global Consultancy (SGC)</p>
+              <ul class="resume-list">
+                <li>Built backend services, implemented features, resolved bugs to ensure platform stability</li>
+                <li>Maintained high performance and responsiveness of APIs and services</li>
+                <li>Collaborated closely with frontend teams and product managers</li>
+              </ul>
+            </div>
 
-              <div class="resume-item">
-                <h4>Teaching Assistant</h4>
-                <div class="resume-date"><i class="bi bi-calendar3"></i> June 2023 – September 2023</div>
-                <p class="resume-org">East West University</p>
-                <ul class="resume-list">
-                  <li><i class="bi bi-check2-circle"></i> Assisted in conducting lectures and laboratory sessions</li>
-                  <li><i class="bi bi-check2-circle"></i> Provided one-on-one assistance to students on complex
-                    technical concepts and coding skills</li>
-                </ul>
-              </div>
+            <div class="resume-entry">
+              <div class="resume-entry-date">Jun 2023 — Sep 2023</div>
+              <h4>Teaching Assistant</h4>
+              <p class="resume-entry-org">East West University</p>
+              <ul class="resume-list">
+                <li>Assisted in conducting lectures and laboratory sessions</li>
+                <li>Provided one-on-one tutoring on complex technical concepts and coding</li>
+              </ul>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
+    <!-- ===== SERVICES ===== -->
     <section id="services" class="services section">
       <div class="container">
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-          <h2 style="font-weight: 800; font-family: 'Space Grotesk', sans-serif;">Services I Provide</h2>
-          <p class="section-subtitle" style="color: #64748b;">Professional services to meet your development and
-            automation needs</p>
+        <div class="section-eyebrow">
+          <span class="section-number">06</span>
+          <span class="section-label">Services</span>
         </div>
+        <h2 class="section-title">What I Can Build For You</h2>
 
-        <div class="row g-4">
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card-modern">
-              <div class="modern-icon-wrapper icon-blue">
-                <i class="bi bi-server"></i>
-              </div>
-              <h3>Backend Web Development</h3>
-              <p>RESTful API development, database design, server architecture, and backend optimization using Python,
-                Django, and modern frameworks to ensure scalable solutions.</p>
-              <div class="service-actions">
-                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
-                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
-                </a>
-                <a href="service-details.html?service=backend" class="btn-learn-modern">
-                  Learn More <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+        <div class="services-grid">
+
+          <div class="service-card">
+            <div class="service-num">01</div>
+            <div class="service-icon"><i class="bi bi-server"></i></div>
+            <h3>Backend Development</h3>
+            <p>RESTful API development, database design, server architecture, and backend optimization using Python, Django, and modern frameworks.</p>
+            <div class="service-links">
+              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on Fiverr ↗</a>
+              <a href="#" class="service-more open-service" data-service="backend">Learn More</a>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card-modern">
-              <div class="modern-icon-wrapper icon-green">
-                <i class="bi bi-terminal-fill"></i>
-              </div>
-              <h3>Python Projects & Automation</h3>
-              <p>Build, debug, and automate Python projects. From web scraping scripts to custom operational programs
-                tailored precisely for your business needs.</p>
-              <div class="service-actions">
-                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
-                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
-                </a>
-                <a href="service-details.html?service=python" class="btn-learn-modern">
-                  Learn More <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+          <div class="service-card">
+            <div class="service-num">02</div>
+            <div class="service-icon"><i class="bi bi-terminal-fill"></i></div>
+            <h3>Python & Automation</h3>
+            <p>Build, debug, and automate Python projects. Web scraping scripts to custom operational programs tailored for your business needs.</p>
+            <div class="service-links">
+              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on Fiverr ↗</a>
+              <a href="#" class="service-more open-service" data-service="python">Learn More</a>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card-modern">
-              <div class="modern-icon-wrapper icon-orange">
-                <i class="bi bi-gear-fill"></i>
-              </div>
-              <h3>DevOps Service</h3>
-              <p>Robust CI/CD pipeline setup, containerization with Docker, cloud deployment strategies, infrastructure
-                automation, and real-time monitoring solutions.</p>
-              <div class="service-actions">
-                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
-                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
-                </a>
-                <a href="service-details.html?service=devops" class="btn-learn-modern">
-                  Learn More <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+          <div class="service-card">
+            <div class="service-num">03</div>
+            <div class="service-icon"><i class="bi bi-gear-fill"></i></div>
+            <h3>DevOps</h3>
+            <p>CI/CD pipeline setup, containerization with Docker, cloud deployment strategies, infrastructure automation, and monitoring.</p>
+            <div class="service-links">
+              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on Fiverr ↗</a>
+              <a href="#" class="service-more open-service" data-service="devops">Learn More</a>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-card-modern">
-              <div class="modern-icon-wrapper icon-cyan">
-                <i class="bi bi-window-dock"></i>
-              </div>
-              <h3>Frontend Service using React</h3>
-              <p>Modern, interactive React applications featuring flawless state management, scalable component
-                architecture, and high-performance responsive design.</p>
-              <div class="service-actions">
-                <a href="https://www.fiverr.com/mkmithun08" class="btn-hire-modern" target="_blank" rel="noopener">
-                  <i class="bi bi-briefcase-fill"></i> Hire on Fiverr
-                </a>
-                <a href="service-details.html?service=frontend" class="btn-learn-modern">
-                  Learn More <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+          <div class="service-card">
+            <div class="service-num">04</div>
+            <div class="service-icon"><i class="bi bi-window-dock"></i></div>
+            <h3>Frontend with React</h3>
+            <p>Modern, interactive React applications with clean state management, scalable component architecture, and responsive design.</p>
+            <div class="service-links">
+              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on Fiverr ↗</a>
+              <a href="#" class="service-more open-service" data-service="frontend">Learn More</a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-
-
-    <!-- ===== CONTACT SECTION ===== -->
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <!-- <span class="section-tag">Reach Out</span> -->
-          <h2>Let's Work Together</h2>
-          <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
+        <div class="section-eyebrow">
+          <span class="section-number">07</span>
+          <span class="section-label">Contact</span>
         </div>
 
-        <div class="row gy-4">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-info-cards">
-              <div class="contact-info-card">
-                <div class="contact-icon">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <h4>Location</h4>
-                <p>Mirpur, Dhaka, Bangladesh</p>
+        <div class="contact-grid">
+          <div class="contact-left">
+            <h2 class="section-title">Let's Build Something<br><em>Together.</em></h2>
+            <p class="contact-desc">Have a project in mind? I'd love to hear about it. Drop me a message and I'll get back to you soon.</p>
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Mirpur, Dhaka, Bangladesh</span>
               </div>
-
-              <div class="contact-info-card">
-                <div class="contact-icon">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <h4>Email</h4>
-                <p>mohsenulkabirmi8486@gmail.com</p>
+              <div class="contact-info-item">
+                <i class="bi bi-envelope"></i>
+                <span>mohsenulkabirmi8486@gmail.com</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <form id="contactForm" class="contact-form php-email-form" method="post" novalidate>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input type="text" name="name" class="form-control" id="contactName" placeholder="Your Name"
-                      required>
-                    <label for="contactName">Your Name</label>
-                  </div>
+          <div class="contact-right">
+            <form id="contactForm" class="contact-form" method="post" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <input type="text" name="name" id="contactName" placeholder="Your Name" required>
                   <span class="field-error" id="err-name">Please enter your name.</span>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-floating">
-                    <input type="email" class="form-control" name="email" id="contactEmail" placeholder="Your Email"
-                      required>
-                    <label for="contactEmail">Your Email</label>
-                  </div>
-                  <span class="field-error" id="err-email">Please enter a valid email address.</span>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" name="subject" id="contactSubject" placeholder="Subject"
-                      required>
-                    <label for="contactSubject">Subject</label>
-                  </div>
-                  <span class="field-error" id="err-subject">Please enter a subject.</span>
-                </div>
-                <div class="col-12">
-                  <div class="form-floating">
-                    <textarea class="form-control" name="message" id="contactMessage" placeholder="Message"
-                      style="height: 180px" required></textarea>
-                    <label for="contactMessage">Your Message</label>
-                  </div>
-                  <span class="field-error" id="err-message">Please write your message.</span>
-                </div>
-                <div class="col-12">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                  <button type="submit" class="btn-submit">
-                    <span>Send Message</span>
-                    <i class="bi bi-send"></i>
-                  </button>
+                <div class="form-field">
+                  <input type="email" name="email" id="contactEmail" placeholder="Your Email" required>
+                  <span class="field-error" id="err-email">Valid email required.</span>
                 </div>
               </div>
+              <div class="form-field">
+                <input type="text" name="subject" id="contactSubject" placeholder="Subject" required>
+                <span class="field-error" id="err-subject">Please enter a subject.</span>
+              </div>
+              <div class="form-field">
+                <textarea name="message" id="contactMessage" placeholder="Your Message" rows="6" required></textarea>
+                <span class="field-error" id="err-message">Please write your message.</span>
+              </div>
+              <div class="loading" style="display:none;">Sending...</div>
+              <div class="error-message" style="display:none;"></div>
+              <div class="sent-message" style="display:none;">Message sent. Thank you!</div>
+              <button type="submit" class="btn-submit">Send Message →</button>
             </form>
           </div>
         </div>
@@ -755,25 +558,237 @@
 
   </main>
 
+  <!-- ===== SERVICE DETAIL OVERLAY ===== -->
+  <div id="serviceOverlay" class="sdo" aria-hidden="true" role="dialog" aria-modal="true">
+
+    <!-- Header bar -->
+    <div class="sdo-header">
+      <div class="sdo-breadcrumb">
+        <span>Services</span>
+        <span class="sdo-sep">/</span>
+        <span id="sdoTitle">Backend Development</span>
+      </div>
+      <button class="sdo-close" id="sdoClose" aria-label="Close service details">✕ Close</button>
+    </div>
+
+    <!-- Body: sidebar + content -->
+    <div class="sdo-body">
+
+      <!-- Sidebar nav -->
+      <aside class="sdo-sidebar">
+        <p class="sdo-sidebar-label">All Services</p>
+
+        <button class="sdo-nav-btn active" data-panel="backend">
+          <i class="bi bi-server"></i>
+          <span>Backend Development</span>
+        </button>
+        <button class="sdo-nav-btn" data-panel="python">
+          <i class="bi bi-terminal-fill"></i>
+          <span>Python &amp; Automation</span>
+        </button>
+        <button class="sdo-nav-btn" data-panel="devops">
+          <i class="bi bi-gear-fill"></i>
+          <span>DevOps</span>
+        </button>
+        <button class="sdo-nav-btn" data-panel="frontend">
+          <i class="bi bi-window-dock"></i>
+          <span>Frontend (React)</span>
+        </button>
+
+        <div class="sdo-sidebar-cta">
+          <i class="bi bi-headset sdo-cta-icon"></i>
+          <h4 class="sdo-cta-title">Let's Work Together</h4>
+          <a href="mailto:mohsenulkabirmi8486@gmail.com" class="sdo-cta-row">
+            <i class="bi bi-envelope"></i>
+            <span>mohsenulkabirmi8486@gmail.com</span>
+          </a>
+          <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="sdo-cta-row sdo-cta-fiverr">
+            <i class="bi bi-briefcase-fill"></i>
+            <span>Hire me on Fiverr</span>
+          </a>
+          <a href="#contact" class="sdo-contact-link" id="sdoContactLink">or send a message ↓</a>
+        </div>
+      </aside>
+
+      <!-- Content panels -->
+      <div class="sdo-content">
+
+        <!-- ── Backend ── -->
+        <div class="sdo-panel active" data-panel="backend">
+          <h2 class="sdo-panel-title">Backend Web Development</h2>
+          <p class="sdo-panel-intro">I build robust, scalable backend systems that power modern applications. Specializing in REST API design, database architecture, and server-side optimization with Python and Django.</p>
+
+          <div class="sdo-highlights">
+            <div class="sdo-highlight">
+              <i class="bi bi-database"></i>
+              <h5>Database Design</h5>
+              <p>PostgreSQL, MySQL, schema optimization</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-diagram-3"></i>
+              <h5>API Architecture</h5>
+              <p>RESTful, GraphQL, OAuth2</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-lightning-fill"></i>
+              <h5>Performance</h5>
+              <p>Caching, indexing, monitoring</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-shield-check"></i>
+              <h5>Security</h5>
+              <p>Authentication, authorization, encryption</p>
+            </div>
+          </div>
+
+          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
+          <ul class="sdo-deliverables">
+            <li><i class="bi bi-check-circle-fill"></i><span>Scalable REST APIs with Django &amp; DRF</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Database schema design &amp; optimization</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Authentication &amp; authorization systems</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Caching strategies &amp; performance tuning</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Unit &amp; integration testing</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>API documentation &amp; deployment</span></li>
+          </ul>
+        </div>
+
+        <!-- ── Python ── -->
+        <div class="sdo-panel" data-panel="python">
+          <h2 class="sdo-panel-title">Python Projects &amp; Automation</h2>
+          <p class="sdo-panel-intro">Leverage Python's versatility for custom projects, data processing, automation workflows, and scripting. From web scraping to batch processing and system automation.</p>
+
+          <div class="sdo-highlights">
+            <div class="sdo-highlight">
+              <i class="bi bi-gear"></i>
+              <h5>Automation</h5>
+              <p>Workflow, task scheduling, scripts</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-graph-up"></i>
+              <h5>Data Processing</h5>
+              <p>ETL, analysis, visualization</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-box-seam"></i>
+              <h5>Web Scraping</h5>
+              <p>BeautifulSoup, Selenium, Scrapy</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-tools"></i>
+              <h5>Custom Tools</h5>
+              <p>Utilities, libraries, integrations</p>
+            </div>
+          </div>
+
+          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
+          <ul class="sdo-deliverables">
+            <li><i class="bi bi-check-circle-fill"></i><span>Automation scripts for complex workflows</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Data extraction &amp; processing pipelines</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Web scraping &amp; parsing solutions</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Batch processing &amp; scheduled jobs</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Python libraries &amp; reusable modules</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>System integration &amp; deployment</span></li>
+          </ul>
+        </div>
+
+        <!-- ── DevOps ── -->
+        <div class="sdo-panel" data-panel="devops">
+          <h2 class="sdo-panel-title">DevOps Service</h2>
+          <p class="sdo-panel-intro">Build reliable, scalable infrastructure with modern DevOps practices. CI/CD pipelines, containerization, cloud deployment, and infrastructure automation for seamless delivery.</p>
+
+          <div class="sdo-highlights">
+            <div class="sdo-highlight">
+              <i class="bi bi-git"></i>
+              <h5>CI/CD Pipelines</h5>
+              <p>GitHub Actions, GitLab, automation</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-box-seam"></i>
+              <h5>Containerization</h5>
+              <p>Docker, Docker Compose, images</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-cloud"></i>
+              <h5>Cloud Deployment</h5>
+              <p>AWS, Google Cloud, DigitalOcean</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-eye"></i>
+              <h5>Monitoring</h5>
+              <p>Logging, analytics, alerting</p>
+            </div>
+          </div>
+
+          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
+          <ul class="sdo-deliverables">
+            <li><i class="bi bi-check-circle-fill"></i><span>Complete CI/CD pipeline setup &amp; configuration</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Docker containerization &amp; optimization</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Infrastructure as Code (IaC)</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Cloud deployment &amp; scaling strategies</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Monitoring, logging &amp; alerting setup</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Security hardening &amp; best practices</span></li>
+          </ul>
+        </div>
+
+        <!-- ── Frontend ── -->
+        <div class="sdo-panel" data-panel="frontend">
+          <h2 class="sdo-panel-title">Frontend Service using React</h2>
+          <p class="sdo-panel-intro">Create modern, interactive user interfaces with React. I build scalable component architectures, manage complex state, and ensure responsive design across all devices.</p>
+
+          <div class="sdo-highlights">
+            <div class="sdo-highlight">
+              <i class="bi bi-palette"></i>
+              <h5>UI/UX Design</h5>
+              <p>Modern interfaces, accessibility</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-puzzle"></i>
+              <h5>Components</h5>
+              <p>Reusable, modular architecture</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-phone"></i>
+              <h5>Responsive</h5>
+              <p>Mobile-first design, all screens</p>
+            </div>
+            <div class="sdo-highlight">
+              <i class="bi bi-speedometer"></i>
+              <h5>Performance</h5>
+              <p>Optimization, lazy loading, bundling</p>
+            </div>
+          </div>
+
+          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
+          <ul class="sdo-deliverables">
+            <li><i class="bi bi-check-circle-fill"></i><span>Reusable React component system</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>State management (Redux, Context API)</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Responsive &amp; mobile-friendly design</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>API integration &amp; data fetching</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Performance optimization &amp; bundling</span></li>
+            <li><i class="bi bi-check-circle-fill"></i><span>Testing &amp; code documentation</span></li>
+          </ul>
+        </div>
+
+      </div><!-- /.sdo-content -->
+    </div><!-- /.sdo-body -->
+  </div><!-- /#serviceOverlay -->
+
   <!-- ===== FOOTER ===== -->
   <footer id="footer" class="footer">
     <div class="container">
-      <div class="footer-content">
-        <h3 class="footer-name">Mohsenul Kabir Mithun</h3>
-        <p class="footer-tagline">Building scalable solutions, one commit at a time.</p>
-        <!-- <p class="footer-aot-tagline">「戦え」 — Tatakae</p> -->
-        <div class="footer-social">
-          <a href="https://github.com/mi-thun" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-          <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" aria-label="LinkedIn"><i
-              class="bi bi-linkedin"></i></a>
-          <a href="https://www.facebook.com/mohsenulkabir.mithun.9" target="_blank" aria-label="Facebook"><i
-              class="bi bi-facebook"></i></a>
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-name">Mohsenul Kabir Mithun</p>
+          <p class="footer-tagline">Building scalable solutions, one commit at a time.</p>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> Mohsenul Kabir Mithun. All Rights Reserved.</p>
-        <!-- <p class="footer-aot-credit">Inspired by &nbsp;<span>進撃の巨人</span>&nbsp; Attack on Titan · Survey Corps Division -->
-        </p>
+        <div class="footer-right">
+          <div class="footer-social">
+            <a href="https://github.com/mi-thun" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.facebook.com/mohsenulkabir.mithun.9" target="_blank" rel="noopener">Facebook</a>
+          </div>
+          <p class="footer-copy">&copy; <span id="currentYear"></span> Mohsenul Kabir Mithun. All rights reserved.</p>
+        </div>
       </div>
     </div>
   </footer>
@@ -786,29 +801,13 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Inline utilities -->
   <script>
-    // Calculate age
-    function calculateAge(birthday) {
-      const today = new Date();
-      const birthDate = new Date(birthday);
-      let age = today.getFullYear() - birthDate.getFullYear();
-      const monthDiff = today.getMonth() - birthDate.getMonth();
-      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) age--;
-      return age;
-    }
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 
 </body>
-
 </html>
