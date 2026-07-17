@@ -591,7 +591,9 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin: 52px 0;
+  max-width: 1120px;
+  margin: 52px auto;
+  padding: 0 24px;
   overflow: hidden;
 }
 
@@ -1376,6 +1378,7 @@ ul { list-style: none; }
   :root { --section-py: 52px; }
 
   .container { padding: 0 16px; }
+  .skills-marquee-wrapper { padding: 0 16px; }
 
   /* Header */
   .header-inner { padding: 0 16px; }
