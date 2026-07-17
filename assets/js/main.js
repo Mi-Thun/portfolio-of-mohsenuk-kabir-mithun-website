@@ -276,6 +276,13 @@
     sdoClose.addEventListener("click", closeServiceOverlay);
   }
 
+  // Click on the dimmed backdrop closes the modal
+  if (overlay) {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeServiceOverlay();
+    });
+  }
+
   // Sidebar nav buttons inside overlay
   if (overlay) {
     overlay.querySelectorAll(".sdo-nav-btn").forEach((btn) => {
