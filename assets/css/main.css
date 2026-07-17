@@ -1715,6 +1715,212 @@ ul { list-style: none; }
 }
 
 /* ================================================================
+   AMBIENT CRITTERS (birds & cat)
+================================================================ */
+#critter-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 850;              /* above background, below header/modal */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.critter {
+  position: absolute;
+  left: 0;
+  animation-timing-function: linear;
+  animation-fill-mode: both; /* 'both' keeps delayed critters offscreen before they start */
+  will-change: transform;
+}
+
+/* Horizontal crossing — the whole viewport plus margins */
+@keyframes critter-ltr {
+  from { transform: translateX(-12vw); }
+  to   { transform: translateX(112vw); }
+}
+@keyframes critter-rtl {
+  from { transform: translateX(112vw); }
+  to   { transform: translateX(-12vw); }
+}
+
+/* ── Bird ─────────────────────────────────────────────────── */
+.bird { width: var(--size, 30px); opacity: 0.55; }
+.bird svg { width: 100%; height: auto; display: block; animation: bird-bob var(--bob, 2.8s) ease-in-out infinite; }
+.bird svg * { fill: var(--text-muted); }
+.bird.flip svg { transform: scaleX(-1); }
+
+.bird .wing {
+  transform-origin: 30px 16px;
+  animation: bird-flap var(--flap, 0.5s) ease-in-out infinite;
+}
+.bird .wing-r { animation-delay: calc(var(--flap, 0.5s) / 2); }
+
+@keyframes bird-flap {
+  0%, 100% { transform: scaleY(1); }
+  50%      { transform: scaleY(-0.55); }
+}
+@keyframes bird-bob {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -14px; }
+}
+
+/* ── Cat ──────────────────────────────────────────────────── */
+.cat { bottom: 0; width: 74px; opacity: 0.85; }
+.cat svg { width: 100%; height: auto; display: block; }
+.cat svg .cat-body,
+.cat svg .leg { fill: #000; }
+.cat svg .tail { stroke: #000; }
+.cat.flip svg { transform: scaleX(-1); }
+
+/* Body bob while trotting */
+.cat svg .cat-body { animation: cat-bob 0.55s ease-in-out infinite; }
+
+/* Legs swing in alternating pairs */
+.cat svg .leg { transform-origin: center 40px; }
+.cat svg .leg-a { animation: cat-step 0.55s ease-in-out infinite; }
+.cat svg .leg-b { animation: cat-step 0.55s ease-in-out infinite reverse; }
+
+/* Tail sway */
+.cat svg .tail {
+  transform-origin: 10px 32px;
+  animation: cat-tail 1.6s ease-in-out infinite;
+}
+
+@keyframes cat-step {
+  0%, 100% { transform: rotate(14deg); }
+  50%      { transform: rotate(-14deg); }
+}
+@keyframes cat-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-1.6px); }
+}
+@keyframes cat-tail {
+  0%, 100% { transform: rotate(0deg); }
+  50%      { transform: rotate(16deg); }
+}
+
+/* Dark cat on dark bg: subtle warm outline so it stays visible */
+.cat svg {
+  filter: drop-shadow(0 0 1px rgba(242, 237, 228, 0.35));
+}
+
+/* ── Bird-hunting: stop, look up, pounce, give up ─────────── */
+.cat .cwrap { transform-origin: 50% 100%; }
+
+/* Standing still while watching: legs and bob freeze, tail keeps swishing */
+.cat.watching svg .leg-a,
+.cat.watching svg .leg-b,
+.cat.watching svg .cat-body { animation-play-state: paused; }
+.cat.watching svg .tail { animation-duration: 0.7s; } /* excited tail */
+
+/* Two pounce jumps at the sky */
+.cat.hunting .cwrap { animation: cat-pounce 1.2s ease-in-out 2; }
+.cat.flip.hunting .cwrap { animation-name: cat-pounce-flip; }
+
+@keyframes cat-pounce {
+  0%   { transform: translateY(0) rotate(0deg); }
+  22%  { transform: translateY(-3px) rotate(-16deg); }  /* crouch + look up */
+  48%  { transform: translateY(-30px) rotate(-22deg); } /* leap! */
+  72%  { transform: translateY(-2px) rotate(-6deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+@keyframes cat-pounce-flip {
+  0%   { transform: translateY(0) rotate(0deg); }
+  22%  { transform: translateY(-3px) rotate(16deg); }
+  48%  { transform: translateY(-30px) rotate(22deg); }
+  72%  { transform: translateY(-2px) rotate(6deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ── White kitten — smaller, quicker little steps ─────────── */
+.cat.kitten { width: 46px; opacity: 0.95; }
+.cat.kitten svg .cat-body,
+.cat.kitten svg .leg { fill: #F2EDE4; }
+.cat.kitten svg .tail { stroke: #F2EDE4; }
+.cat.kitten svg { filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5)); }
+.cat.kitten svg .cat-body { animation-duration: 0.4s; }
+.cat.kitten svg .leg-a,
+.cat.kitten svg .leg-b { animation-duration: 0.4s; }
+.cat.kitten svg .tail { animation-duration: 1.1s; }
+
+/* ── Mikasa perched on the "u" of Mithun ──────────────────── */
+.perch-u { position: relative; display: inline-block; }
+
+.mikasa-perch {
+  position: absolute;
+  left: 50%;
+  bottom: 82%;              /* seated on top of the letter */
+  width: 0.52em;            /* scales with the hero title */
+  margin-left: -0.26em;
+  pointer-events: none;
+  animation: mikasa-arrive 2.2s cubic-bezier(0.22, 0.9, 0.3, 1) both;
+  z-index: 2;
+}
+
+.mikasa-perch svg { width: 100%; height: auto; display: block; overflow: visible; }
+.mikasa-perch .figure circle,
+.mikasa-perch .figure path,
+.mikasa-perch .figure rect { fill: var(--text-dim); }
+.mikasa-perch .scarf {
+  fill: var(--accent);
+  transform-origin: 38px 24px;
+  animation: scarf-wave 1.8s ease-in-out infinite;
+}
+
+/* Legs dangling off the letter, swinging idly */
+.mikasa-perch .dleg { transform-origin: center 38px; }
+.mikasa-perch .dl1 { animation: leg-dangle 2.6s ease-in-out infinite; }
+.mikasa-perch .dl2 { animation: leg-dangle 2.6s ease-in-out infinite reverse; }
+
+/* ── ODM gear: real grapple cable (position driven by JS) ─── */
+.odm-cable {
+  position: fixed;
+  height: 1.5px;
+  background: linear-gradient(to right, rgba(242, 237, 228, 0.9), rgba(242, 237, 228, 0.35));
+  transform-origin: left center;
+  pointer-events: none;
+  z-index: 840;
+  opacity: 0.8;
+  transition: opacity 0.08s linear;
+}
+
+/* Gas burst behind her during the swing */
+.mikasa-perch .figure { position: relative; }
+.mikasa-perch svg { animation: odm-gas 2.2s linear both; }
+
+@keyframes odm-gas {
+  0%   { filter: drop-shadow(-8px 6px 6px rgba(242, 237, 228, 0.5)); }
+  30%  { filter: drop-shadow(-10px 4px 7px rgba(242, 237, 228, 0.35)); }
+  60%  { filter: drop-shadow(-7px 5px 6px rgba(242, 237, 228, 0.3)); }
+  88%  { filter: drop-shadow(-2px 2px 3px rgba(242, 237, 228, 0.15)); }
+  100% { filter: none; }
+}
+
+/* ODM swing-in from off-screen left, two arcs, soft landing */
+@keyframes mikasa-arrive {
+  0%   { transform: translate(-52vw, 42vh) rotate(-18deg); opacity: 0; }
+  10%  { opacity: 1; }
+  38%  { transform: translate(-30vw, -14vh) rotate(10deg); }
+  68%  { transform: translate(-10vw, 10vh) rotate(-10deg); }
+  88%  { transform: translate(-1vw, -2vh) rotate(4deg); }
+  100% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes scarf-wave {
+  0%, 100% { transform: scaleX(1) rotate(0deg); }
+  50%      { transform: scaleX(1.18) rotate(-7deg); }
+}
+
+@keyframes leg-dangle {
+  0%, 100% { transform: rotate(8deg); }
+  50%      { transform: rotate(-8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #critter-layer { display: none; }
+}
+
+/* ================================================================
    SERVICE DETAIL OVERLAY (SDO)
 ================================================================ */
 .sdo {
