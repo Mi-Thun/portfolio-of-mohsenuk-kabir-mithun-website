@@ -77,8 +77,8 @@
 
           <div class="hero-meta">
             <p class="hero-role"><code>$ Sr. Software Engineer / Researcher / AI Enthusiast</code></p>
-            <p class="hero-desc">Backend systems that don't fall apart.<br>Code written for humans, not just machines.
-            </p>
+            <p class="hero-desc">Building complete products, from architecture to interface —<br>engineered to
+              work, and to keep working.</p>
           </div>
 
           <div class="hero-actions">
@@ -90,6 +90,18 @@
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <!-- Self-playing tic-tac-toe, bot vs bot, loops forever -->
+      <div class="hero-game" aria-hidden="true">
+        <div class="hg-head">
+          <span class="hg-title">$ ./bot_vs_bot --game=tictactoe</span>
+        </div>
+        <div class="hg-board" id="hgBoard"></div>
+        <div class="hg-foot">
+          <span class="hg-status" id="hgStatus">booting…</span>
+          <span class="hg-score" id="hgScore">X 0 · O 0 · = 0</span>
         </div>
       </div>
 
@@ -126,14 +138,16 @@
             <div class="about-role-badge">Sr. Software Engineer</div>
             <h2 class="about-name">Mohsenul Kabir Mithun</h2>
             <p class="about-lead">
-              I build backend systems that are reliable, scalable, and boring in the best possible way — they just work.
+              I build software end to end — from the data model to the user interface — with the care it
+              takes to run reliably in production.
             </p>
             <p class="about-body">
-              Leading development through the full SDLC since 2023, I specialize in Python, Django,
-              and modern infrastructure. I've shipped enterprise software across banking, travel, healthcare,
-              education, and data platforms — including 9+ production systems for a single bank and a passed
-              Travelport GDS vendor certification. Currently pursuing M.Sc. in CSE at BRAC University with a
-              3.95 CGPA on scholarship.
+              I'm a Senior Software Engineer who works across the entire product — backend, frontend, cloud
+              infrastructure, and data. I care about the things that make software last: clean architecture,
+              thoughtful APIs, interfaces people enjoy using, and systems that behave well long after launch.
+              I'm equally at home designing a database, reviewing a pull request, or debugging production at
+              odd hours. Beyond engineering, I'm drawn to research and applied AI, and I'm pursuing an M.Sc.
+              in CSE at BRAC University with a 3.95 CGPA on merit scholarship.
             </p>
 
             <div class="about-details">
@@ -293,20 +307,20 @@
 
         <div class="roles-grid">
 
-          <!-- Eren -->
           <div class="role-card">
+            <span class="role-ghost" aria-hidden="true">E</span>
             <div class="role-top">
+              <div class="role-icon"><i class="bi bi-lightning-charge-fill"></i></div>
               <span class="role-num">01</span>
-              <span class="role-glyph">⚡</span>
             </div>
             <div class="role-lore">
               <span class="role-char">Eren</span>
               <span class="role-char-title">Attack Specialist</span>
             </div>
-            <div class="role-divider">↓ in real life means</div>
+            <div class="role-divider"><span>↓</span> in real life means</div>
             <h3 class="role-title">Full Stack Developer</h3>
-            <p class="role-desc">I attack every layer of the stack. Backend logic, frontend UI, deployment pipelines — I
-              charge in, solve the problem, and ship it.</p>
+            <p class="role-desc">I attack every layer of the stack. Backend logic, frontend UI, deployment pipelines — I charge in, solve the
+              problem, and ship it.</p>
             <div class="role-tags">
               <span>Backend</span>
               <span>Frontend</span>
@@ -314,20 +328,20 @@
             </div>
           </div>
 
-          <!-- Mikasa -->
           <div class="role-card">
+            <span class="role-ghost" aria-hidden="true">M</span>
             <div class="role-top">
+              <div class="role-icon"><i class="bi bi-shield-fill"></i></div>
               <span class="role-num">02</span>
-              <span class="role-glyph">🛡</span>
             </div>
             <div class="role-lore">
               <span class="role-char">Mikasa</span>
               <span class="role-char-title">Defense Specialist</span>
             </div>
-            <div class="role-divider">↓ in real life means</div>
-            <h3 class="role-title">UX & Interface Guardian</h3>
-            <p class="role-desc">I guard the user's experience with precision. Clean interfaces, smooth interactions,
-              mobile-first — users deserve protection from bad UX.</p>
+            <div class="role-divider"><span>↓</span> in real life means</div>
+            <h3 class="role-title">UX &amp; Interface Guardian</h3>
+            <p class="role-desc">I guard the user’s experience with precision. Clean interfaces, smooth interactions, mobile-first — users
+              deserve protection from bad UX.</p>
             <div class="role-tags">
               <span>React</span>
               <span>UI/UX</span>
@@ -335,20 +349,20 @@
             </div>
           </div>
 
-          <!-- Armin -->
           <div class="role-card">
+            <span class="role-ghost" aria-hidden="true">A</span>
             <div class="role-top">
+              <div class="role-icon"><i class="bi bi-lightbulb-fill"></i></div>
               <span class="role-num">03</span>
-              <span class="role-glyph">🧠</span>
             </div>
             <div class="role-lore">
               <span class="role-char">Armin</span>
               <span class="role-char-title">Strategic Coordinator</span>
             </div>
-            <div class="role-divider">↓ in real life means</div>
+            <div class="role-divider"><span>↓</span> in real life means</div>
             <h3 class="role-title">Systems Architect</h3>
-            <p class="role-desc">I think before I build. Scalable databases, clean APIs, systems designed not to fall
-              apart under pressure — strategy over brute force.</p>
+            <p class="role-desc">I think before I build. Scalable databases, clean APIs, systems designed not to fall apart under pressure —
+              strategy over brute force.</p>
             <div class="role-tags">
               <span>Python</span>
               <span>Databases</span>
@@ -374,7 +388,11 @@
         </div>
 
         <div class="work-header">
-          <h2 class="section-title">Things I've <em>Shipped.</em></h2>
+          <div>
+            <h2 class="section-title">Things I've <em>Shipped.</em></h2>
+            <p class="work-hint"><i class="bi bi-arrow-down-right-circle"></i> Click any project to read the full case
+              study</p>
+          </div>
           <p class="work-quip"><code>$ git log --production</code> — 7 client platforms · 4 industries · 0 "works on my
             machine"</p>
         </div>
@@ -388,9 +406,9 @@
               <span class="work-summary-main">
                 <span class="work-title">Enterprise Banking Workflow Platform</span>
                 <span class="work-client">Dhaka Bank PLC · 2023 — Present · Full-stack Engineer</span>
+                <span class="work-toggle" aria-hidden="true">+</span>
               </span>
               <span class="work-hook">9+ systems, one engine</span>
-              <span class="work-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="work-body">
               <p class="work-dek">Instead of building nine banking products from scratch, I built one reusable workflow
@@ -433,9 +451,9 @@
               <span class="work-summary-main">
                 <span class="work-title">GDS Integration &amp; Vendor Certification</span>
                 <span class="work-client">Travelport / SGC Soft OTA · 2025 — Present · Backend Engineer</span>
+                <span class="work-toggle" aria-hidden="true">+</span>
               </span>
               <span class="work-hook">passed formal certification</span>
-              <span class="work-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="work-body">
               <p class="work-dek">Replaced a third-party flight aggregator with a direct Travelport GDS integration —
@@ -477,9 +495,9 @@
               <span class="work-summary-main">
                 <span class="work-title">Multi-Tenant PE Due-Diligence SaaS</span>
                 <span class="work-client">InteliqX · 2024 — Present · Platform Engineer</span>
+                <span class="work-toggle" aria-hidden="true">+</span>
               </span>
               <span class="work-hook">security remediation at scale</span>
-              <span class="work-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="work-body">
               <p class="work-dek">"Revenue Intelligence for Private Equity Due Diligence" — six microservices, taken
@@ -518,9 +536,9 @@
               <span class="work-summary-main">
                 <span class="work-title">GCC Manpower &amp; Visa Processing SaaS</span>
                 <span class="work-client">Wafidflow · 2026 · Full-stack Engineer</span>
+                <span class="work-toggle" aria-hidden="true">+</span>
               </span>
               <span class="work-hook">real-time serverless OCR</span>
-              <span class="work-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="work-body">
               <p class="work-dek">A multi-tenant platform for recruitment agencies running the Gulf pre-employment
@@ -561,9 +579,9 @@
                 <span class="work-title">Clinical Practice Digital Ecosystem</span>
                 <span class="work-client">Children's Gastroliver Center · 2025 — Present · Solo Full-stack
                   Developer</span>
+                <span class="work-toggle" aria-hidden="true">+</span>
               </span>
               <span class="work-hook">a whole EHR, built solo</span>
-              <span class="work-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="work-body">
               <p class="work-dek">A real e-prescription app, a schema-driven admin panel, and patient-facing tools for a
@@ -605,9 +623,9 @@
               <span class="work-summary-main">
                 <span class="work-title">Data Warehouse Platform</span>
                 <span class="work-client">Frankie4 · 2024 — Present · Data / Backend Engineer</span>
+                <span class="work-toggle" aria-hidden="true">+</span>
               </span>
               <span class="work-hook">ETL → observable lakehouse</span>
-              <span class="work-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="work-body">
               <p class="work-dek">From a custom ETL system to a modern, observable lakehouse-style architecture — with
@@ -646,9 +664,9 @@
               <span class="work-summary-main">
                 <span class="work-title">Exam-Prep Learning Management System</span>
                 <span class="work-client">3PCL · 2023 — Present · Full-stack Engineer</span>
+                <span class="work-toggle" aria-hidden="true">+</span>
               </span>
               <span class="work-hook">1,368 queries → ~0</span>
-              <span class="work-toggle" aria-hidden="true">+</span>
             </summary>
             <div class="work-body">
               <p class="work-dek">A mature, multi-year LMS product — and a measured performance-optimization story, not
@@ -798,6 +816,9 @@
               <h4>M.Sc. in Computer Science and Engineering</h4>
               <p class="resume-entry-org">BRAC University</p>
               <p class="resume-entry-grade">CGPA: 3.95 / 4.00</p>
+              <p class="resume-entry-desc">Graduate study deepening my grounding in machine learning, advanced
+                algorithms, and research methodology, with a concentration in deep learning for medical imaging —
+                pursued alongside full-time engineering work.</p>
               <ul class="resume-achievements">
                 <li>75% Merit Scholarship — CGPA 3.95+</li>
                 <li>50% Merit Scholarship — CGPA 3.90+</li>
@@ -810,6 +831,9 @@
               <h4>B.Sc. in Computer Science and Engineering</h4>
               <p class="resume-entry-org">East West University</p>
               <p class="resume-entry-grade">CGPA: 3.76 / 4.00</p>
+              <p class="resume-entry-desc">Built my core foundation across algorithms, data structures, databases,
+                operating systems, and software engineering, with a growing pull toward machine learning and research
+                by the final year.</p>
               <ul class="resume-achievements">
                 <li>Cum Laude — 3.75+ GPA across 12 consecutive semesters</li>
                 <li>Dean's List Scholarship — GPA 3.75+ for 3 semesters</li>
@@ -817,7 +841,22 @@
               </ul>
             </div>
 
-            <h3 class="resume-col-title mt-section"><i class="bi bi-journal-text"></i> Publication</h3>
+            <h3 class="resume-col-title mt-section"><i class="bi bi-journal-text"></i> Publications &amp; Research</h3>
+
+            <div class="resume-entry">
+              <div class="resume-entry-date">In Progress · M.Sc. Thesis Research <span class="pub-status">Targeting MICCAI / Q1 Journal</span></div>
+              <h4>Trustworthy Missing-Modality Brain MRI Synthesis: Pathology-Faithful Diffusion with Calibrated Uncertainty</h4>
+              <p class="resume-entry-org"><strong>Mohsenul Kabir Mithun</strong> · BRAC University</p>
+              <p class="resume-pub">
+                A diffusion model for synthesizing missing MRI sequences that stays faithful in the tumor region,
+                paired with the first <strong>calibrated, conformal per-pixel uncertainty map</strong> for
+                cross-modality MRI synthesis — a statistical signal for when a synthesized scan should not be trusted.
+                Targeting <em>MICCAI</em> and a Q1 medical-imaging journal.
+              </p>
+              <div class="pub-links">
+                <a href="#">DOI: xx.xxxx/xxxxxxxxxxxxx-xx (pending)</a>
+              </div>
+            </div>
 
             <div class="resume-entry">
               <div class="resume-entry-date">Published 2026 · Book Chapter · 1st Edition</div>
@@ -911,54 +950,62 @@
         <div class="services-grid">
 
           <div class="service-card">
-            <div class="service-num">01</div>
-            <div class="service-icon"><i class="bi bi-server"></i></div>
+            <div class="service-top">
+              <div class="service-icon"><i class="bi bi-server"></i></div>
+              <span class="service-num">01</span>
+            </div>
             <h3>Backend Development</h3>
             <p>RESTful API development, database design, server architecture, and backend optimization using Python,
               Django, and modern frameworks.</p>
             <div class="service-links">
+              <a href="#" class="service-more open-service" data-service="backend">Read details →</a>
               <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
                 Fiverr ↗</a>
-              <a href="#" class="service-more open-service" data-service="backend">Learn More</a>
             </div>
           </div>
 
           <div class="service-card">
-            <div class="service-num">02</div>
-            <div class="service-icon"><i class="bi bi-terminal-fill"></i></div>
+            <div class="service-top">
+              <div class="service-icon"><i class="bi bi-terminal-fill"></i></div>
+              <span class="service-num">02</span>
+            </div>
             <h3>Python & Automation</h3>
             <p>Build, debug, and automate Python projects. Web scraping scripts to custom operational programs tailored
               for your business needs.</p>
             <div class="service-links">
+              <a href="#" class="service-more open-service" data-service="python">Read details →</a>
               <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
                 Fiverr ↗</a>
-              <a href="#" class="service-more open-service" data-service="python">Learn More</a>
             </div>
           </div>
 
           <div class="service-card">
-            <div class="service-num">03</div>
-            <div class="service-icon"><i class="bi bi-gear-fill"></i></div>
+            <div class="service-top">
+              <div class="service-icon"><i class="bi bi-gear-fill"></i></div>
+              <span class="service-num">03</span>
+            </div>
             <h3>DevOps</h3>
             <p>CI/CD pipeline setup, containerization with Docker, cloud deployment strategies, infrastructure
               automation, and monitoring.</p>
             <div class="service-links">
+              <a href="#" class="service-more open-service" data-service="devops">Read details →</a>
               <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
                 Fiverr ↗</a>
-              <a href="#" class="service-more open-service" data-service="devops">Learn More</a>
             </div>
           </div>
 
           <div class="service-card">
-            <div class="service-num">04</div>
-            <div class="service-icon"><i class="bi bi-window-dock"></i></div>
+            <div class="service-top">
+              <div class="service-icon"><i class="bi bi-window-dock"></i></div>
+              <span class="service-num">04</span>
+            </div>
             <h3>Frontend with React</h3>
             <p>Modern, interactive React applications with clean state management, scalable component architecture, and
               responsive design.</p>
             <div class="service-links">
+              <a href="#" class="service-more open-service" data-service="frontend">Read details →</a>
               <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
                 Fiverr ↗</a>
-              <a href="#" class="service-more open-service" data-service="frontend">Learn More</a>
             </div>
           </div>
 
@@ -1279,6 +1326,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/critters.js"></script>
+  <script src="assets/js/tictactoe.js"></script>
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
