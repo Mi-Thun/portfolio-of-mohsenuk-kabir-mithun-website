@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mithun-profile.netlify.app/sitemap.xml

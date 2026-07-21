@@ -4,17 +4,72 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Mohsenul Kabir Mithun — Software Engineer</title>
-  <meta name="description"
+  <meta name="google-site-verification" content="J15oDck8HzclrSiyhrbC0UacBlnjLMbyWtTVSUi4VOc" />
+  <title id="pageTitle">Mohsenul Kabir Mithun — Software Engineer</title>
+  <meta id="metaDescription" name="description"
     content="Portfolio of Mohsenul Kabir Mithun — Software Engineer specializing in backend development, Python, Django, and scalable systems.">
-  <meta name="keywords"
+  <meta id="metaKeywords" name="keywords"
     content="Mohsenul Kabir Mithun, Software Engineer, Backend Developer, Python, Django, React, Portfolio">
-  <meta name="author" content="Mohsenul Kabir Mithun">
+  <meta id="metaAuthor" name="author" content="Mohsenul Kabir Mithun">
 
-  <meta property="og:title" content="Mohsenul Kabir Mithun — Software Engineer">
-  <meta property="og:description"
+  <meta id="metaOgTitle" property="og:title" content="Mohsenul Kabir Mithun — Software Engineer">
+  <meta id="metaOgDescription" property="og:description"
     content="Backend developer building reliable and scalable solutions with Python, Django, React & more.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mithun-profile.netlify.app/">
+  <meta property="og:site_name" content="Mohsenul Kabir Mithun">
+  <meta property="og:image" content="https://mithun-profile.netlify.app/assets/image/Monkey_D.Luffy">
+  <meta property="og:image:width" content="736">
+  <meta property="og:image:height" content="1104">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohsenul Kabir Mithun — Software Engineer">
+  <meta name="twitter:description"
+    content="Backend developer building reliable and scalable solutions with Python, Django, React & more.">
+  <meta name="twitter:image" content="https://mithun-profile.netlify.app/assets/image/Monkey_D.Luffy">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FF6B35">
+  <link rel="canonical" href="https://mithun-profile.netlify.app/">
+
+  <link rel="icon" type="image/svg+xml" href="assets/image/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohsenul Kabir Mithun",
+    "alternateName": "Mithun",
+    "url": "https://mithun-profile.netlify.app/",
+    "image": "https://mithun-profile.netlify.app/assets/image/Monkey_D.Luffy",
+    "jobTitle": "Senior Software Engineer",
+    "description": "Senior Software Engineer specializing in backend development, Python, Django, React, and scalable systems.",
+    "email": "mailto:mohsenulkabirmi8486@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dhaka",
+      "addressCountry": "BD"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "BRAC University"
+    },
+    "sameAs": [
+      "https://github.com/mi-thun",
+      "https://www.linkedin.com/in/mohsenul_kabir_mithun",
+      "https://www.fiverr.com/mkmithun08"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mohsenul Kabir Mithun — Portfolio",
+    "url": "https://mithun-profile.netlify.app/"
+  }
+  </script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -36,22 +91,13 @@
   <!-- ===== HEADER ===== -->
   <header id="header" class="header">
     <div class="header-inner">
-      <a href="#hero" class="header-logo">MK<span>.</span></a>
+      <a href="#hero" id="headerLogo" class="header-logo"></a>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#developer-roles">Roles</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <ul id="navList"></ul>
       </nav>
 
-      <a href="#contact" class="header-cta">Let's Talk</a>
+      <a href="#contact" id="headerCta" class="header-cta"></a>
       <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
@@ -64,30 +110,25 @@
         <div class="hero-inner">
 
           <div class="hero-label">
-            <span class="hero-number">01 — intro</span>
+            <span class="hero-number" id="heroNumber"></span>
             <span class="hero-status">
-              <span class="status-dot"></span> Available for opportunities
+              <span class="status-dot"></span> <span id="heroStatusText"></span>
             </span>
           </div>
 
           <h1 class="hero-title">
-            <span class="hero-title-line">Mohsenul</span>
-            <span class="hero-title-line">Kabir <em>Mith<span class="perch-u">u</span>n.</em></span>
+            <span class="hero-title-line" id="heroTitleLine1"></span>
+            <span class="hero-title-line" id="heroTitleLine2"></span>
           </h1>
 
           <div class="hero-meta">
-            <p class="hero-role"><code>$ Sr. Software Engineer / Researcher / AI Enthusiast</code></p>
-            <p class="hero-desc">Building complete products, from architecture to interface —<br>engineered to
-              work, and to keep working.</p>
+            <p class="hero-role"><code id="heroRole"></code></p>
+            <p class="hero-desc" id="heroDesc"></p>
           </div>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Get In Touch</a>
-            <div class="hero-social">
-              <a href="https://github.com/mi-thun" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener">Fiverr</a>
-            </div>
+            <a href="#contact" id="heroCta" class="btn-primary"></a>
+            <div class="hero-social" id="heroSocialMount"></div>
           </div>
 
         </div>
@@ -96,7 +137,7 @@
       <!-- Self-playing tic-tac-toe, bot vs bot, loops forever -->
       <div class="hero-game" aria-hidden="true">
         <div class="hg-head">
-          <span class="hg-title">$ ./bot_vs_bot --game=tictactoe</span>
+          <span class="hg-title" id="hgTitleText"></span>
         </div>
         <div class="hg-board" id="hgBoard"></div>
         <div class="hg-foot">
@@ -107,7 +148,7 @@
 
       <div class="hero-scroll">
         <a href="#about">
-          <span>scroll</span>
+          <span id="heroScrollLabel"></span>
           <span class="scroll-line"></span>
         </a>
       </div>
@@ -125,71 +166,31 @@
           <!-- Image col -->
           <div class="about-image-col">
             <div class="about-img-wrapper">
-              <img src="assets/image/Monkey_D.Luffy" alt="Mohsenul Kabir Mithun">
+              <img id="aboutImg" src="assets/image/Monkey_D.Luffy" alt="Mohsenul Kabir Mithun">
               <div class="about-img-tag">
-                <span>☠</span>
-                <span>Luffy energy. Engineer mindset.</span>
+                <span id="aboutImgTagIcon"></span>
+                <span id="aboutImgTagText"></span>
               </div>
             </div>
           </div>
 
           <!-- Content col -->
           <div class="about-content-col">
-            <div class="about-role-badge">Sr. Software Engineer</div>
-            <h2 class="about-name">Mohsenul Kabir Mithun</h2>
-            <p class="about-lead">
-              I build software end to end — from the data model to the user interface — with the care it
-              takes to run reliably in production.
-            </p>
-            <p class="about-body">
-              I'm a Senior Software Engineer who works across the entire product — backend, frontend, cloud
-              infrastructure, and data. I care about the things that make software last: clean architecture,
-              thoughtful APIs, interfaces people enjoy using, and systems that behave well long after launch.
-              I'm equally at home designing a database, reviewing a pull request, or debugging production at
-              odd hours. Beyond engineering, I'm drawn to research and applied AI, and I'm pursuing an M.Sc.
-              in CSE at BRAC University with a 3.95 CGPA on merit scholarship.
-            </p>
+            <div class="about-role-badge" id="aboutRoleBadge"></div>
+            <h2 class="about-name" id="aboutName"></h2>
+            <p class="about-lead" id="aboutLead"></p>
+            <p class="about-body" id="aboutBody"></p>
 
-            <div class="about-details">
-              <div class="about-detail">
-                <i class="bi bi-geo-alt"></i>
-                <span>Mirpur, Dhaka, Bangladesh</span>
-              </div>
-              <div class="about-detail">
-                <i class="bi bi-mortarboard"></i>
-                <span>M.Sc. in Computer Science and Engineering</span>
-              </div>
-              <div class="about-detail">
-                <i class="bi bi-envelope"></i>
-                <span>mohsenulkabirmi8486@gmail.com</span>
-              </div>
-              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener"
-                class="about-detail about-detail-link">
-                <i class="bi bi-check-circle"></i>
-                <span>Freelance — <strong>Available on Fiverr</strong></span>
+            <div class="about-details" id="aboutDetailsMount">
+              <a href="#" id="aboutFreelanceLink" target="_blank" rel="noopener" class="about-detail about-detail-link">
+                <i></i>
+                <span></span>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num" id="expYears">3+</span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">7</span>
-            <span class="stat-label">Client Platforms</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">3.95</span>
-            <span class="stat-label">M.Sc. CGPA</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">15+</span>
-            <span class="stat-label">Production Systems</span>
-          </div>
-        </div>
+        <div class="about-stats" id="aboutStatsMount"></div>
       </div>
     </section>
 
@@ -201,92 +202,22 @@
           <span class="section-label">Skills & Tech</span>
         </div>
         <h2 class="section-title">What I Work With</h2>
-        <p class="section-sub">SDLC · Database Design · Design Patterns · Data Structures · Algorithms</p>
+        <p class="section-sub" id="skillsSubtitle"></p>
       </div>
 
       <!-- Marquee rows -->
       <div class="skills-marquee-wrapper">
         <div class="skills-marquee">
-          <div class="marquee-track">
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">Django</span>
-            <span class="skill-pill">Flask</span>
-            <span class="skill-pill">JavaScript</span>
-            <span class="skill-pill">React</span>
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">MongoDB</span>
-            <span class="skill-pill">Docker</span>
-            <span class="skill-pill">AWS</span>
-            <span class="skill-pill">Linux</span>
-            <span class="skill-pill">Java</span>
-            <span class="skill-pill">Supabase</span>
-            <!-- Duplicate for seamless loop -->
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">Django</span>
-            <span class="skill-pill">Flask</span>
-            <span class="skill-pill">JavaScript</span>
-            <span class="skill-pill">React</span>
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">MongoDB</span>
-            <span class="skill-pill">Docker</span>
-            <span class="skill-pill">AWS</span>
-            <span class="skill-pill">Linux</span>
-            <span class="skill-pill">Java</span>
-            <span class="skill-pill">Supabase</span>
-          </div>
+          <div class="marquee-track" id="marqueeCoreTrack"></div>
         </div>
         <div class="skills-marquee reverse">
-          <div class="marquee-track">
-            <span class="skill-pill accent">TensorFlow</span>
-            <span class="skill-pill accent">Pandas</span>
-            <span class="skill-pill accent">NumPy</span>
-            <span class="skill-pill accent">Scikit-learn</span>
-            <span class="skill-pill accent">Keras</span>
-            <span class="skill-pill accent">Hadoop</span>
-            <span class="skill-pill accent">PySpark</span>
-            <span class="skill-pill accent">Airflow</span>
-            <span class="skill-pill accent">DBT</span>
-            <span class="skill-pill accent">Scrapy</span>
-            <span class="skill-pill accent">Selenium</span>
-            <span class="skill-pill accent">Postman</span>
-            <span class="skill-pill accent">Flutter</span>
-            <!-- Duplicate -->
-            <span class="skill-pill accent">TensorFlow</span>
-            <span class="skill-pill accent">Pandas</span>
-            <span class="skill-pill accent">NumPy</span>
-            <span class="skill-pill accent">Scikit-learn</span>
-            <span class="skill-pill accent">Keras</span>
-            <span class="skill-pill accent">Hadoop</span>
-            <span class="skill-pill accent">PySpark</span>
-            <span class="skill-pill accent">Airflow</span>
-            <span class="skill-pill accent">DBT</span>
-            <span class="skill-pill accent">Scrapy</span>
-            <span class="skill-pill accent">Selenium</span>
-            <span class="skill-pill accent">Postman</span>
-            <span class="skill-pill accent">Flutter</span>
-          </div>
+          <div class="marquee-track" id="marqueeAccentTrack"></div>
         </div>
       </div>
 
       <!-- Category grid -->
       <div class="container">
-        <div class="skills-grid">
-          <div class="skill-cat">
-            <span class="skill-cat-num">01</span>
-            <h4>Core Development</h4>
-            <p>Python · Java · JavaScript · Django · Flask · React · PostgreSQL · MongoDB · ORM</p>
-          </div>
-          <div class="skill-cat">
-            <span class="skill-cat-num">02</span>
-            <h4>Data & Intelligence</h4>
-            <p>NumPy · Pandas · Scikit-learn · TensorFlow · Keras · Matplotlib · Hadoop · PySpark · Airflow · DBT</p>
-          </div>
-          <div class="skill-cat">
-            <span class="skill-cat-num">03</span>
-            <h4>Infrastructure</h4>
-            <p>AWS · Docker · Linux · CI/CD · Selenium · JMeter · Postman · Scrapy · Flutter · Supabase</p>
-          </div>
-        </div>
+        <div class="skills-grid" id="skillCategoriesMount"></div>
       </div>
     </section>
 
@@ -301,81 +232,13 @@
         <div class="roles-header">
           <h2 class="section-title">One Developer,<br><em>Three Modes.</em></h2>
           <p class="roles-lore-note">
-            <span>⚔</span> Survey Corps inspiration — if you know, you know.
+            <span id="rolesNoteIcon"></span> <span id="rolesNoteText"></span>
           </p>
         </div>
 
-        <div class="roles-grid">
+        <div class="roles-grid" id="roleCardsMount"></div>
 
-          <div class="role-card">
-            <span class="role-ghost" aria-hidden="true">E</span>
-            <div class="role-top">
-              <div class="role-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-              <span class="role-num">01</span>
-            </div>
-            <div class="role-lore">
-              <span class="role-char">Eren</span>
-              <span class="role-char-title">Attack Specialist</span>
-            </div>
-            <div class="role-divider"><span>↓</span> in real life means</div>
-            <h3 class="role-title">Full Stack Developer</h3>
-            <p class="role-desc">I attack every layer of the stack. Backend logic, frontend UI, deployment pipelines — I charge in, solve the
-              problem, and ship it.</p>
-            <div class="role-tags">
-              <span>Backend</span>
-              <span>Frontend</span>
-              <span>DevOps</span>
-            </div>
-          </div>
-
-          <div class="role-card">
-            <span class="role-ghost" aria-hidden="true">M</span>
-            <div class="role-top">
-              <div class="role-icon"><i class="bi bi-shield-fill"></i></div>
-              <span class="role-num">02</span>
-            </div>
-            <div class="role-lore">
-              <span class="role-char">Mikasa</span>
-              <span class="role-char-title">Defense Specialist</span>
-            </div>
-            <div class="role-divider"><span>↓</span> in real life means</div>
-            <h3 class="role-title">UX &amp; Interface Guardian</h3>
-            <p class="role-desc">I guard the user’s experience with precision. Clean interfaces, smooth interactions, mobile-first — users
-              deserve protection from bad UX.</p>
-            <div class="role-tags">
-              <span>React</span>
-              <span>UI/UX</span>
-              <span>Mobile</span>
-            </div>
-          </div>
-
-          <div class="role-card">
-            <span class="role-ghost" aria-hidden="true">A</span>
-            <div class="role-top">
-              <div class="role-icon"><i class="bi bi-lightbulb-fill"></i></div>
-              <span class="role-num">03</span>
-            </div>
-            <div class="role-lore">
-              <span class="role-char">Armin</span>
-              <span class="role-char-title">Strategic Coordinator</span>
-            </div>
-            <div class="role-divider"><span>↓</span> in real life means</div>
-            <h3 class="role-title">Systems Architect</h3>
-            <p class="role-desc">I think before I build. Scalable databases, clean APIs, systems designed not to fall apart under pressure —
-              strategy over brute force.</p>
-            <div class="role-tags">
-              <span>Python</span>
-              <span>Databases</span>
-              <span>APIs</span>
-            </div>
-          </div>
-
-        </div>
-
-        <p class="roles-note-bottom">
-          These aren't three different people — <strong>this is one developer, me</strong>, playing every role the
-          project demands.
-        </p>
+        <p class="roles-note-bottom" id="rolesBottomNote"></p>
       </div>
     </section>
 
@@ -390,408 +253,18 @@
         <div class="work-header">
           <div>
             <h2 class="section-title">Things I've <em>Shipped.</em></h2>
-            <p class="work-hint"><i class="bi bi-arrow-down-right-circle"></i> Click any project to read the full case
-              study</p>
+            <p class="work-hint"><i id="workHintIcon" class="bi bi-arrow-down-right-circle"></i> <span id="workHintText"></span></p>
           </div>
-          <p class="work-quip"><code>$ git log --production</code> — 7 client platforms · 4 industries · 0 "works on my
-            machine"</p>
+          <p class="work-quip"><code id="workQuipCode"></code> <span id="workQuipText"></span></p>
         </div>
 
-        <div class="work-list">
-
-          <!-- 01 Dhaka Bank -->
-          <details class="work-item" open>
-            <summary>
-              <span class="work-index">01</span>
-              <span class="work-summary-main">
-                <span class="work-title">Enterprise Banking Workflow Platform</span>
-                <span class="work-client">Dhaka Bank PLC · 2023 — Present · Full-stack Engineer</span>
-                <span class="work-toggle" aria-hidden="true">+</span>
-              </span>
-              <span class="work-hook">9+ systems, one engine</span>
-            </summary>
-            <div class="work-body">
-              <p class="work-dek">Instead of building nine banking products from scratch, I built one reusable workflow
-                engine — and extended it into nine-plus production systems.</p>
-              <div class="work-cols">
-                <div class="work-col">
-                  <h4>The Problem</h4>
-                  <p>The bank needed to digitize paper-and-spreadsheet processes — bank guarantees, e-lending, card
-                    operations, credit limits, tax returns, term deposits — each with its own approval hierarchy,
-                    branch/role permissions, and live core-banking dependency.</p>
-                </div>
-                <div class="work-col">
-                  <h4>What I Built</h4>
-                  <ul>
-                    <li>Bank Guarantee &amp; Electronic Lending platforms — the two largest systems in the suite — with
-                      configurable role/branch routing and compliance PDF generation</li>
-                    <li>Full card-lifecycle system with bulk Excel activation and a batch engine with failed-job retry
-                    </li>
-                    <li>A corporate credit-appraisal engine modeling 40+ financial risk domains into multi-stage
-                      sanction chains, plus a parallel SME loan-origination flow</li>
-                    <li>Shared platform: Oracle core-banking integration, LDAP/AD auth, Celery/Redis async,
-                      Prometheus/Loki observability, JMeter load coverage</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="work-outcome"><strong>Outcome →</strong> 9+ mission-critical workflows in production on one
-                shared platform — consistent RBAC, audit trail, and core-banking behavior everywhere. Yes, a bank trusts
-                my code. No, I can't approve your loan.</p>
-              <div class="work-tags">
-                <span>Django</span><span>DRF</span><span>React</span><span>PostgreSQL</span><span>Oracle /
-                  SOAP</span><span>Celery + Redis</span><span>Docker</span><span>Prometheus / Loki</span>
-              </div>
-            </div>
-          </details>
-
-          <!-- 02 Travelport -->
-          <details class="work-item">
-            <summary>
-              <span class="work-index">02</span>
-              <span class="work-summary-main">
-                <span class="work-title">GDS Integration &amp; Vendor Certification</span>
-                <span class="work-client">Travelport / SGC Soft OTA · 2025 — Present · Backend Engineer</span>
-                <span class="work-toggle" aria-hidden="true">+</span>
-              </span>
-              <span class="work-hook">passed formal certification</span>
-            </summary>
-            <div class="work-body">
-              <p class="work-dek">Replaced a third-party flight aggregator with a direct Travelport GDS integration —
-                and passed Travelport's multi-round vendor certification to prove it.</p>
-              <div class="work-cols">
-                <div class="work-col">
-                  <h4>The Problem</h4>
-                  <p>The agency resold flights through an aggregator sitting in front of Travelport. The goal: a direct
-                    integration swappable with a one-line config change — zero client-side changes — while passing the
-                    formal MyTravelport certification before production credentials are issued.</p>
-                </div>
-                <div class="work-col">
-                  <h4>What I Built</h4>
-                  <ul>
-                    <li>Layered Flask middleware: a hand-built SOAP client for the full booking lifecycle (search →
-                      price → book → ticket → void → cancel), behind a facade reproducing the legacy OTA's exact wire
-                      contract</li>
-                    <li>Carried the integration through multi-round certification review, with an automated test-runner
-                      covering every mandated scenario</li>
-                    <li>Same booking engine packaged as Ubuntu &amp; Windows desktop apps, a dual-protocol CLI, and
-                      supplier modules for a commercial PHP travel CMS</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="work-outcome"><strong>Outcome →</strong> a production middleware service with documented
-                reviewer sign-off — one booking engine powering a web API, two desktop clients, a CLI, and a CMS
-                integration.</p>
-              <div class="work-tags">
-                <span>Python</span><span>Flask</span><span>SOAP / XML</span><span>Travelport uAPI v52</span><span>JSON
-                  API v11</span><span>pywebview</span><span>PyInstaller</span>
-              </div>
-            </div>
-          </details>
-
-          <!-- 03 InteliqX -->
-          <details class="work-item">
-            <summary>
-              <span class="work-index">03</span>
-              <span class="work-summary-main">
-                <span class="work-title">Multi-Tenant PE Due-Diligence SaaS</span>
-                <span class="work-client">InteliqX · 2024 — Present · Platform Engineer</span>
-                <span class="work-toggle" aria-hidden="true">+</span>
-              </span>
-              <span class="work-hook">security remediation at scale</span>
-            </summary>
-            <div class="work-body">
-              <p class="work-dek">"Revenue Intelligence for Private Equity Due Diligence" — six microservices, taken
-                through a formal security and infrastructure remediation program while still shipping product.</p>
-              <div class="work-cols">
-                <div class="work-col">
-                  <h4>The Problem</h4>
-                  <p>The platform grew fast on hand-provisioned EC2 with no IaC. A security audit surfaced hundreds of
-                    findings — including credentials hardcoded for over a year and no structured multi-tenant isolation
-                    model.</p>
-                </div>
-                <div class="work-col">
-                  <h4>What I Built</h4>
-                  <ul>
-                    <li>Eliminated hardcoded Auth0 and Stripe secrets across three services, closing critical audit
-                      findings directly</li>
-                    <li>Authored the migration plan to organization-based tenancy backed by PostgreSQL Row-Level
-                      Security</li>
-                    <li>Owned AWS CodeBuild CI/CD for backend (Docker → ECR) and frontend (S3/CloudFront); built
-                      analyst-facing Plotly visualizations (heatmap, treemap, sunburst, waterfall)</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="work-outcome"><strong>Outcome →</strong> hardcoded-secret elimination and CI/CD stabilization
-                delivered, with a documented path to full multi-tenant isolation and infrastructure-as-code.</p>
-              <div class="work-tags">
-                <span>Django</span><span>django-tenants</span><span>React</span><span>TypeScript</span><span>Auth0</span><span>Stripe</span><span>Terraform</span><span>AWS</span>
-              </div>
-            </div>
-          </details>
-
-          <!-- 04 Wafidflow -->
-          <details class="work-item">
-            <summary>
-              <span class="work-index">04</span>
-              <span class="work-summary-main">
-                <span class="work-title">GCC Manpower &amp; Visa Processing SaaS</span>
-                <span class="work-client">Wafidflow · 2026 · Full-stack Engineer</span>
-                <span class="work-toggle" aria-hidden="true">+</span>
-              </span>
-              <span class="work-hook">real-time serverless OCR</span>
-            </summary>
-            <div class="work-body">
-              <p class="work-dek">A multi-tenant platform for recruitment agencies running the Gulf pre-employment
-                pipeline end to end — visa, medical fitness, embassy, flights.</p>
-              <div class="work-cols">
-                <div class="work-col">
-                  <h4>The Problem</h4>
-                  <p>Agencies were manually re-typing applicant data from scanned passports and flight tickets — the
-                    slowest, most error-prone step at the front of a multi-stage compliance pipeline.</p>
-                </div>
-                <div class="work-col">
-                  <h4>What I Built</h4>
-                  <ul>
-                    <li>Serverless OCR pipeline: a passport photo upload triggers an AWS Lambda running docTR,
-                      extracting structured fields with confidence scores, streamed live to the browser over WebSockets
-                      (Django Channels + Redis)</li>
-                    <li>Full applicant lifecycle — intake, embassy batching, flight booking with ticket-OCR auto-fill,
-                      contract PDF generation</li>
-                    <li>JWT + Google SSO auth, analytics dashboard, and a from-scratch reusable data table
-                      (sort/filter/search/pagination/drag-and-drop)</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="work-outcome"><strong>Outcome →</strong> the slowest manual step in the pipeline, automated — on
-                an architecture cleanly separating stateful backend, static frontend, and serverless OCR compute.</p>
-              <div class="work-tags">
-                <span>Django</span><span>Channels</span><span>React 19</span><span>TypeScript</span><span>AWS
-                  Lambda</span><span>docTR</span><span>Redis</span><span>Docker</span>
-              </div>
-            </div>
-          </details>
-
-          <!-- 05 Gastroliver -->
-          <details class="work-item">
-            <summary>
-              <span class="work-index">05</span>
-              <span class="work-summary-main">
-                <span class="work-title">Clinical Practice Digital Ecosystem</span>
-                <span class="work-client">Children's Gastroliver Center · 2025 — Present · Solo Full-stack
-                  Developer</span>
-                <span class="work-toggle" aria-hidden="true">+</span>
-              </span>
-              <span class="work-hook">a whole EHR, built solo</span>
-            </summary>
-            <div class="work-body">
-              <p class="work-dek">A real e-prescription app, a schema-driven admin panel, and patient-facing tools for a
-                pediatric clinic — built solo on a lean, serverless foundation.</p>
-              <div class="work-cols">
-                <div class="work-col">
-                  <h4>The Problem</h4>
-                  <p>A specialist clinic needed to move from paper prescriptions and ad hoc scheduling to a proper
-                    digital practice — without the budget or overhead of a commercial EHR suite.</p>
-                </div>
-                <div class="work-col">
-                  <h4>What I Built</h4>
-                  <ul>
-                    <li>E-prescription/EHR app with a structured visit workflow, searchable medicine database,
-                      dose-combination picker, and a real two-column prescription print layout — packaged as an Android
-                      app</li>
-                    <li>Schema-driven admin panel that introspects Postgres to auto-generate CRUD for every clinical
-                      table — no hand-built screens</li>
-                    <li>AI-assisted meal planning: deterministic allergy/nutrient filtering first, then an LLM composes
-                      a 7-day pediatric plan from the curated shortlist — grounded, not hallucinating menus</li>
-                    <li>WHO child-growth data converted into an interactive growth-chart PWA, plus scrapers feeding the
-                      drug database</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="work-outcome"><strong>Outcome →</strong> a specialist clinic running on a purpose-built digital
-                practice stack — delivered by one developer instead of an EHR vendor's invoice.</p>
-              <div class="work-tags">
-                <span>Supabase</span><span>Postgres</span><span>React</span><span>Ionic /
-                  Capacitor</span><span>Python</span><span>Groq · Llama 3.3</span><span>AWS S3 / CloudFront</span>
-              </div>
-            </div>
-          </details>
-
-          <!-- 06 Frankie4 -->
-          <details class="work-item">
-            <summary>
-              <span class="work-index">06</span>
-              <span class="work-summary-main">
-                <span class="work-title">Data Warehouse Platform</span>
-                <span class="work-client">Frankie4 · 2024 — Present · Data / Backend Engineer</span>
-                <span class="work-toggle" aria-hidden="true">+</span>
-              </span>
-              <span class="work-hook">ETL → observable lakehouse</span>
-            </summary>
-            <div class="work-body">
-              <p class="work-dek">From a custom ETL system to a modern, observable lakehouse-style architecture — with
-                zero downtime to business reporting.</p>
-              <div class="work-cols">
-                <div class="work-col">
-                  <h4>The Problem</h4>
-                  <p>Business Central, dual-region Shopify stores, and SFTP report feeds each spoke a different format
-                    on a different schedule. The business needed one reliable, monitored pipeline instead of ad hoc
-                    exports.</p>
-                </div>
-                <div class="work-col">
-                  <h4>What I Built</h4>
-                  <ul>
-                    <li>Gen 1: custom Python importer/transformer/scheduler microservices with a Flask monitoring
-                      dashboard and Auth0 role management</li>
-                    <li>Gen 2: re-architected onto Airflow DAGs, MinIO landing zone, Spark incremental transforms, and
-                      dbt staging → intermediate → marts with a data-quality layer</li>
-                    <li>Grafana/Prometheus observability over pipeline performance, storage, and governance</li>
-                  </ul>
-                </div>
-              </div>
-              <p class="work-outcome"><strong>Outcome →</strong> a production data platform that evolved from working
-                custom ETL into a dbt-tested, observable architecture — reporting never skipped a beat.</p>
-              <div class="work-tags">
-                <span>Python</span><span>Airflow</span><span>MinIO</span><span>Spark</span><span>dbt</span><span>PostgreSQL</span><span>Grafana
-                  / Prometheus</span>
-              </div>
-            </div>
-          </details>
-
-          <!-- 07 3PCL -->
-          <details class="work-item">
-            <summary>
-              <span class="work-index">07</span>
-              <span class="work-summary-main">
-                <span class="work-title">Exam-Prep Learning Management System</span>
-                <span class="work-client">3PCL · 2023 — Present · Full-stack Engineer</span>
-                <span class="work-toggle" aria-hidden="true">+</span>
-              </span>
-              <span class="work-hook">1,368 queries → ~0</span>
-            </summary>
-            <div class="work-body">
-              <p class="work-dek">A mature, multi-year LMS product — and a measured performance-optimization story, not
-                just a feature list.</p>
-              <div class="work-cols">
-                <div class="work-col">
-                  <h4>What I Built</h4>
-                  <p>Course, lesson, and question-bank management with Excel bulk import/export, a practice-exam engine
-                    with repetition-avoidance logic, and a flashcard study mode. Migrated production onto AWS Graviton
-                    (ARM), resolving the packaging issues that came with it.</p>
-                </div>
-                <div class="work-col">
-                  <h4>The Performance Fix</h4>
-                  <p>Diagnosed an N+1 query pattern in the practice-exam engine and resolved it with
-                    <code>select_related</code> plus 35 new indexes — cutting per-request database queries from roughly
-                    <strong>1,368 to near-zero</strong>, an ~9.5x speedup, documented in a dedicated performance report.
-                  </p>
-                </div>
-              </div>
-              <p class="work-outcome"><strong>Outcome →</strong> 600+ backend commits, and concrete proof I'd rather fix
-                the bottleneck than buy a bigger server.</p>
-              <div class="work-tags">
-                <span>Django</span><span>DRF</span><span>PostgreSQL</span><span>Celery</span><span>React</span><span>Redux</span><span>AWS
-                  Graviton</span>
-              </div>
-            </div>
-          </details>
-
-        </div>
+        <div class="work-list" id="workListMount"></div>
 
         <!-- Smaller / freelance strip -->
         <div class="work-minor">
-          <p class="work-minor-label">Also built — academic &amp; off the clock</p>
-          <div class="work-minor-grid">
-            <div class="work-minor-item">
-              <h5>Shajkotha <a href="https://github.com/Mi-Thun/shajkotha-backend" target="_blank" rel="noopener"
-                  class="minor-repo" aria-label="View Shajkotha on GitHub">↗</a></h5>
-              <p>Jewelry e-commerce MVP with cart/checkout, wishlists, promo codes, and local payment-gateway
-                integration (bKash, Nagad, Rocket).</p>
-              <div class="work-tags"><span>Django REST</span><span>React</span><span>Vite</span><span>SSLCommerz</span>
-              </div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Lung Cancer Diagnose App <a
-                  href="https://github.com/Mi-Thun/diagnose-lung-cancer-flask-server-flutter-app" target="_blank"
-                  rel="noopener" class="minor-repo" aria-label="View Lung Cancer Diagnose App on GitHub">↗</a></h5>
-              <p>Mobile app predicting lung cancer type from CT-scan images — the applied side of my published research.
-              </p>
-              <div class="work-tags"><span>Flutter</span><span>Flask</span><span>CNN</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Web Scraping — Daraz &amp; DataCamp <a href="https://github.com/Mi-Thun/python-scrapy-scraper"
-                  target="_blank" rel="noopener" class="minor-repo"
-                  aria-label="View Web Scraping — Daraz &amp; DataCamp on GitHub">↗</a></h5>
-              <p>Scraping tools extracting structured e-commerce and course-catalog data into a database.</p>
-              <div class="work-tags">
-                <span>Python</span><span>Scrapy</span><span>BeautifulSoup</span><span>MongoDB</span>
-              </div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Python Authentication Hub <a href="https://github.com/Mi-Thun/python-authentication-hub"
-                  target="_blank" rel="noopener" class="minor-repo"
-                  aria-label="View Python Authentication Hub on GitHub">↗</a></h5>
-              <p>A collection of working auth integrations — popular providers implemented in one place.</p>
-              <div class="work-tags"><span>Python</span><span>Auth0</span><span>OAuth2</span><span>JWT</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Stripe Recurring Payments <a href="https://github.com/Mi-Thun/stripe-recurring-python" target="_blank"
-                  rel="noopener" class="minor-repo" aria-label="View Stripe Recurring Payments on GitHub">↗</a></h5>
-              <p>Lightweight module for managing subscriptions and recurring billing with webhook support.</p>
-              <div class="work-tags"><span>Python</span><span>Stripe API</span><span>Webhooks</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Neural Style Transfer Web App <a
-                  href="https://github.com/Mi-Thun/web-application-of-neural-style-transfer" target="_blank"
-                  rel="noopener" class="minor-repo" aria-label="View Neural Style Transfer Web App on GitHub">↗</a></h5>
-              <p>Web app repainting photos in the style of famous artworks using deep learning.</p>
-              <div class="work-tags"><span>Python</span><span>CNN</span><span>TensorFlow</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Quizzler App <a href="https://github.com/Mi-Thun/quizzler-app" target="_blank" rel="noopener"
-                  class="minor-repo" aria-label="View Quizzler App on GitHub">↗</a></h5>
-              <p>Quiz-based mobile app with separate admin and user interfaces backed by a remote server.</p>
-              <div class="work-tags">
-                <span>Flutter</span><span>Dart</span><span>Android</span><span>Java</span><span>PHP</span><span>MySQL</span>
-              </div>
-            </div>
-            <div class="work-minor-item">
-              <h5>'Lok Lagbe' Platform <a
-                  href="https://github.com/Mi-Thun/web-application-online-lok-lagbe-management-system" target="_blank"
-                  rel="noopener" class="minor-repo" aria-label="View 'Lok Lagbe' Platform on GitHub">↗</a></h5>
-              <p>Web platform connecting local workers and day laborers with service seekers.</p>
-              <div class="work-tags"><span>Python</span><span>Flask</span><span>MongoDB</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Café Shop Management <a
-                  href="https://github.com/Mi-Thun/web-application-online-cafe-shop-management-system" target="_blank"
-                  rel="noopener" class="minor-repo" aria-label="View Café Shop Management on GitHub">↗</a></h5>
-              <p>Full-stack café site with in-store and online ordering — menus, order processing, admin control.</p>
-              <div class="work-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>XAMPP</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Grocery Shop Management <a href="https://github.com/Mi-Thun/grocery-shop-management-system-java-swing"
-                  target="_blank" rel="noopener" class="minor-repo"
-                  aria-label="View Grocery Shop Management on GitHub">↗</a></h5>
-              <p>Desktop app for inventory and sales management with a responsive interface.</p>
-              <div class="work-tags"><span>Java</span><span>Swing</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>Event Management App <a href="https://github.com/Mi-Thun/event-management-system" target="_blank"
-                  rel="noopener" class="minor-repo" aria-label="View Event Management App on GitHub">↗</a></h5>
-              <p>Event scheduling and management app supporting admin and user roles.</p>
-              <div class="work-tags"><span>Java</span><span>SQLite</span><span>PHP</span><span>Android</span></div>
-            </div>
-            <div class="work-minor-item">
-              <h5>FIFA World Cup 2022 Portal <a
-                  href="https://github.com/Mi-Thun/fifa-world-cup-2022-database-management-project" target="_blank"
-                  rel="noopener" class="minor-repo" aria-label="View FIFA World Cup 2022 Portal on GitHub">↗</a></h5>
-              <p>Informative portal displaying team stats, fixtures, and results.</p>
-              <div class="work-tags"><span>SQL</span><span>Oracle Apex</span><span>HTML/CSS</span></div>
-            </div>
-          </div>
-          <p class="work-minor-more">↗ marks projects with public code — full archive at
-            <a href="https://github.com/mi-thun" target="_blank" rel="noopener">github.com/mi-thun</a>
-          </p>
+          <p class="work-minor-label" id="workMinorLabel"></p>
+          <div class="work-minor-grid" id="workMinorMount"></div>
+          <p class="work-minor-more" id="workMoreNote"></p>
         </div>
       </div>
     </section>
@@ -810,128 +283,16 @@
           <!-- Left: Education + Publication -->
           <div class="resume-col">
             <h3 class="resume-col-title"><i class="bi bi-mortarboard"></i> Education</h3>
-
-            <div class="resume-entry">
-              <div class="resume-entry-date">Jan 2024 — Present</div>
-              <h4>M.Sc. in Computer Science and Engineering</h4>
-              <p class="resume-entry-org">BRAC University</p>
-              <p class="resume-entry-grade">CGPA: 3.95 / 4.00</p>
-              <p class="resume-entry-desc">Graduate study deepening my grounding in machine learning, advanced
-                algorithms, and research methodology, with a concentration in deep learning for medical imaging —
-                pursued alongside full-time engineering work.</p>
-              <ul class="resume-achievements">
-                <li>75% Merit Scholarship — CGPA 3.95+</li>
-                <li>50% Merit Scholarship — CGPA 3.90+</li>
-                <li>40% Tuition Fee Waiver — Outstanding undergrad performance</li>
-              </ul>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-entry-date">Sep 2019 — Sep 2023</div>
-              <h4>B.Sc. in Computer Science and Engineering</h4>
-              <p class="resume-entry-org">East West University</p>
-              <p class="resume-entry-grade">CGPA: 3.76 / 4.00</p>
-              <p class="resume-entry-desc">Built my core foundation across algorithms, data structures, databases,
-                operating systems, and software engineering, with a growing pull toward machine learning and research
-                by the final year.</p>
-              <ul class="resume-achievements">
-                <li>Cum Laude — 3.75+ GPA across 12 consecutive semesters</li>
-                <li>Dean's List Scholarship — GPA 3.75+ for 3 semesters</li>
-                <li>Medha Lalon Scholarship — GPA 3.50+ for 3 semesters</li>
-              </ul>
-            </div>
+            <div id="resumeEducationMount"></div>
 
             <h3 class="resume-col-title mt-section"><i class="bi bi-journal-text"></i> Publications &amp; Research</h3>
-
-            <div class="resume-entry">
-              <div class="resume-entry-date">In Progress · M.Sc. Thesis Research <span class="pub-status">Targeting MICCAI / Q1 Journal</span></div>
-              <h4>Trustworthy Missing-Modality Brain MRI Synthesis: Pathology-Faithful Diffusion with Calibrated Uncertainty</h4>
-              <p class="resume-entry-org"><strong>Mohsenul Kabir Mithun</strong> · BRAC University</p>
-              <p class="resume-pub">
-                A diffusion model for synthesizing missing MRI sequences that stays faithful in the tumor region,
-                paired with the first <strong>calibrated, conformal per-pixel uncertainty map</strong> for
-                cross-modality MRI synthesis — a statistical signal for when a synthesized scan should not be trusted.
-                Targeting <em>MICCAI</em> and a Q1 medical-imaging journal.
-              </p>
-              <div class="pub-links">
-                <a href="#">DOI: xx.xxxx/xxxxxxxxxxxxx-xx (pending)</a>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-entry-date">Published 2026 · Book Chapter · 1st Edition</div>
-              <h4>Computer-Aided Strategy to Diagnose Lung Cancer from CT-Scan Images Using Inception Architecture</h4>
-              <p class="resume-entry-org">
-                <strong>Mohsenul Kabir Mithun</strong>, M. Islam, S. N. Zaman, M. T. H. Sagar, O. Numan,
-                S. S. Jennifer, M. H. Shamim, A. W. Reza &amp; N. Siddique
-              </p>
-              <p class="resume-pub">
-                An Inception v3 (CNN) model detecting malignant lung tumors from CT-scan images —
-                achieving <strong>92.36% test accuracy</strong> on preprocessed scans. Chapter in
-                <em>Machine Learning for Healthcare Informatics</em>, published by
-                <strong>Chapman and Hall/CRC, Taylor &amp; Francis Group</strong>.
-              </p>
-              <div class="pub-links">
-                <a href="https://doi.org/10.1201/9781032650715-12" target="_blank" rel="noopener">DOI:
-                  10.1201/9781032650715-12 ↗</a>
-              </div>
-            </div>
+            <div id="resumePublicationsMount"></div>
           </div>
 
           <!-- Right: Experience -->
           <div class="resume-col">
             <h3 class="resume-col-title"><i class="bi bi-briefcase"></i> Professional Experience</h3>
-
-            <div class="resume-entry">
-              <div class="resume-entry-date">Jan 2026 — Present</div>
-              <h4>Sr. Software Engineer</h4>
-              <p class="resume-entry-org">Software Global Consultancy (SGC)</p>
-              <ul class="resume-list">
-                <li>Lead system architecture and technical decision-making — translating business requirements into
-                  scalable designs, evaluating trade-offs, and defining API contracts and data models</li>
-                <li>Own the full delivery lifecycle: sprint planning, estimation, implementation, code review, testing
-                  strategy, deployment, and post-release monitoring</li>
-                <li>Ensure production reliability through observability, on-call incident response, root-cause analysis,
-                  and preventive hardening of performance and security</li>
-                <li>Mentor junior engineers, conduct technical interviews, and set team standards for code quality,
-                  documentation, and secure deployment practices</li>
-                <li>Communicate directly with clients and stakeholders — scoping features, negotiating timelines, and
-                  reporting progress across concurrent projects</li>
-              </ul>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-entry-date">Jun 2023 — Dec 2025</div>
-              <h4>Associate Software Engineer</h4>
-              <p class="resume-entry-org">Software Global Consultancy (SGC)</p>
-              <ul class="resume-list">
-                <li>Designed, built, and maintained production REST APIs, database schemas, and background job pipelines
-                  following clean-architecture and design-pattern principles</li>
-                <li>Integrated third-party services and legacy systems — payment gateways, SOAP/XML APIs, enterprise
-                  directories, and OAuth providers — passing a formal vendor certification in the process</li>
-                <li>Wrote unit and integration tests, participated in code reviews, and maintained technical
-                  documentation to keep multi-developer codebases stable</li>
-                <li>Debugged and resolved production issues end to end — from log analysis to query optimization —
-                  including a measured ~9.5x speedup on a live system</li>
-                <li>Worked in Agile sprints with frontend engineers, QA, and product managers — refining requirements,
-                  demoing features, and shipping on schedule</li>
-              </ul>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-entry-date">Jun 2023 — Sep 2023</div>
-              <h4>Undergraduate Teaching Assistant</h4>
-              <p class="resume-entry-org">East West University — Dept. of Computer Science &amp; Engineering</p>
-              <ul class="resume-list">
-                <li>Ran weekly lab sessions for undergraduate CSE courses — guiding students through programming
-                  exercises and debugging their code live</li>
-                <li>Broke down complex topics into approachable one-on-one tutoring sessions</li>
-                <li>Reviewed and graded assignments and lab work, giving individual written feedback on code quality and
-                  problem-solving approach</li>
-                <li>Acted as first point of contact between students and faculty — fielding questions, clarifying
-                  requirements, and flagging struggling students early</li>
-              </ul>
-            </div>
+            <div id="resumeExperienceMount"></div>
           </div>
 
         </div>
@@ -947,69 +308,7 @@
         </div>
         <h2 class="section-title">What I Can Build For You</h2>
 
-        <div class="services-grid">
-
-          <div class="service-card">
-            <div class="service-top">
-              <div class="service-icon"><i class="bi bi-server"></i></div>
-              <span class="service-num">01</span>
-            </div>
-            <h3>Backend Development</h3>
-            <p>RESTful API development, database design, server architecture, and backend optimization using Python,
-              Django, and modern frameworks.</p>
-            <div class="service-links">
-              <a href="#" class="service-more open-service" data-service="backend">Read details →</a>
-              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
-                Fiverr ↗</a>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-top">
-              <div class="service-icon"><i class="bi bi-terminal-fill"></i></div>
-              <span class="service-num">02</span>
-            </div>
-            <h3>Python & Automation</h3>
-            <p>Build, debug, and automate Python projects. Web scraping scripts to custom operational programs tailored
-              for your business needs.</p>
-            <div class="service-links">
-              <a href="#" class="service-more open-service" data-service="python">Read details →</a>
-              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
-                Fiverr ↗</a>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-top">
-              <div class="service-icon"><i class="bi bi-gear-fill"></i></div>
-              <span class="service-num">03</span>
-            </div>
-            <h3>DevOps</h3>
-            <p>CI/CD pipeline setup, containerization with Docker, cloud deployment strategies, infrastructure
-              automation, and monitoring.</p>
-            <div class="service-links">
-              <a href="#" class="service-more open-service" data-service="devops">Read details →</a>
-              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
-                Fiverr ↗</a>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-top">
-              <div class="service-icon"><i class="bi bi-window-dock"></i></div>
-              <span class="service-num">04</span>
-            </div>
-            <h3>Frontend with React</h3>
-            <p>Modern, interactive React applications with clean state management, scalable component architecture, and
-              responsive design.</p>
-            <div class="service-links">
-              <a href="#" class="service-more open-service" data-service="frontend">Read details →</a>
-              <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="service-hire">Hire on
-                Fiverr ↗</a>
-            </div>
-          </div>
-
-        </div>
+        <div class="services-grid" id="servicesCardsMount"></div>
       </div>
     </section>
 
@@ -1024,18 +323,8 @@
         <div class="contact-grid">
           <div class="contact-left">
             <h2 class="section-title">Let's Build Something<br><em>Together.</em></h2>
-            <p class="contact-desc">Have a project in mind? I'd love to hear about it. Drop me a message and I'll get
-              back to you soon.</p>
-            <div class="contact-info">
-              <div class="contact-info-item">
-                <i class="bi bi-geo-alt"></i>
-                <span>Mirpur, Dhaka, Bangladesh</span>
-              </div>
-              <div class="contact-info-item">
-                <i class="bi bi-envelope"></i>
-                <span>mohsenulkabirmi8486@gmail.com</span>
-              </div>
-            </div>
+            <p class="contact-desc" id="contactDesc"></p>
+            <div class="contact-info" id="contactInfoMount"></div>
           </div>
 
           <div class="contact-right">
@@ -1058,10 +347,10 @@
                 <textarea name="message" id="contactMessage" placeholder="Your Message" rows="6" required></textarea>
                 <span class="field-error" id="err-message">Please write your message.</span>
               </div>
-              <div class="loading" style="display:none;">Sending...</div>
+              <div class="loading" id="contactLoadingText" style="display:none;">Sending...</div>
               <div class="error-message" style="display:none;"></div>
-              <div class="sent-message" style="display:none;">Message sent. Thank you!</div>
-              <button type="submit" class="btn-submit">Send Message →</button>
+              <div class="sent-message" id="contactSuccessText" style="display:none;">Message sent. Thank you!</div>
+              <button type="submit" id="contactSubmitBtn" class="btn-submit"></button>
             </form>
           </div>
         </div>
@@ -1091,204 +380,26 @@
       <aside class="sdo-sidebar">
         <p class="sdo-sidebar-label">All Services</p>
 
-        <button class="sdo-nav-btn active" data-panel="backend">
-          <i class="bi bi-server"></i>
-          <span>Backend Development</span>
-        </button>
-        <button class="sdo-nav-btn" data-panel="python">
-          <i class="bi bi-terminal-fill"></i>
-          <span>Python &amp; Automation</span>
-        </button>
-        <button class="sdo-nav-btn" data-panel="devops">
-          <i class="bi bi-gear-fill"></i>
-          <span>DevOps</span>
-        </button>
-        <button class="sdo-nav-btn" data-panel="frontend">
-          <i class="bi bi-window-dock"></i>
-          <span>Frontend (React)</span>
-        </button>
+        <div id="sdoNavMount"></div>
 
         <div class="sdo-sidebar-cta">
           <i class="bi bi-headset sdo-cta-icon"></i>
-          <h4 class="sdo-cta-title">Let's Work Together</h4>
-          <a href="mailto:mohsenulkabirmi8486@gmail.com" class="sdo-cta-row">
+          <h4 class="sdo-cta-title" id="sdoCtaTitle"></h4>
+          <a href="#" id="sdoCtaEmailLink" class="sdo-cta-row">
             <i class="bi bi-envelope"></i>
-            <span>mohsenulkabirmi8486@gmail.com</span>
+            <span></span>
           </a>
-          <a href="https://www.fiverr.com/mkmithun08" target="_blank" rel="noopener" class="sdo-cta-row sdo-cta-fiverr">
+          <a href="#" id="sdoCtaFiverrLink" target="_blank" rel="noopener" class="sdo-cta-row sdo-cta-fiverr">
             <i class="bi bi-briefcase-fill"></i>
-            <span>Hire me on Fiverr</span>
+            <span></span>
           </a>
-          <a href="#contact" class="sdo-contact-link" id="sdoContactLink">or send a message ↓</a>
+          <a href="#contact" class="sdo-contact-link" id="sdoContactLink"></a>
         </div>
       </aside>
 
       <!-- Content panels -->
-      <div class="sdo-content">
+      <div class="sdo-content" id="sdoPanelsMount"></div>
 
-        <!-- ── Backend ── -->
-        <div class="sdo-panel active" data-panel="backend">
-          <h2 class="sdo-panel-title">Backend Web Development</h2>
-          <p class="sdo-panel-intro">I build robust, scalable backend systems that power modern applications.
-            Specializing in REST API design, database architecture, and server-side optimization with Python and Django.
-          </p>
-
-          <div class="sdo-highlights">
-            <div class="sdo-highlight">
-              <i class="bi bi-database"></i>
-              <h5>Database Design</h5>
-              <p>PostgreSQL, MySQL, schema optimization</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-diagram-3"></i>
-              <h5>API Architecture</h5>
-              <p>RESTful, GraphQL, OAuth2</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-lightning-fill"></i>
-              <h5>Performance</h5>
-              <p>Caching, indexing, monitoring</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-shield-check"></i>
-              <h5>Security</h5>
-              <p>Authentication, authorization, encryption</p>
-            </div>
-          </div>
-
-          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
-          <ul class="sdo-deliverables">
-            <li><i class="bi bi-check-circle-fill"></i><span>Scalable REST APIs with Django &amp; DRF</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Database schema design &amp; optimization</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Authentication &amp; authorization systems</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Caching strategies &amp; performance tuning</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Unit &amp; integration testing</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>API documentation &amp; deployment</span></li>
-          </ul>
-        </div>
-
-        <!-- ── Python ── -->
-        <div class="sdo-panel" data-panel="python">
-          <h2 class="sdo-panel-title">Python Projects &amp; Automation</h2>
-          <p class="sdo-panel-intro">Leverage Python's versatility for custom projects, data processing, automation
-            workflows, and scripting. From web scraping to batch processing and system automation.</p>
-
-          <div class="sdo-highlights">
-            <div class="sdo-highlight">
-              <i class="bi bi-gear"></i>
-              <h5>Automation</h5>
-              <p>Workflow, task scheduling, scripts</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-graph-up"></i>
-              <h5>Data Processing</h5>
-              <p>ETL, analysis, visualization</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-box-seam"></i>
-              <h5>Web Scraping</h5>
-              <p>BeautifulSoup, Selenium, Scrapy</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-tools"></i>
-              <h5>Custom Tools</h5>
-              <p>Utilities, libraries, integrations</p>
-            </div>
-          </div>
-
-          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
-          <ul class="sdo-deliverables">
-            <li><i class="bi bi-check-circle-fill"></i><span>Automation scripts for complex workflows</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Data extraction &amp; processing pipelines</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Web scraping &amp; parsing solutions</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Batch processing &amp; scheduled jobs</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Python libraries &amp; reusable modules</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>System integration &amp; deployment</span></li>
-          </ul>
-        </div>
-
-        <!-- ── DevOps ── -->
-        <div class="sdo-panel" data-panel="devops">
-          <h2 class="sdo-panel-title">DevOps Service</h2>
-          <p class="sdo-panel-intro">Build reliable, scalable infrastructure with modern DevOps practices. CI/CD
-            pipelines, containerization, cloud deployment, and infrastructure automation for seamless delivery.</p>
-
-          <div class="sdo-highlights">
-            <div class="sdo-highlight">
-              <i class="bi bi-git"></i>
-              <h5>CI/CD Pipelines</h5>
-              <p>GitHub Actions, GitLab, automation</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-box-seam"></i>
-              <h5>Containerization</h5>
-              <p>Docker, Docker Compose, images</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-cloud"></i>
-              <h5>Cloud Deployment</h5>
-              <p>AWS, Google Cloud, DigitalOcean</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-eye"></i>
-              <h5>Monitoring</h5>
-              <p>Logging, analytics, alerting</p>
-            </div>
-          </div>
-
-          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
-          <ul class="sdo-deliverables">
-            <li><i class="bi bi-check-circle-fill"></i><span>Complete CI/CD pipeline setup &amp; configuration</span>
-            </li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Docker containerization &amp; optimization</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Infrastructure as Code (IaC)</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Cloud deployment &amp; scaling strategies</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Monitoring, logging &amp; alerting setup</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Security hardening &amp; best practices</span></li>
-          </ul>
-        </div>
-
-        <!-- ── Frontend ── -->
-        <div class="sdo-panel" data-panel="frontend">
-          <h2 class="sdo-panel-title">Frontend Service using React</h2>
-          <p class="sdo-panel-intro">Create modern, interactive user interfaces with React. I build scalable component
-            architectures, manage complex state, and ensure responsive design across all devices.</p>
-
-          <div class="sdo-highlights">
-            <div class="sdo-highlight">
-              <i class="bi bi-palette"></i>
-              <h5>UI/UX Design</h5>
-              <p>Modern interfaces, accessibility</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-puzzle"></i>
-              <h5>Components</h5>
-              <p>Reusable, modular architecture</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-phone"></i>
-              <h5>Responsive</h5>
-              <p>Mobile-first design, all screens</p>
-            </div>
-            <div class="sdo-highlight">
-              <i class="bi bi-speedometer"></i>
-              <h5>Performance</h5>
-              <p>Optimization, lazy loading, bundling</p>
-            </div>
-          </div>
-
-          <h4 class="sdo-deliverables-title">Key Deliverables</h4>
-          <ul class="sdo-deliverables">
-            <li><i class="bi bi-check-circle-fill"></i><span>Reusable React component system</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>State management (Redux, Context API)</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Responsive &amp; mobile-friendly design</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>API integration &amp; data fetching</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Performance optimization &amp; bundling</span></li>
-            <li><i class="bi bi-check-circle-fill"></i><span>Testing &amp; code documentation</span></li>
-          </ul>
-        </div>
-
-      </div><!-- /.sdo-content -->
     </div><!-- /.sdo-body -->
     </div><!-- /.sdo-modal -->
   </div><!-- /#serviceOverlay -->
@@ -1298,16 +409,12 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-left">
-          <p class="footer-name">Mohsenul Kabir Mithun</p>
-          <p class="footer-tagline">Building scalable solutions, one commit at a time.</p>
+          <p class="footer-name" id="footerName"></p>
+          <p class="footer-tagline" id="footerTagline"></p>
         </div>
         <div class="footer-right">
-          <div class="footer-social">
-            <a href="https://github.com/mi-thun" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/mohsenul_kabir_mithun" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.facebook.com/mohsenulkabir.mithun.9" target="_blank" rel="noopener">Facebook</a>
-          </div>
-          <p class="footer-copy">&copy; <span id="currentYear"></span> Mohsenul Kabir Mithun. All rights reserved.</p>
+          <div class="footer-social" id="footerSocialMount"></div>
+          <p class="footer-copy">&copy; <span id="currentYear"></span> <span id="footerCopyName"></span>. All rights reserved.</p>
         </div>
       </div>
     </div>
@@ -1324,16 +431,19 @@
   <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/data/content.js"></script>
+  <script src="assets/js/content-render.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/critters.js"></script>
   <script src="assets/js/tictactoe.js"></script>
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Years of experience — auto-calculated from June 2023
-    const expStart = new Date(2023, 5, 1);
+    // Years of experience — auto-calculated from SITE_CONTENT.experienceSince
+    const expStart = new Date(window.SITE_CONTENT.experienceSince);
     const expYears = (Date.now() - expStart.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
-    document.getElementById('expYears').textContent = Math.floor(expYears) + '+';
+    const expYearsEl = document.getElementById('expYears');
+    if (expYearsEl) expYearsEl.textContent = Math.floor(expYears) + '+';
   </script>
 
 </body>

@@ -1,0 +1,542 @@
+<title>Case Studies — Mohsenul Kabir Mithun</title>
+<style>
+  :root {
+    --bg: #EEF1F0;
+    --surface: #FFFFFF;
+    --ink: #14201F;
+    --ink-soft: #4B5957;
+    --ink-faint: #7C8C89;
+    --accent: #1F7A6E;
+    --accent-soft: #E4EFED;
+    --line: #D3DAD8;
+    --chip-bg: #F3F6F5;
+    --shadow: 0 1px 2px rgba(20,32,31,0.04), 0 8px 24px rgba(20,32,31,0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0D1412;
+      --surface: #121A18;
+      --ink: #E7EFEC;
+      --ink-soft: #9DB0AC;
+      --ink-faint: #63736F;
+      --accent: #4FBBA8;
+      --accent-soft: #172622;
+      --line: #24302D;
+      --chip-bg: #17201E;
+      --shadow: 0 1px 2px rgba(0,0,0,0.2), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0D1412;
+    --surface: #121A18;
+    --ink: #E7EFEC;
+    --ink-soft: #9DB0AC;
+    --ink-faint: #63736F;
+    --accent: #4FBBA8;
+    --accent-soft: #172622;
+    --line: #24302D;
+    --chip-bg: #17201E;
+    --shadow: 0 1px 2px rgba(0,0,0,0.2), 0 8px 24px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #EEF1F0;
+    --surface: #FFFFFF;
+    --ink: #14201F;
+    --ink-soft: #4B5957;
+    --ink-faint: #7C8C89;
+    --accent: #1F7A6E;
+    --accent-soft: #E4EFED;
+    --line: #D3DAD8;
+    --chip-bg: #F3F6F5;
+    --shadow: 0 1px 2px rgba(20,32,31,0.04), 0 8px 24px rgba(20,32,31,0.05);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  code, .mono, .meta, .chip, .tag-label {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  }
+
+  /* ---------- Header ---------- */
+  header.hero {
+    border-bottom: 1px solid var(--line);
+    padding: 64px 0 40px;
+  }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  h1.name {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 5vw, 46px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .role-line {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 0 28px;
+    text-wrap: balance;
+  }
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .stat .n {
+    font-size: 22px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat .l {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    letter-spacing: 0.03em;
+  }
+
+  /* ---------- Manifest / nav ---------- */
+  nav.manifest {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  nav.manifest h2 {
+    font-size: 12.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+  .manifest-list { display: flex; flex-direction: column; }
+  .manifest-list a {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: baseline;
+    text-decoration: none;
+    color: var(--ink);
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 15px;
+  }
+  .manifest-list a:last-child { border-bottom: none; }
+  .manifest-list a:hover .mtitle, .manifest-list a:focus-visible .mtitle { color: var(--accent); }
+  .manifest-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .mtitle { font-weight: 600; transition: color .15s ease; }
+  .myears { color: var(--ink-faint); font-size: 13px; white-space: nowrap; }
+
+  /* ---------- Case study blocks ---------- */
+  section.case {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 32px;
+  }
+  section.case:last-of-type { border-bottom: none; }
+
+  .case-rail { position: relative; }
+  .case-rail .client {
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0 0 8px;
+  }
+  .case-rail .years {
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .case-rail .role {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 10px;
+  }
+
+  .case-body h3 {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    text-wrap: balance;
+  }
+  .case-body .dek {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin: 0 0 20px;
+    max-width: 62ch;
+  }
+
+  .case-body h4 {
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-faint);
+    margin: 22px 0 10px;
+    font-weight: 600;
+  }
+  .case-body p { margin: 0 0 12px; max-width: 68ch; }
+  .case-body ul { margin: 0; padding-left: 18px; }
+  .case-body li { margin-bottom: 10px; max-width: 66ch; }
+  .case-body li:last-child { margin-bottom: 0; }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .chip {
+    font-size: 12px;
+    padding: 4px 9px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--chip-bg);
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .outcome {
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .outcome strong { color: var(--accent); }
+
+  @media (max-width: 620px) {
+    section.case { grid-template-columns: 1fr; gap: 12px; }
+    .case-rail { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .case-rail .role { display: none; }
+  }
+
+  /* ---------- Minor projects table ---------- */
+  section.minor { padding: 56px 0; }
+  section.minor h2 {
+    font-family: ui-serif, Georgia, serif;
+    font-size: 22px;
+    margin: 0 0 6px;
+  }
+  section.minor .dek { color: var(--ink-soft); font-size: 14.5px; margin: 0 0 24px; }
+  .minor-grid { display: flex; flex-direction: column; gap: 20px; }
+  .minor-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  .minor-item .mname { font-weight: 600; font-size: 14.5px; }
+  .minor-item p { margin: 0; font-size: 14.5px; color: var(--ink-soft); max-width: 60ch; }
+  @media (max-width: 560px) {
+    .minor-item { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  footer {
+    padding: 40px 0 64px;
+    color: var(--ink-faint);
+    font-size: 13px;
+    border-top: 1px solid var(--line);
+  }
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Portfolio — Case Studies</p>
+    <h1 class="name">Mohsenul Kabir Mithun</h1>
+    <p class="role-line">Full-stack &amp; platform engineer building production systems across banking, travel, healthcare, and data — from enterprise workflow engines to serverless OCR pipelines to a passed GDS vendor certification.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="n">7</span><span class="l">Client platforms</span></div>
+      <div class="stat"><span class="n">4</span><span class="l">Domains — banking, travel, health, data</span></div>
+      <div class="stat"><span class="n">9+</span><span class="l">Production banking systems on one engine</span></div>
+      <div class="stat"><span class="n">2021–</span><span class="l">Building in production</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="manifest">
+  <div class="wrap">
+    <h2>Engagements</h2>
+    <div class="manifest-list">
+      <a href="#dhaka-bank"><span class="mtitle">Dhaka Bank — Enterprise Banking Workflow Platform</span><span class="myears">2021 – Present</span></a>
+      <a href="#inteliqx"><span class="mtitle">InteliqX — Multi-Tenant PE Due-Diligence SaaS</span><span class="myears">2024 – Present</span></a>
+      <a href="#travelport"><span class="mtitle">Travelport — GDS Integration &amp; Vendor Certification</span><span class="myears">2025 – Present</span></a>
+      <a href="#wafidflow"><span class="mtitle">Wafidflow — GCC Manpower &amp; Visa SaaS</span><span class="myears">2026</span></a>
+      <a href="#gastroliver"><span class="mtitle">Gastroliver — Clinical Practice Ecosystem</span><span class="myears">2025 – Present</span></a>
+      <a href="#dwh"><span class="mtitle">Frankie4 — Data Warehouse Platform</span><span class="myears">2024 – Present</span></a>
+      <a href="#lms"><span class="mtitle">3PCL — Exam-Prep LMS</span><span class="myears">2021 – Present</span></a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section class="case" id="dhaka-bank">
+    <div class="case-rail">
+      <p class="client">Dhaka Bank PLC</p>
+      <p class="years">2021 – Present</p>
+      <p class="role">Full-stack Engineer</p>
+    </div>
+    <div class="case-body">
+      <h3>Enterprise Banking Workflow Platform</h3>
+      <p class="dek">One reusable workflow engine, extended into nine-plus production banking systems — instead of building each from scratch.</p>
+
+      <h4>Problem</h4>
+      <p>Dhaka Bank needed to digitize a series of manual, paper-and-spreadsheet-driven processes — bank guarantee issuance, e-lending approvals, card operations, credit limit management, tax return processing, term deposit servicing — each with its own approval hierarchy, branch/role permissions, and dependency on live core-banking data.</p>
+
+      <h4>What I built</h4>
+      <ul>
+        <li><strong>Bank Guarantee &amp; Electronic Lending platforms</strong> — issuance, amendment, and closure workflows with configurable role/branch routing and compliance PDF generation; the two largest systems in the suite by iteration count.</li>
+        <li><strong>Card Services &amp; Card Payment</strong> — full card lifecycle (issuance, activation, block, replacement, PIN change), bulk Excel-based activation, and a batch-workflow engine with failed-job retry.</li>
+        <li><strong>Corporate credit appraisal (MCC)</strong> — a purpose-built app modeling 40+ financial risk domains into a multi-stage sanction/approval chain — an Internal Credit Risk Rating engine for corporate lending.</li>
+        <li><strong>SME loan origination</strong> — a parallel credit-appraisal workflow with automated executive-summary PDF generation and duplicate-application detection.</li>
+        <li><strong>Limit management, documentation, tax return, and term-deposit/rebate systems</strong> — including a dedicated Islamic banking TD workflow and RM-to-branch tagging governance.</li>
+        <li>Shared across all systems: Oracle-view-based core-banking integration, LDAP/AD authentication, Celery/Redis async processing, and — on newer systems — full observability (Prometheus, Loki, Fluentd) plus JMeter load coverage.</li>
+      </ul>
+
+      <h4>Stack</h4>
+      <div class="stack">
+        <span class="chip">Django</span><span class="chip">DRF</span><span class="chip">React</span><span class="chip">PostgreSQL</span><span class="chip">Oracle / SOAP</span><span class="chip">LDAP</span><span class="chip">Celery + Redis</span><span class="chip">Docker Compose</span><span class="chip">Prometheus / Loki</span><span class="chip">JMeter</span>
+      </div>
+
+      <div class="outcome"><strong>Outcome —</strong> nine-plus mission-critical workflows in production on one shared, actively maintained platform, giving the bank consistent RBAC, audit trail, and core-banking integration across every product.</div>
+    </div>
+  </section>
+
+  <section class="case" id="inteliqx">
+    <div class="case-rail">
+      <p class="client">InteliqX</p>
+      <p class="years">2024 – Present</p>
+      <p class="role">Full-stack / Platform Engineer</p>
+    </div>
+    <div class="case-body">
+      <h3>Multi-Tenant Due-Diligence SaaS for Private Equity</h3>
+      <p class="dek">"Revenue Intelligence for Private Equity Due Diligence" — six microservices, taken through a formal security and infrastructure remediation program.</p>
+
+      <h4>Problem</h4>
+      <p>The platform had grown quickly on individually hand-provisioned EC2 infrastructure with no formal IaC. A security audit surfaced hundreds of findings — including credentials hardcoded for over a year and no structured multi-tenant isolation model — while the product still needed to ship.</p>
+
+      <h4>What I built</h4>
+      <ul>
+        <li><strong>Security remediation</strong> — removed hardcoded Auth0 and Stripe secrets in favor of environment-based configuration across the auth, billing, and admin-panel services, closing out critical audit findings directly.</li>
+        <li><strong>Multi-tenancy migration planning</strong> — authored gap-analysis and migration documentation for moving from ad hoc, user-owned tenancy to an organization-based model backed by PostgreSQL Row-Level Security.</li>
+        <li><strong>CI/CD ownership</strong> — maintained AWS CodeBuild pipelines for the Django backend (Docker → ECR) and the React dashboard (S3/CloudFront), iterating configuration as the deployment target evolved.</li>
+        <li><strong>Dashboard visualizations</strong> — built early analyst-facing charting (heatmap, treemap, sunburst, waterfall) with Plotly for exploring deal financials.</li>
+      </ul>
+
+      <h4>Stack</h4>
+      <div class="stack">
+        <span class="chip">Django</span><span class="chip">django-tenants</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Redux</span><span class="chip">Plotly</span><span class="chip">Flask</span><span class="chip">Auth0</span><span class="chip">Stripe</span><span class="chip">Terraform</span><span class="chip">AWS</span>
+      </div>
+
+      <div class="outcome"><strong>Outcome —</strong> hardcoded-secret elimination and CI/CD stabilization delivered directly, with a documented path to full multi-tenant isolation and infrastructure-as-code.</div>
+    </div>
+  </section>
+
+  <section class="case" id="travelport">
+    <div class="case-rail">
+      <p class="client">Travelport / SGC Soft OTA</p>
+      <p class="years">2025 – Present</p>
+      <p class="role">Backend Engineer</p>
+    </div>
+    <div class="case-body">
+      <h3>GDS Integration &amp; Vendor API Certification</h3>
+      <p class="dek">Replacing a third-party aggregator with a direct GDS integration — and passing Travelport's formal certification process to prove it.</p>
+
+      <h4>Problem</h4>
+      <p>The agency was reselling flights through a third-party aggregator sitting in front of Travelport. The goal was a direct integration swappable with a one-line config change — no client-side changes — while passing Travelport's multi-round MyTravelport certification before receiving production credentials.</p>
+
+      <h4>What I built</h4>
+      <ul>
+        <li><strong>Anti-corruption middleware</strong> — a layered Flask service: a hand-built SOAP client for the full booking lifecycle (search → price → fare rules → book → ticket → void → retrieve → cancel), behind a booking-engine abstraction, behind a compatibility facade reproducing the legacy OTA's exact wire contract.</li>
+        <li><strong>Vendor certification</strong> — carried the integration through Travelport's multi-round review, resolving reviewer feedback (TraceID continuity, passenger-age consistency, booking-traveler ordering, infant SSR formatting) across submissions, with an automated test-runner covering every mandated scenario.</li>
+        <li><strong>Cross-platform desktop clients</strong> — the same booking engine packaged as native-feeling apps for Ubuntu (pywebview) and Windows (PyInstaller).</li>
+        <li><strong>CLI tool</strong> — a dual-protocol terminal booking tool (legacy SOAP + newer JSON API) for fast manual testing and diagnostics.</li>
+        <li><strong>Commercial CMS integration</strong> — Travelport flight and hotel supplier modules for a multi-supplier PHP travel CMS already integrating Amadeus, Sabre, Duffel, and HotelBeds.</li>
+      </ul>
+
+      <h4>Stack</h4>
+      <div class="stack">
+        <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">SQLAlchemy</span><span class="chip">SOAP / XML</span><span class="chip">Travelport uAPI v52</span><span class="chip">Travelport JSON v11</span><span class="chip">pywebview</span><span class="chip">PyInstaller</span><span class="chip">PHP</span>
+      </div>
+
+      <div class="outcome"><strong>Outcome —</strong> a production middleware service, a passed multi-round vendor certification with documented reviewer sign-off, two packaged desktop clients, a CLI tool, and a commercial CMS integration — all on one booking engine.</div>
+    </div>
+  </section>
+
+  <section class="case" id="wafidflow">
+    <div class="case-rail">
+      <p class="client">Wafidflow</p>
+      <p class="years">2026</p>
+      <p class="role">Full-stack Engineer</p>
+    </div>
+    <div class="case-body">
+      <h3>GCC Manpower &amp; Visa Processing SaaS</h3>
+      <p class="dek">A multi-tenant platform for recruitment agencies managing the Gulf pre-employment process end to end — visa, medical fitness, embassy, flights.</p>
+
+      <h4>Problem</h4>
+      <p>Agencies were manually re-typing applicant data from scanned passports and flight tickets — a slow, error-prone step at the front of a multi-stage compliance pipeline (embassy batching, medical clearance, flight booking, contracts).</p>
+
+      <h4>What I built</h4>
+      <ul>
+        <li><strong>Serverless OCR pipeline</strong> — a passport or ticket photo upload triggers an event-invoked AWS Lambda running docTR, extracting structured fields with confidence scores after a quality gate, then streaming results to the browser over a WebSocket (Django Channels + Redis) in real time.</li>
+        <li><strong>Applicant lifecycle</strong> — profile intake, embassy batch grouping, flight booking with its own ticket-OCR auto-fill, and PDF generation for contracts and financial reports.</li>
+        <li><strong>Enterprise auth</strong> — JWT plus Google SSO, with a sandboxed architecture isolating tenant data.</li>
+        <li><strong>Analytics dashboard</strong> — reports, activity feed, and financial charts, alongside a from-scratch reusable data table (sort/filter/search/pagination/drag-and-drop).</li>
+        <li><strong>Architecture</strong> — Django on EC2 behind nginx, React on S3/CloudFront, the OCR engine as a containerized Lambda, Postgres as its own Dockerized service.</li>
+      </ul>
+
+      <h4>Stack</h4>
+      <div class="stack">
+        <span class="chip">Django</span><span class="chip">DRF</span><span class="chip">Channels</span><span class="chip">Celery</span><span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">AWS Lambda</span><span class="chip">docTR</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Docker</span>
+      </div>
+
+      <div class="outcome"><strong>Outcome —</strong> an automated, real-time OCR-driven intake flow that removes the slowest manual step in the pipeline, on an architecture that cleanly separates stateful backend, static frontend, and serverless OCR compute.</div>
+    </div>
+  </section>
+
+  <section class="case" id="gastroliver">
+    <div class="case-rail">
+      <p class="client">Children's Gastroliver Center</p>
+      <p class="years">2025 – Present</p>
+      <p class="role">Solo Full-stack Developer</p>
+    </div>
+    <div class="case-body">
+      <h3>Digital Ecosystem for a Pediatric Clinic</h3>
+      <p class="dek">Built solo: a real e-prescription app, a schema-driven admin panel, and patient-facing tools — on a lean, serverless foundation.</p>
+
+      <h4>Problem</h4>
+      <p>A specialist clinic needed to move from paper prescriptions and ad hoc scheduling to a proper digital practice, without the overhead of adopting a full commercial EHR suite.</p>
+
+      <h4>What I built</h4>
+      <ul>
+        <li><strong>E-prescription / EHR app</strong> — a structured visit workflow (history, examination, diagnosis, investigation, medication) with a searchable medicine database, a dose-combination picker, and a print service rendering a real two-column prescription layout. Packaged as an installable Android app.</li>
+        <li><strong>Schema-driven admin panel</strong> — a role-based (Doctor/Nurse) dashboard that introspects the Postgres schema to auto-generate CRUD interfaces for every clinical table, instead of hand-building a screen per table.</li>
+        <li><strong>Public booking micro-site</strong> — a lightweight, hCaptcha-protected appointment widget, kept separate from the clinical tools.</li>
+        <li><strong>AI-assisted meal planning</strong> — deterministic filtering by allergy and nutrient targets, then an LLM (Groq Llama 3.3 70B, JSON mode) composes a 7-day pediatric meal plan from the curated shortlist — keeping the model grounded.</li>
+        <li><strong>Clinical data pipelines</strong> — scrapers feeding the prescription drug database, and a WHO child-growth dataset converted into an interactive growth-chart tool in a patient-facing PWA.</li>
+      </ul>
+
+      <h4>Stack</h4>
+      <div class="stack">
+        <span class="chip">Supabase</span><span class="chip">Postgres</span><span class="chip">React</span><span class="chip">Ionic / Capacitor</span><span class="chip">Python</span><span class="chip">Selenium</span><span class="chip">Groq · Llama 3.3</span><span class="chip">AWS S3 / CloudFront</span>
+      </div>
+
+      <div class="outcome"><strong>Outcome —</strong> a specialist clinic running on a real, purpose-built digital practice stack — delivered solo on a serverless foundation instead of a costly off-the-shelf EHR.</div>
+    </div>
+  </section>
+
+  <section class="case" id="dwh">
+    <div class="case-rail">
+      <p class="client">Frankie4</p>
+      <p class="years">2024 – Present</p>
+      <p class="role">Data / Backend Engineer</p>
+    </div>
+    <div class="case-body">
+      <h3>Data Warehouse Platform</h3>
+      <p class="dek">From a custom ETL system to a modern, observable lakehouse-style architecture — without downtime to reporting.</p>
+
+      <h4>Problem</h4>
+      <p>Business Central, dual-region Shopify stores, and SFTP-delivered reports each spoke a different format on a different schedule; the business needed one reliable, monitored pipeline instead of ad hoc exports.</p>
+
+      <h4>What I built</h4>
+      <ul>
+        <li><strong>First-generation platform</strong> — custom Python microservices (importer, transformer, scheduler) plus a Flask monitoring dashboard with import history and transformer mapping views, Auth0-based role management.</li>
+        <li><strong>Second-generation rebuild</strong> — re-architected onto Airflow (source-specific DAGs), MinIO (raw landing zone), Spark (incremental watermark-based and full-refresh transforms), and dbt (staging → intermediate → marts, with a dedicated data-quality/governance layer).</li>
+        <li><strong>Observability</strong> — Grafana dashboards over pipeline performance, storage, and transformation governance, backed by Prometheus.</li>
+      </ul>
+
+      <h4>Stack</h4>
+      <div class="stack">
+        <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Airflow</span><span class="chip">MinIO</span><span class="chip">Spark</span><span class="chip">dbt</span><span class="chip">PostgreSQL</span><span class="chip">Grafana / Prometheus</span><span class="chip">Docker</span>
+      </div>
+
+      <div class="outcome"><strong>Outcome —</strong> a production data platform that evolved from a working custom ETL system into a dbt-tested, observable architecture — with no disruption to business reporting during the transition.</div>
+    </div>
+  </section>
+
+  <section class="case" id="lms">
+    <div class="case-rail">
+      <p class="client">3PCL</p>
+      <p class="years">2021 – Present</p>
+      <p class="role">Full-stack Engineer</p>
+    </div>
+    <div class="case-body">
+      <h3>Exam-Prep Learning Management System</h3>
+      <p class="dek">A mature, multi-year LMS product — and a measured performance-optimization story.</p>
+
+      <h4>What I built</h4>
+      <ul>
+        <li>Course, lesson, and question-bank management with Excel-based bulk import/export, a practice-exam engine with repetition-avoidance logic, and a flashcard study mode.</li>
+        <li><strong>Performance fix</strong> — diagnosed an N+1 query pattern in the practice-exam engine, resolved it with <code>select_related</code> and 35 new indexes, cutting per-request database queries from roughly 1,368 to near-zero — an approximate 9.5x speedup, documented in a dedicated performance report.</li>
+        <li>Migrated the production backend onto AWS Graviton (ARM) instances, resolving the ARM-specific packaging issues that came with the move.</li>
+      </ul>
+
+      <h4>Stack</h4>
+      <div class="stack">
+        <span class="chip">Django</span><span class="chip">DRF</span><span class="chip">PostgreSQL</span><span class="chip">Celery</span><span class="chip">React</span><span class="chip">Redux</span><span class="chip">Ant Design</span><span class="chip">AWS Graviton</span>
+      </div>
+
+      <div class="outcome"><strong>Outcome —</strong> 600+ combined backend commits, and a concrete example of diagnosing and fixing a real production bottleneck rather than just shipping features.</div>
+    </div>
+  </section>
+
+  <section class="minor">
+    <h2>Smaller &amp; freelance projects</h2>
+    <p class="dek">Independent work outside the core client engagements above.</p>
+    <div class="minor-grid">
+      <div class="minor-item">
+        <p class="mname">Shajkotha</p>
+        <p>Full-stack jewelry e-commerce MVP (Django REST + React/Vite) for a Bangladeshi jewelry brand — cart/checkout, wishlists, reviews, promo codes, and bKash/Nagad/Rocket/SSLCommerz payment integration.</p>
+      </div>
+      <div class="minor-item">
+        <p class="mname">SGC Soft website</p>
+        <p>Built and maintain the corporate marketing site for SGC Soft, a boutique software/QA consultancy.</p>
+      </div>
+      <div class="minor-item">
+        <p class="mname">backup-cron</p>
+        <p>Python automation tool performing monthly full and daily incremental backups of project directories to Google Drive via OAuth, with automatic packaging and cleanup.</p>
+      </div>
+      <div class="minor-item">
+        <p class="mname">Freelance static sites</p>
+        <p>Small portfolio and gallery sites with contact-form backends, built for independent clients.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Case studies compiled from project history · adapt freely for your site</div>
+</footer>
